@@ -14,4 +14,4 @@ $this->menu=array(
 ?>
 
 <h1>Nota de Venta</h1>
-<?php $this->renderPartial('_form', array('model'=>$model, 'model_pro'=>$model_pro, 'detalle'=>$detalle) )?>
+<?php $this->renderPartial('_form', array('model'=>$model, 'detalle'=>$detalle) )?>

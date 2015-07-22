@@ -48,7 +48,7 @@ $(function(){
 
 	<p class="note">Campos con <span class="required">*</span> son obligatorios.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+	<?php echo $form->errorSummary($model, $detalle); ?>
         
 
 
@@ -85,7 +85,7 @@ $(function(){
                         'name'=>'datepicker-Inline',
                        //'flat'=>true,//remove to hide the datepicker
                         'options'=>array(
-                            'dateFormat'=>'yy-mm-dd',
+                            'dateFormat'=>'dd-mm-yy',
                             'changeYear'=>TRUE,
                             'showButtonPanel'=>TRUE,
                             'showAnim'=>'fadeIn',//'slide','fold','slideDown','fadeIn','blind','bounce','clip','drop'
@@ -112,6 +112,8 @@ $(function(){
                         'options'=>array(
                             'showAnim'=>'fadeIn',//'slide','fold','slideDown','fadeIn','blind','bounce','clip','drop'
                             'changeYear'=>TRUE,
+                            'dateFormat'=>'dd-mm-yy',
+                            
                             'showButtonPanel'=>TRUE,
                         ),
                         'htmlOptions'=>array(
@@ -126,7 +128,7 @@ $(function(){
             <tr>
                 <td class="meta-head"><?php echo $form->labelEx($model,'Total'); ?></td>
                 <td><div class="due">
-                        <?php echo $form->textField($model,'Total',array('size'=>10,'maxlength'=>10, 'class'=>'due')); ?>
+                        <?php echo $form->textField($model,'Total',array('size'=>10,'maxlength'=>12, 'class'=>'due')); ?>
                         <?php echo $form->error($model,'Total'); ?>
                 </div>
                 </td>       
@@ -244,26 +246,21 @@ $(function(){
 		  <tr>
 		      <td colspan="2" class="blank"> </td>
 		      <td colspan="2" class="total-line">Total Cancelado</td>
-		      <td class="total-value"><textarea id="paid">$0.00</textarea></td>
+                      <td class="total-value"><input type="text" id="paid" value="0"/></td>
 		  </tr>
 		  <tr>
 		      <td colspan="2" class="blank"> </td>
 		      <td colspan="2" class="total-line balance">Deuda Pendiente</td>
-		      <td class="total-value balance"><div class="due">$875.00</div></td>
+		      <td class="total-value balance"><div class="due">0</div></td>
 		  </tr>
 		  
-		</table>
-		
-		<div id="terms">
-		  <h5>Terms</h5>
-		  <textarea>Comprobante de movimiento de mercancia, verificar el Stock.</textarea>
-		</div>
+    </table>
 	
 	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
-	</div>
+    <div class="row buttons">
+            <?php echo CHtml::submitButton($model->isNewRecord ? 'Save':'Create');?>
+    </div>
 
 <?php $this->endWidget(); ?>
 

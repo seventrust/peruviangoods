@@ -63,23 +63,27 @@ class VentaController extends Controller
 	public function actionCreate()
 	{
 		$model=new Venta;
-                $model_pro = new Producto;
                 $detalle = new Detalleventa;
-
+                //$this->performAjaxValidation(array($model, $detalle));
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Venta'], $_POST['Producto'], $_POST['Detalleventa']))
+		if(isset($_POST['Venta'], $_POST['Detalleventa']))
 		{
-			$model->attributes=$_POST['Venta'];
-                        $model_pro->attributes=$_POST['Producto'];
+			$model->attributes=$_POST['Venta'];                       
                         $detalle->attributes=$_POST['Detalleventa'];
-			if($model->save() && $detalle->save())
-				$this->redirect(array('view', $id=>NumVenta));
+                        
+                        $valid=$model->validate();
+                        $valid=$detalle->validate() && $valid;
+                        if($valid){
+                            $model->save(false);
+                            $detalle->save(false);
+                            $this->redirect('index');
+                        }
+				
 		}
-
 		$this->render('create',array(
-			'model'=>$model, 'model_pro'=>$model_pro, 'detalle'=>$detalle,
+			'model'=>$model, 'detalle'=>$detalle,
 		));
 	}
 
