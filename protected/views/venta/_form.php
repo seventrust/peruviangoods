@@ -1,266 +1,269 @@
-<?php
-/* @var $this VentaController */
-/* @var $model Venta */
-/* @var $form CActiveForm */
-?>
-<script type='text/javascript' src='<?php echo Yii::app()->request->baseUrl?>/js/example.js'></script>
 
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl?>/css/jquery.css" />
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/jquery.js"></script>
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/jquery-ui.js"></script>
+<script type='text/javascript' src='<?php echo Yii::app()->request->baseUrl?>/js/example.js'></script>
 <script type="text/javascript">
-$(function(){
-    $('.descripcion').autocomplete({
-        source: function(solicitud, respuesta){
-            $.ajax({
-                url: <?php echo "'".Yii::app()->createUrl('venta/autocomplete')."'";?>,
-                type: 'POST',
-                data: {term: solicitud.term},
-                dataType: 'json',
-                success: function(data){
-                    respuesta(data);
-                }
-                
-            });
-                
-        },
-        select: function(event, ui){
+    $(document).ready(function(){  
+        $('#contador').val(0); 
+        $('#fecha').attr('readonly', 'readonly').val(fechaHoy());
+        $('#cuenta').hide();
 
-                $('#Detalleventa_CodProducto').val(ui.item.CodProducto);
-                $('#precioU').val(ui.item.PreCompra);
+        $.post("ordenDeVenta.php", function(data){
+                $('#numeroOrden').val(data);
+                $('#reporte').val(data);
 
-        }
-        
-        
+        });		
+        $('#reiniciar').hide();
     });
-});
+    function agregar()
+    {
+        $('#cuenta').show(500);
+        $('#contador').val(parseInt($('#contador').val())+1);
+        var contador = $('#contador').val();
+        $('#tabla').find('tbody').append($('<tr>').attr('id', 'fila'+contador));
+        //Primera Fila
+        $('#fila'+contador).append($('<td>').append($('<input>').attr('type', 'text').attr('id', 'idProducto'+contador).attr('style', 'border-width: 0; resize: none; width: 40px')
+        ));
+        //Segunda
+        $('#fila'+contador).append($('<td>').append($('<input>').attr('type', 'text').attr('id', 'producto'+contador).attr('style', 'border-width: 0; resize: none; width: 400px')
+        ));
+        //Tercera
+        $('#fila'+contador).append($('<td>').append($('<input>').attr('type', 'text').attr('id', 'precioU'+contador).attr('style', 'border-width: 0; resize: none; width: 60px')
+        ));
+        //Cuarta
+        $('#fila'+contador).append($('<td>').append($('<input>').attr('type', 'text').attr('id', 'cantidad'+contador).attr('style', 'border-width: 0; resize: none; width: 60px')
+        ));
+        //Quinta 
+        $('#fila'+contador).append($('<td>').append($('<input>').attr('type', 'text').attr('id', 'precio'+contador).attr('style', 'border-width: 0; resize: none; width: 60px')
+        .attr('readonly', 'readonly')
+        ));
+        //Boton quitar
+        $('#fila'+contador).append($('<td>').append($('<a>').attr('href', '#').text('x').attr('style', 'color:blue; font-size:1.3em; text-decoration:none;')
+                        .click(function(){ 
+                                quitar(this.parentNode.parentNode.id);
+                                if(('#contador').val() == 0){
+                                        ('#subtotal').val(0);
+                                        ('#total').val(0);
+                                }
+                                })));
 
+        $('#producto'+contador).autocomplete({				
+            source: function(solicitud, respuesta)
+                {
+                    $.ajax(
+                    {
+                            url: "<?php echo Yii::app()->createUrl('venta/autocomplete')?>",
+                            type: "POST",
+                            dataType: "json",
+                            data:
+                            {
+                                    term: solicitud.term
+                            },
+                            success: function(data)
+                            {
+                                    respuesta(data);
+                            }
+                    });
+                },
+
+            select: function(event, ui){
+                $('#idProducto'+contador).val(ui.item.CodProducto);
+                $('#precioU'+contador).val(ui.item.PreCompra);
+                }});
+
+    $('#precio'+contador).click(function(){
+        var precioU = $('#precioU'+contador).val();	
+        var cantidad = $('#cantidad'+contador).val();
+
+        var totalP =  parseFloat(precioU) * parseFloat(cantidad) ;
+
+        totalP = roundNumber(totalP, 2);	
+        $('#precio'+contador).val(totalP);
+
+
+        var subtotal=0;
+        for(var i = 1; i<=contador; i++){
+                subtotal += parseFloat($('#precio'+i).val());
+        }
+        subtotal= roundNumber(subtotal, 2);
+        $('#subtotal').attr('readonly', 'readonly').val(parseFloat(subtotal));
+
+        var totalCuenta = parseFloat($('#subtotal').val()) * parseFloat($('#iva').val());
+        totalCuenta += parseFloat($('#subtotal').val());
+
+        totalCuenta = roundNumber(totalCuenta, 2);
+        $('#total').attr('readonly', 'readonly').val(totalCuenta);
+    });
+
+
+    }
+
+    function quitar(fila)
+    {
+
+        var numero = parseInt(String(fila).substring(4));
+        $('#'+String(fila)).remove();
+        for (var i = numero; i < $('#contador').val(); i++)
+        {
+                $('#fila'+(i+1)).attr('id', 'fila'+i);
+                $('#texto'+(i+1)).attr('id', 'texto'+i);
+                $('#numero'+(i+1)).attr('id', 'numero'+i);
+        }
+        $('#contador').val(parseInt($('#contador').val())-1);
+    }
+    //Creo unos arreglos para poder manipularlos durante la ejecucion de la funcion
+    //Adicional unas variables para como cadena de caracteres
+    var id = Array();
+    var descripcion = Array();
+    var cantidad = Array();
+    var precio = Array();
+    var cadena="";
+
+    //Una funcion para recoger los datos agregados
+
+    function recogerDatos(){
+            var orden = "&orden="+$('#numeroOrden').val();
+            for(var i = 1; i <= $('#contador').val(); i++){
+                    id[i] = $('#idProducto'+i).val();
+                    descripcion[i] = $('#producto'+i).val();
+                    cantidad[i] = $('#cantidad'+i).val();
+                    precio[i] = $('#precio'+i).val();
+
+                    cadena +='&cadena[]='+id[i]+" "+descripcion[i]+" "+cantidad[i]+" "+precio[i];
+            }
+            $.ajax({
+                url: "formulario.php",
+                type: "POST",
+                data: cadena+orden,
+                success: function(data)
+                        {
+                                $('#reporte').val(data);
+                                alert("Esta orden es la No. :"+$('#reporte').val());
+                                $('#reiniciar').show(500);
+                        }
+
+            });
+    }
+    function Consultar(){
+            var numerOrden = $('#reporte').val();
+            $.ajax({
+                    url: "convertir.php",
+                    type: "POST",
+                    data: numeroOrden,
+                    sucess: function(data){
+
+                    }
+
+            });
+    }
 </script>
 
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'venta-form',
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
-	'enableAjaxValidation'=>false,
-)); ?>
+<div>
+    <header>
+    <div id="HTML" align="center">  
+    	<table id="informacion">
+      	<tr>
+            <th colspan="4">Cliente</th>
+            <tr id="estiloCol">
+                <td>RUT</td>
+                <td>Cliente/Empresa</td>
+                <td>Tlf:</td>
+                <td>Direccion:</td>
+            </tr>
+            <tr>
+                <td><input type="text" id="identidad"/></td>
+                <td><input type="text" id="nombreCliente" /></td>
+                <td><input type="text" id="telefono"></td>
+                <td><input type="text" id="direccion"></td>
+            </tr>	
+      	</tr>
+      
+      
+       <table id="invoice">
+      	<tr>
+            <th colspan="2">Info Factura</th>
+            <tr id="estiloCol">
+                    <td>#Orden</td>
+                    <td>Fecha</td>
+      			
 
-	<p class="note">Campos con <span class="required">*</span> son obligatorios.</p>
+            </tr>
+            <tr>
+                    <td> <input type="text" id="numeroOrden" value="<?php getOrden();?>"/></td>
+                    <td><input type="text" id="fecha" /></td>
 
-	<?php echo $form->errorSummary($model, $detalle); ?>
-        
+            </tr>
+      	
+       </tr>
+      	
+      	
+      </table>
+      	
+     
+      
+      <table id="tabla" border="1">
+      	<tr id="estiloCol">
+      		<th>ID</th>
+      		<th style="width: 400px;"><p><b>Descripcion</p></th>
+      		<th><p><b>P. Unidad</p></th>
+      		<th><p><b>Cantidad</p></th>
+      		<th colspan="2"><p><b>Precio por Unidad</p></th>
+      	</tr>
+       
+      	
 
+     </table>
+        <input type="button" id="enviar" value="Agregar" onclick="agregar();"/>
+    	<table id="cuenta">
+      	<tr>
+      		<th colspan="2">Cuenta</th>
+                <tr>
+      			<td>Forma de Pago</td>
+                        <td> <select id="for_pago">
+                                <option>Efectivo</option>
+                                <option>Debito</option>
+                                <option>Credito</option>
+                                <option>Cheque</option>
+                            </select></td>
+      		</tr>
+      		<tr>
+      			<td>Subtotal</td>
+      			<td> <input type="text" id="subtotal"/></td>
+      		</tr>
+      		<tr>
+      			<td>IVA</td>
+      			<td><input type="text" id="iva" value="0.19" readonly="readonly"/></td>
+      		</tr>
+                <tr>
+      			<td>ILA</td>
+      			<td><input type="text" id="ila" value="0.21" readonly="readonly"/></td>
+      		</tr>
+                
+                <tr>
+      			<td>Impuestos Agregados</td>
+      			<td><input type="text" id="im_agregado"/></td>
+      		</tr>
+                
+      		<tr>
+      			<td>Total</td>
+      			<td><input type="text" id="total"></td>
+      		</tr>
+      	</tr>
+      	
+      	
+      </table>
+      <input type="hidden" id="contador" value="0"/ >
+      <input type="button" id="convertir" value="Enviar" onclick="recogerDatos();">
+      <input type="button" id="reiniciar" value="Limpiar" onclick="location.reload();"/>
+	  
+	  
+	  <input type="hidden" id="reporte" name="orden"/>
+	  <input type="submit" id="enviarForm"  value="Consultar" onclick="Consultar();"/>
 
-<div id="page-wrap">	
-    <div id="identity">
-        <?php echo $form->labelEx($model,'CodCliente'); ?>
-        <?php echo $form->textField($model,'CodCliente',array('size'=>10,'maxlength'=>10)); ?>
-        <?php echo $form->error($model,'CodCliente'); ?>		
+    
+    
     </div>
 
-    <div id="customer">
-        <?php echo $form->labelEx($model,'CodBodega'); ?>
-        <?php echo $form->textField($model,'CodBodega',array('size'=>10,'maxlength'=>10,
-                                                      'value'=>Yii::app()->user->isGuest?CHtml::encode(Yii::app()->name):CHtml::encode(Yii::app()->user->id))); ?>
-        <?php echo $form->error($model,'CodBodega'); ?>
-
-        <table id="meta">
-            <tr>
-                <td class="meta-head"><?php echo $form->labelEx($model,'NumVenta'); ?></td>
-                <td>
-                    <?php echo $form->textField($model,'NumVenta'); ?>
-                    <?php echo $form->error($model,'NumVenta'); ?>
-                </td>
-            </tr>
-            
-            <tr>
-                <td class="meta-head"><?php echo $form->labelEx($model,'Fecha'); ?></td>
-                <td>
-                    <?php
-                    $this->widget('zii.widgets.jui.CJuiDatePicker',array(
-                        'model'=>$model,
-                        'attribute'=>'Fecha',
-                        'language'=>'es',
-                        'name'=>'datepicker-Inline',
-                       //'flat'=>true,//remove to hide the datepicker
-                        'options'=>array(
-                            'dateFormat'=>'dd-mm-yy',
-                            'changeYear'=>TRUE,
-                            'showButtonPanel'=>TRUE,
-                            'showAnim'=>'fadeIn',//'slide','fold','slideDown','fadeIn','blind','bounce','clip','drop'
-                        ),
-                        'htmlOptions'=>array(
-                            'style'=>''
-                        ),  
-                    ));
-                    ?>
-                    <?php echo $form->error($model,'Fecha'); ?>
-                </td>            
-            </tr>
-
-            <tr>
-                <td class="meta-head"><?php echo $form->labelEx($model,'Vencimiento'); ?></td>
-                <td>
-                     <?php
-                        $this->widget('zii.widgets.jui.CJuiDatePicker',array(
-                        'model'=>$model,
-                        'attribute'=>'Vencimiento',
-                        'language'=>'es',
-                        'name'=>'datepicker-Inline2',
-                       //'flat'=>true,//remove to hide the datepicker
-                        'options'=>array(
-                            'showAnim'=>'fadeIn',//'slide','fold','slideDown','fadeIn','blind','bounce','clip','drop'
-                            'changeYear'=>TRUE,
-                            'dateFormat'=>'dd-mm-yy',
-                            
-                            'showButtonPanel'=>TRUE,
-                        ),
-                        'htmlOptions'=>array(
-                            'style'=>''
-                        ),                  
-                    ));
-                    ?>
-                    <?php echo $form->error($model,'Vencimiento'); ?>
-                </td>            
-            </tr>
-
-            <tr>
-                <td class="meta-head"><?php echo $form->labelEx($model,'Total'); ?></td>
-                <td><div class="due">
-                        <?php echo $form->textField($model,'Total',array('size'=>10,'maxlength'=>12, 'class'=>'due')); ?>
-                        <?php echo $form->error($model,'Total'); ?>
-                </div>
-                </td>       
-            </tr>
-
-        </table>
-
-    </div>
-		
-    <table id="items">
-		  <tr>
-		      <th>Codigo del Producto</th>
-		      <th>Descripcion</th>
-		      <th>Precio Unitario</th>
-		      <th>Cantidad</th>
-		      <th>Sub Total</th>
-		  </tr>
-                  
-		  <tr class="item-row">
-                        <td class="item-name">
-                            <?php echo $form->textField($detalle,'CodProducto',array('size'=>10,'maxlength'=>10, 'class'=>'descripcion')); ?>
-                            <?php echo $form->error($detalle,'CodProducto'); ?>
-                            <div class="delete-wpr">
-                                <a class="delete" href="#" title="Remove row">X</a>
-                            </div>
-                        </td>
-
-                        <td class="description">
-                            <input type="text" class="descripcion"/>
-                        </td>
-                        
-                        <td>
-                          <input type="text" class="cost" id="precioU" />
-                              
-                        </td>
-                          <td>
-                            <?php echo $form->textField($detalle, 'Cantidad', array('class'=>'qty'));?>
-                            <?php echo $form->error($detalle, 'Cantidad');?>
-                          </td>
-		      <td>
-                          <?php echo $form->textField($detalle, 'Subtotal', array('class'=>'qty'));?>
-                          <?php echo $form->error($detalle, 'Subtotal');?>
-                      </td>
-		  </tr>
-		
-		  <tr id="hiderow">
-		    <td colspan="5"><a id="addrow" href="javascript:;" title="Add a row">Añadir Producto</a></td>
-		  </tr>
-		  
-		  <tr>
-		      <td colspan="2" class="blank"> </td>
-		      <td colspan="2" class="total-line"><?php echo $form->labelEx($model,'TotExento'); ?></td>
-		      <td class="total-value">
-                        <?php echo $form->textField($model,'TotExento',array('size'=>10,'maxlength'=>10, 'id'=>'subtotal')); ?>
-                        <?php echo $form->error($model,'TotExento'); ?>
-                      </td>
-                    
-		  </tr>
-		  
-                  <tr>
-		      <td colspan="2" class="blank"> </td>
-		      <td colspan="2" class="total-line"><?php echo $form->labelEx($model,'TotNeto'); ?></td>
-                      <td class="total-value">
-                        <?php echo $form->textField($model,'TotNeto',array('size'=>10,'maxlength'=>10, 'id'=>'total')); ?>
-                        <?php echo $form->error($model,'TotNeto'); ?>
-                      </td>
-		  </tr>
-                  
-                   <tr>
-		      <td colspan="2" class="blank"> </td>
-		      <td colspan="2" class="total-line"><?php echo $form->labelEx($model,'TotIva'); ?></td>
-                      <td class="total-value">
-                        <?php echo $form->textField($model,'TotIva',array('size'=>10,'maxlength'=>10, 'id'=>'iva', 'value'=>'19')); ?>
-                        <?php echo $form->error($model,'TotIva'); ?>
-                      </td>
-		  </tr>
-                  
-                   <tr>
-		      <td colspan="2" class="blank"> </td>
-		      <td colspan="2" class="total-line"> <?php echo $form->labelEx($model,'TotImpuesto'); ?></td>
-                      <td class="total-value">
-                        <?php echo $form->textField($model,'TotImpuesto',array('size'=>10,'maxlength'=>10, 'id'=>'impuesto','value'=>'21')); ?>
-                        <?php echo $form->error($model,'TotImpuesto'); ?>
-                      </td>
-		  </tr>
-                  
-                   <tr>
-		      <td colspan="2" class="blank"> </td>
-		      <td colspan="2" class="total-line"><?php echo $form->labelEx($model,'TotDescuento'); ?></td>
-                      <td class="total-value">
-                        <?php echo $form->textField($model,'TotDescuento',array('size'=>10,'maxlength'=>10)); ?>
-                        <?php echo $form->error($model,'TotDescuento'); ?>
-                      </td>
-		  </tr>
-                  
-                  <tr>
-		      <td colspan="2" class="blank"> </td>
-		      <td colspan="2" class="total-line"><?php echo $form->labelEx($model,'TotRetencion'); ?></td>
-                      <td class="total-value">
-                        <?php echo $form->textField($model,'TotRetencion',array('size'=>10,'maxlength'=>10)); ?>
-                        <?php echo $form->error($model,'TotRetencion'); ?>
-                      </td>
-		  </tr>
-                  
-                  <tr>
-		      <td colspan="2" class="blank"> </td>
-		      <td colspan="2" class="total-line"> <?php echo $form->labelEx($model,'ForPago'); ?></td>
-                      <td class="total-value">
-                        <?php echo $form->textField($model,'ForPago',array('size'=>10,'maxlength'=>10)); ?>
-                        <?php echo $form->error($model,'ForPago'); ?>
-                      </td>
-		  </tr>
-                    
-                  
-		  <tr>
-		      <td colspan="2" class="blank"> </td>
-		      <td colspan="2" class="total-line">Total Cancelado</td>
-                      <td class="total-value"><input type="text" id="paid" value="0"/></td>
-		  </tr>
-		  <tr>
-		      <td colspan="2" class="blank"> </td>
-		      <td colspan="2" class="total-line balance">Deuda Pendiente</td>
-		      <td class="total-value balance"><div class="due">0</div></td>
-		  </tr>
-		  
-    </table>
-	
-	</div>
-
-    <div class="row buttons">
-            <?php echo CHtml::submitButton($model->isNewRecord ? 'Save':'Create');?>
-    </div>
-
-<?php $this->endWidget(); ?>
-
+  <div id="receptorPHP"></div>
+  </div>

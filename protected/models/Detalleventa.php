@@ -32,9 +32,9 @@ class Detalleventa extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('Item, NumVenta, CodProducto, Cantidad, Precio, UniMedida, Descuento, Exento, Subtotal', 'required'),
+			array('CodProducto, Cantidad', 'required'),
 			array('Item', 'numerical', 'integerOnly'=>true),
-			array('NumVenta, CodProducto, Cantidad, Precio, UniMedida, Descuento, Exento, Subtotal', 'length', 'max'=>10),
+			array('NumVenta, CodProducto, Cantidad, Precio, UniMedida, Descuento, Exento, Subtotal', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('Item, NumVenta, CodProducto, Cantidad, Precio, UniMedida, Descuento, Exento, Subtotal', 'safe', 'on'=>'search'),
