@@ -61,6 +61,17 @@ function roundNumber(number,decimals) {
   return newString; // Output the result to the form field (change for your purposes)
 }
 
+function fechaHoy() {
+
+  var ahora = new Date();
+  var meses = new Array('Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre');
+  var fecha = ((ahora.getDate()<10) ? "0" : "")+ ahora.getDate();
+  function fourdigits(numero) {
+    return (numero < 1000) ? numero + 1900 : numero;
+  }
+  var hoy =  meses[ahora.getMonth()] + " " + fecha + ", " + (fourdigits(ahora.getYear()));
+  return hoy;
+}
 
 function update_total() {
   var total = 0;
