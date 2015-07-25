@@ -32,7 +32,7 @@ class VentaController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update', 'autocomplete', 'admin'),
+				'actions'=>array('create','update', 'autocomplete', 'admin', 'autocompletel', 'create1'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -86,29 +86,61 @@ class VentaController extends Controller
 			'model'=>$model, 'detalle'=>$detalle,
 		));
 	}
+        
+        public function actionCreate1() {
+            Yii::import('ext.multimodelform.MultiModelForm');
+            $model = new Venta();
+            $member = new Detalleventa();
+            $validatedMembers = array();  //ensure an empty array
 
-	/**
-	 * Updates a particular model.
-	 * If update is successful, the browser will be redirected to the 'view' page.
-	 * @param integer $id the ID of the model to be updated
-	 */
-	public function actionUpdate($id)
-	{
-		$model=$this->loadModel($id);
+            if(isset($_POST['Venta']))
+            {
+                $model->attributes=$_POST['Venta'];
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+                if( //validate detail before saving the master
+                    MultiModelForm::validate($member,$validatedMembers,$deleteItems) &&
+                    $model->save()
+                   )
+                   {
+                     //the value for the foreign key 'groupid'
+                     $masterValues = array ('NumVenta'=>$model->NumVenta);
+                     if (MultiModelForm::save($member,$validatedMembers,$deleteMembers,$masterValues)){
+                     $this->redirect(array('view','id'=>$model->NumVenta));
+                     
+                     }
+                    }
+            }
 
-		if(isset($_POST['Venta']))
-		{
-			$model->attributes=$_POST['Venta'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->Fecha));
-		}
+            $this->render('create2',array(
+                'model'=>$model,
+                //submit the member and validatedItems to the widget in the edit form
+                'member'=>$member,
+                'validatedMembers' => $validatedMembers,
+            ));
+            }
 
-		$this->render('update',array(
-			'model'=>$model,
-		));
+            /**
+             * Updates a particular model.
+             * If update is successful, the browser will be redirected to the 'view' page.
+             * @param integer $id the ID of the model to be updated
+             */
+            public function actionUpdate($id)
+            {
+                    $model=$this->loadModel($id);
+
+                    // Uncomment the following line if AJAX validation is needed
+                    // $this->performAjaxValidation($model);
+
+                    if(isset($_POST['Venta']))
+                    {
+                            $model->attributes=$_POST['Venta'];
+                            if($model->save())
+                                    $this->redirect(array('view','id'=>$model->Fecha));
+                    }
+
+                    $this->render('update',array(
+                            'model'=>$model,
+                    ));
 	}
 
 	/**
@@ -152,13 +184,46 @@ class VentaController extends Controller
 	}
         
         public function actionAutoComplete() {
-           $res = array();
+           
+            $criteria = new CDbCriteria;
+            $criteria->compare('LOWER(Descripcion)', strtolower($_GET['term']), true);
+//          $criteria->compare('LOWER(CodProducto)', strtolower($_GET['term']), true, 'OR');
+            $criteria->order = 'Descripcion';
+            $criteria->limit = 30; 
+            $data = Producto::model()->findAll($criteria);
+
+            if (!empty($data))
+            {
+             $arr = array();
+             foreach ($data as $item) {
+              $arr[] = array(
+                'id' => $item->CodProducto,
+                'value' => $item->Descripcion,
+                'precio' => $item->PreCompra,
+                'label' => $item->Descripcion,
+              );
+             }
+            }
+            else
+            {
+             $arr = array();
+             $arr[] = array(
+              'id' => '',
+              'value' => 'No se han encontrado resultados para su búsqueda',
+              'label' => 'No se han encontrado resultados para su búsqueda',
+             );
+         }
+
+         echo CJSON::encode($arr);
+            
+            
+            /* $res = array();
 
             if (isset($_POST['term']))
             {
-               /* $criteria = new CDbCriteria();
+               $criteria = new CDbCriteria();
                 $criteria->addSearchCondition('Descripcion', $_GET['term']);
-                $models = Producto::model()->findAll($criteria);*/
+                $models = Producto::model()->findAll($criteria);
                 
                 $qtxt = "SELECT Descripcion, CodProducto, PreCompra FROM productos WHERE Descripcion LIKE :descripcion LIMIT 5";
                 $command = Yii::app()->db->createCommand($qtxt);
@@ -169,8 +234,65 @@ class VentaController extends Controller
             echo CJSON::encode($res);
             Yii::app()->end();
 
-        
+        */
         }
+        
+        public function actionAutoCompletel() {
+           
+            $criteria = new CDbCriteria;
+            $criteria->compare('LOWER(CodCliente)', strtolower($_GET['term']), true);
+//          $criteria->compare('LOWER(CodProducto)', strtolower($_GET['term']), true, 'OR');
+            $criteria->order = 'CodCliente';
+            $criteria->limit = 30; 
+            $data = Cliente::model()->findAll($criteria);
+
+            if (!empty($data))
+            {
+             $arr = array();
+             foreach ($data as $item) {
+              $arr[] = array(
+                'id' => $item->CodCliente,
+                'value' => $item->CodCliente,
+                'label' => $item->CodCliente,
+                'direccion' => $item->Direccion,
+                'nombre'=> $item->Descripcion,
+                'telefono'=> $item->Telefono,
+                
+              );
+             }
+            }
+            else
+            {
+             $arr = array();
+             $arr[] = array(
+              'id' => '',
+              'value' => 'No se han encontrado resultados para su búsqueda',
+              'label' => 'No se han encontrado resultados para su búsqueda',
+             );
+         }
+
+         echo CJSON::encode($arr);
+        }
+        public function actionBatchUpdate()
+            {
+                // retrieve items to be updated in a batch mode
+                // assuming each item is of model class 'Item'
+            $items = new Venta;
+                $items=$this->getItemsToUpdate();
+                if(isset($_POST['Venta']))
+                {
+                    $valid=true;
+                    foreach($items as $i=>$item)
+                    {
+                        if(isset($_POST['Venta'][$i]))
+                            $item->attributes=$_POST['Venta'][$i];
+                        $valid=$item->validate() && $valid;
+                    }
+                    
+                }
+                // displays the view to collect tabular input
+                $this->render('create',array('items'=>$items));
+            }
         
         
 

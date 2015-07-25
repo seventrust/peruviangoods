@@ -1,28 +1,23 @@
 <?php
 
 /**
- * This is the model class for table "detalleventa".
+ * This is the model class for table "cliente".
  *
- * The followings are the available columns in table 'detalleventa':
- * @property integer $Item
- * @property string $NumVenta
- * @property string $CodProducto
+ * The followings are the available columns in table 'cliente':
+ * @property string $CodCliente
  * @property string $Descripcion
- * @property string $Cantidad
- * @property string $Precio
- * @property string $UniMedida
- * @property string $Descuento
- * @property string $Exento
- * @property string $Subtotal
+ * @property string $Direccion
+ * @property string $Telefono
+ * @property string $Estatus
  */
-class Detalleventa extends CActiveRecord
+class Cliente extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'detalleventa';
+		return 'cliente';
 	}
 
 	/**
@@ -33,12 +28,15 @@ class Detalleventa extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('CodProducto, Descripcion, Cantidad', 'required'),
-			array('Item', 'numerical', 'integerOnly'=>true),
-			array('NumVenta, CodProducto, Descripcion, Cantidad, Precio, UniMedida, Descuento, Exento, Subtotal', 'length', 'max'=>20),
+			array('CodCliente, Descripcion, Direccion, Telefono, Estatus', 'required'),
+			array('CodCliente', 'length', 'max'=>10),
+			array('Descripcion', 'length', 'max'=>50),
+			array('Direccion', 'length', 'max'=>100),
+			array('Telefono', 'length', 'max'=>20),
+			array('Estatus', 'length', 'max'=>1),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('Item, NumVenta, CodProducto, Cantidad, Precio, UniMedida, Descuento, Exento, Subtotal', 'safe', 'on'=>'search'),
+			array('CodCliente, Descripcion, Direccion, Telefono, Estatus', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -50,7 +48,6 @@ class Detalleventa extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-                    'numVenta' => array(self::BELONGS_TO, 'Venta', 'NumVenta'),
 		);
 	}
 
@@ -60,16 +57,11 @@ class Detalleventa extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'Item' => 'Item',
-			'NumVenta' => 'Num Venta',
-			'CodProducto' => 'Cod Producto',
-                        'Descripcion' => 'Descripcion',
-			'Cantidad' => 'Cantidad',
-			'Precio' => 'Precio',
-			'UniMedida' => 'Uni Medida',
-			'Descuento' => 'Descuento',
-			'Exento' => 'Exento',
-			'Subtotal' => 'Subtotal',
+			'CodCliente' => 'Cod Cliente',
+			'Descripcion' => 'Descripcion',
+			'Direccion' => 'Direccion',
+			'Telefono' => 'Telefono',
+			'Estatus' => 'Estatus',
 		);
 	}
 
@@ -91,15 +83,11 @@ class Detalleventa extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('Item',$this->Item);
-		$criteria->compare('NumVenta',$this->NumVenta,true);
-		$criteria->compare('CodProducto',$this->CodProducto,true);
-		$criteria->compare('Cantidad',$this->Cantidad,true);
-		$criteria->compare('Precio',$this->Precio,true);
-		$criteria->compare('UniMedida',$this->UniMedida,true);
-		$criteria->compare('Descuento',$this->Descuento,true);
-		$criteria->compare('Exento',$this->Exento,true);
-		$criteria->compare('Subtotal',$this->Subtotal,true);
+		$criteria->compare('CodCliente',$this->CodCliente,true);
+		$criteria->compare('Descripcion',$this->Descripcion,true);
+		$criteria->compare('Direccion',$this->Direccion,true);
+		$criteria->compare('Telefono',$this->Telefono,true);
+		$criteria->compare('Estatus',$this->Estatus,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -110,7 +98,7 @@ class Detalleventa extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Detalleventa the static model class
+	 * @return Cliente the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

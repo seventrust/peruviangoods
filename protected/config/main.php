@@ -23,6 +23,7 @@ return array(
                 'ext.bootstrap-theme.widgets.*',
                 'ext.bootstrap-theme.helpers.*',
                 'ext.bootstrap-theme.behaviors.*',
+                'ext.multimodelform.MultiModelForm.*',
 	),
 
 	'modules'=>array(

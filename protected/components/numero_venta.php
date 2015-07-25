@@ -25,10 +25,9 @@ function getOrden() {
     while($row = mysqli_fetch_array($resultado)){
         $orden = $row['NumVenta'];
     }
-    settype($orden, "integer");
+    
 
-    $orden++;
-    echo $orden;
+    echo $orden+=4;
 }
 
 
