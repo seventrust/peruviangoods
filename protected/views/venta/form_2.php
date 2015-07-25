@@ -59,37 +59,37 @@
         <?php echo $form->error($model,'Vencimiento'); ?>
     </div>
     
-     <div class="row">
+     <div class="required">
         <?php echo $form->labelEx($model, 'CodClienet');?>
         <?php echo $form->textField($model, 'CodCliente');?>
         <?php echo $form->error($model,'CodCliente'); ?>
     </div>
     
-    <div class="row">
+    <div class="required">
         <?php echo $form->labelEx($model, 'CodBodega');?>
         <?php echo $form->textField($model, 'CodBodega');?>
         <?php echo $form->error($model,'CodBodega'); ?>
     </div>
     
-    <div class="row">
+    <div class="required">
         <?php echo $form->labelEx($model, 'ForPago');?>
-        <?php echo $form->textField($model, 'ForPago');?>
+        <?php echo $form->dropDownList($model, 'ForPago', array('Debito', 'Credito', 'Efectivo', 'Cheque', 'Vale'));?>
         <?php echo $form->error($model,'ForPago'); ?>
     </div>
     
-    <div class="row">
+    <div class="required">
         <?php echo $form->labelEx($model, 'TotExento');?>
         <?php echo $form->textField($model, 'TotExento');?>
         <?php echo $form->error($model,'TotExento'); ?>
     </div>
     
-    <div class="row">
+    <div class="required">
         <?php echo $form->labelEx($model, 'TotDescuento');?>
         <?php echo $form->textField($model, 'TotDescuento');?>
         <?php echo $form->error($model,'TotDescuento'); ?>
     </div>
     
-    <div class="row">
+    <div class="required">
         <?php echo $form->labelEx($model, 'TotNeto');?>
         <?php echo $form->textField($model, 'TotNeto');?>
         <?php echo $form->error($model,'TotNeto'); ?>
@@ -133,8 +133,25 @@
                 'maxlength'=>80,
             ),
             'Descripcion'=>array(
-                'type'=>'text',
-                'maxlength'=>120,
+                'type'=>'zii.widgets.jui.CJuiAutoComplete',                
+                'source'=>$this->createUrl('venta/autocomplete'),
+                'options'=>array(
+                    'showAnim'=>'fold',
+                         'size'=>'120',
+                         'minLength'=>'2', // Minimo de caracteres que hay que digitar antes de relizar la busqueda
+                         'select'=>"js:function(event, ui) { 
+                          $('#Detalleventa_CodProducto').val(ui.item.id); // HTML-Id del campo
+                          $('#Detalleventa_Cantidad').val(ui.item.precio);
+                            
+                           }"                       
+                ),
+                'htmlOptions'=> array(
+                        'size'=>40,
+                        'placeholder'=>'Buscar ...',
+                        'title'=>'Indique el producto.'
+                ),
+                
+               
             ),
             'Cantidad'=>array(
                 'type'=>'text',
@@ -151,6 +168,7 @@
             //if submitted not empty from the controller,
             //the form will be rendered with validation errors
             'validatedItems' => $validatedMembers,
+            'jsAfterNewId' => MultiModelForm::afterNewIdAutoComplete($memberFormConfig['elements']['Descripcion']),
  
             //array of member instances loaded from db
             'data' => $member->findAll('NumVenta=:groupId', array(':groupId'=>$model->NumVenta)),
