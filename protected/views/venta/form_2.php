@@ -16,13 +16,13 @@
         echo $form->errorSummary(array_merge(array($model),$validatedMembers));
     ?>
  
-    <div class="row">
+    <div class="required">
         <?php echo $form->labelEx($model,'NumVenta'); ?>
         <?php echo $form->textField($model,'NumVenta'); ?>
         <?php echo $form->error($model,'NunVenta'); ?>
     </div>
     
-    <div class="row">
+    <div class="required">
         <?php echo $form->labelEx($model, 'Fecha');?>
         <?php 
             $this->widget('zii.widgets.jui.CJuiDatePicker',array(
@@ -42,7 +42,7 @@
         <?php echo $form->error($model,'Fecha'); ?>
     </div>
     
-     <div class="row">
+     <div class="required">
         <?php echo $form->labelEx($model, 'Vencimiento');?>
          <?php 
             $this->widget('zii.widgets.jui.CJuiDatePicker',array(
@@ -60,9 +60,48 @@
     </div>
     
      <div class="required">
-        <?php echo $form->labelEx($model, 'CodClienet');?>
-        <?php echo $form->textField($model, 'CodCliente');?>
+        <?php echo $form->labelEx($model, 'CodCliente');?>
+        <?php
+             $this->widget('zii.widgets.jui.CJuiAutoComplete',
+                      array(
+                       'id'=>'CodCliente',
+                       'name'=>'Cliente', // Nombre para el campo de autocompletar
+                       'model'=>$model,
+                       'value'=>$model->CodCliente,
+                       'source'=>$this->createUrl('venta/autocompletel'), // URL que genera el conjunto de datos
+                       'options'=> array(
+                         'showAnim'=>'fold',
+                         'size'=>'30',
+                         'minLength'=>'2', // Minimo de caracteres que hay que digitar antes de relizar la busqueda
+                         'select'=>"js:function(event, ui) { 
+                          $('#nombreCliente').val(ui.item.nombre); // HTML-Id del campo
+                          $('#direccion').val(ui.item.direccion);
+                          $('#telefono').val(ui.item.telefono);
+                           }"
+                         ),
+                       'htmlOptions'=> array(
+                        'size'=>40,
+                        'placeholder'=>'Buscar ...',
+                        'title'=>'Indique el producto.'
+                        ),
+                      )); 
+        ?>
         <?php echo $form->error($model,'CodCliente'); ?>
+    </div>
+    
+    <div class="required">
+        <label>Cliente</label>
+        <input type="text" id="nombreCliente"/>
+    </div>
+    
+    <div class="required">
+        <label>Direccion</label>
+        <input type="text" id="direccion"/>
+    </div>
+    
+    <div class="required">
+        <label>Telefono</label>
+        <input type="text" id="telefono"/>
     </div>
     
     <div class="required">
@@ -135,24 +174,29 @@
             'Descripcion'=>array(
                 'type'=>'zii.widgets.jui.CJuiAutoComplete',                
                 'source'=>$this->createUrl('venta/autocomplete'),
+                
                 'options'=>array(
                     'showAnim'=>'fold',
                          'size'=>'120',
                          'minLength'=>'2', // Minimo de caracteres que hay que digitar antes de relizar la busqueda
                          'select'=>"js:function(event, ui) { 
                           $('#Detalleventa_CodProducto').val(ui.item.id); // HTML-Id del campo
-                          $('#Detalleventa_Cantidad').val(ui.item.precio);
+                          $('#Detalleventa_Precio').val(ui.item.precio); //HTML-Id del campo
                             
                            }"                       
                 ),
                 'htmlOptions'=> array(
-                        'size'=>40,
+                        'size'=>120,
                         'placeholder'=>'Buscar ...',
                         'title'=>'Indique el producto.'
                 ),
                 
                
             ),
+            'Precio'=>array(
+                'type'=>'text',
+                'maxlength'=>'120',
+            ),  
             'Cantidad'=>array(
                 'type'=>'text',
                 //it is important to add an empty item because of new records
@@ -169,13 +213,15 @@
             //the form will be rendered with validation errors
             'validatedItems' => $validatedMembers,
             'jsAfterNewId' => MultiModelForm::afterNewIdAutoComplete($memberFormConfig['elements']['Descripcion']),
- 
+            'addItemText' => 'Agregar',
+            'removeText' => 'Quitar',
+            'removeConfirm' => 'Desea quitar la fila seleccionada',
             //array of member instances loaded from db
             'data' => $member->findAll('NumVenta=:groupId', array(':groupId'=>$model->NumVenta)),
         ));
     ?>
  
-    <div class="row buttons">
+    <div class="required buttons">
         <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
     </div>
  

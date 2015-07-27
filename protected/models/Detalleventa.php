@@ -51,6 +51,7 @@ class Detalleventa extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
                     'numVenta' => array(self::BELONGS_TO, 'Venta', 'NumVenta'),
+                    'producto' => array(self::HAS_MANY, 'Producto', 'CodProducto'),
 		);
 	}
 
@@ -105,8 +106,9 @@ class Detalleventa extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+       
 
-	/**
+        /**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.

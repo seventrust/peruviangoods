@@ -91,11 +91,14 @@ class VentaController extends Controller
             Yii::import('ext.multimodelform.MultiModelForm');
             $model = new Venta();
             $member = new Detalleventa();
+            $producto = new Producto();
+            $cliente = new Cliente();
             $validatedMembers = array();  //ensure an empty array
 
             if(isset($_POST['Venta']))
             {
                 $model->attributes=$_POST['Venta'];
+                
 
                 if( //validate detail before saving the master
                     MultiModelForm::validate($member,$validatedMembers,$deleteItems) &&
@@ -116,6 +119,8 @@ class VentaController extends Controller
                 //submit the member and validatedItems to the widget in the edit form
                 'member'=>$member,
                 'validatedMembers' => $validatedMembers,
+                'cliente' => $cliente,
+               
             ));
             }
 
@@ -258,6 +263,7 @@ class VentaController extends Controller
                 'nombre'=> $item->Descripcion,
                 'telefono'=> $item->Telefono,
                 
+                
               );
              }
             }
@@ -323,4 +329,6 @@ class VentaController extends Controller
 			Yii::app()->end();
 		}
 	}
+        
+       
 }

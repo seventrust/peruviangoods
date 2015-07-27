@@ -81,7 +81,7 @@ class MultiModelForm extends CWidget
      *
      * @var boolean $addItemAsButton
      */
-    public $addItemAsButton = false;
+    public $addItemAsButton = true;
 
     /**
      * Alert text if options['limit']>0 and the limit is reached
@@ -191,7 +191,7 @@ class MultiModelForm extends CWidget
      * Render elements in bootstrap layout
      * @var bool
      */
-    public $bootstrapLayout = false;
+    public $bootstrapLayout = true;
 
     /**
      * The wrapper for each fieldset
