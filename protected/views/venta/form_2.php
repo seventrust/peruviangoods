@@ -1,6 +1,100 @@
-<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl?>/css/jquery.css" />
-
+<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl?>/css/jquery.css"/>
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/jquery-ui.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl?>/js/jquery-ui.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#contador').html(-1);
+    });
+ 
+ $('#Detalleventa_Descripcion').autocomplete({				
+            source: function(solicitud, respuesta)
+                {
+                    $.ajax(
+                    {
+                            url: "<?php echo Yii::app()->createUrl('venta/autocompletel')?>",
+                            type: "GET",
+                            dataType: "json",
+                            data:
+                            {
+                                    term: solicitud.term
+                            },
+                            success: function(data)
+                            {
+                                    respuesta(data);
+                                    
+                            }
+                    });
+                },
+
+            select: function(event, ui){
+                $('#Detalleventa_CodProducto').val(ui.item.id);
+                $('#Detalleventa_Precio').val(ui.item.precio);
+            }});
+            
+            
+            var contador = parseInt($('#contador').html());
+            
+            $('#Detalleventa_Descripcion'+contador).autocomplete({				
+            source: function(solicitud, respuesta)
+                {
+                    $.ajax(
+                    {
+                            url: "<?php echo Yii::app()->createUrl('venta/autocompletel')?>",
+                            type: "GET",
+                            dataType: "json",
+                            data:
+                            {
+                                    term: solicitud.term
+                            },
+                            success: function(data)
+                            {
+                                    respuesta(data);
+                            }
+                    });
+                },
+
+            select: function(event, ui){
+                $('#Detalleventa_CodProducto'+contador).val(ui.item.id);
+                $('#Detalleventa_Precio'+contador).val(ui.item.precio);
+            }});
+            
+            $('#id_member').on('click', function(){
+                contador++;
+            });
+            
+            $('.mmf_removelink').on('click', function(){
+                contador--;
+            });
+            
+
+            $('#identidad').autocomplete({				
+            source: function(solicitud, respuesta)
+                {
+                    $.ajax(
+                    {
+                            url: "<?php echo Yii::app()->createUrl('venta/autocompletel')?>",
+                            type: "GET",
+                            dataType: "json",
+                            data:
+                            {
+                                    term: solicitud.term
+                            },
+                            success: function(data)
+                            {
+                                    respuesta(data);
+                            }
+                    });
+                },
+
+            select: function(event, ui){
+                $('#nombreCliente').val(ui.item.nombre);
+                $('#telefono').val(ui.item.telefono);
+                $('#direccion').val(ui.item.direccion);
+                
+            }
+        });
+</script>
+<div id="contador"></div>
 <div class="form wide">
  
     <?php $form=$this->beginWidget('CActiveForm', array(
@@ -170,37 +264,43 @@
             'CodProducto'=>array(
                 'type'=>'text',
                 'maxlength'=>80,
+                'class'=>'CodProducto',
             ),
             'Descripcion'=>array(
-                'type'=>'zii.widgets.jui.CJuiAutoComplete',                
-                'source'=>$this->createUrl('venta/autocomplete'),
-                
-                'options'=>array(
-                    'showAnim'=>'fold',
-                         'size'=>'120',
-                         'minLength'=>'2', // Minimo de caracteres que hay que digitar antes de relizar la busqueda
-                         'select'=>"js:function(event, ui) { 
-                          $('#Detalleventa_CodProducto').val(ui.item.id); // HTML-Id del campo
-                          $('#Detalleventa_Precio').val(ui.item.precio); //HTML-Id del campo
-                            
-                           }"                       
-                ),
-                'htmlOptions'=> array(
-                        'size'=>120,
-                        'placeholder'=>'Buscar ...',
-                        'title'=>'Indique el producto.'
-                ),
+                'type'=>'text',
+                'maxlength'=>120,
+//                'type'=>'zii.widgets.jui.CJuiAutoComplete',                
+//                'source'=>$this->createUrl('venta/autocomplete'),
+//                'options'=>array(
+//                    'showAnim'=>'fold',
+//                         'size'=>'80',
+//                         'minLength'=>'2', // Minimo de caracteres que hay que digitar antes de relizar la busqueda
+//                         'select'=>"js:function(event, ui) { 
+//                         $('.mmf_cell').children('.CodProducto').val(ui.item.id); // HTML-Id del campo
+//                         //$('.mmf_cell').children('.Precio').val(ui.item.precio);
+//                         $(this).siblings('td').val(ui.item.precio);
+//                            
+//                           }"                       
+//                ),
+//                'htmlOptions'=> array(
+//                        'size'=>120,
+//                        'placeholder'=>'Buscar ...',
+//                        'title'=>'Indique el producto.'
+//                ),
                 
                
             ),
             'Precio'=>array(
                 'type'=>'text',
-                'maxlength'=>'120',
+                'maxlength'=>120,
+                'class'=>'Precio',
+                
             ),  
             'Cantidad'=>array(
                 'type'=>'text',
                 //it is important to add an empty item because of new records
                 'maxlength'=>120,
+                'class'=>'Cantidad',
             ),
         ));
     
@@ -212,7 +312,7 @@
             //if submitted not empty from the controller,
             //the form will be rendered with validation errors
             'validatedItems' => $validatedMembers,
-            'jsAfterNewId' => MultiModelForm::afterNewIdAutoComplete($memberFormConfig['elements']['Descripcion']),
+            //'jsAfterNewId' => MultiModelForm::afterNewIdAutoComplete($memberFormConfig['elements']['Descripcion']),
             'addItemText' => 'Agregar',
             'removeText' => 'Quitar',
             'removeConfirm' => 'Desea quitar la fila seleccionada',

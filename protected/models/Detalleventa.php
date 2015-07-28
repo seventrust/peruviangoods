@@ -35,7 +35,7 @@ class Detalleventa extends CActiveRecord
 		return array(
 			array('CodProducto, Descripcion, Cantidad', 'required'),
 			array('Item', 'numerical', 'integerOnly'=>true),
-			array('NumVenta, CodProducto, Descripcion, Cantidad, Precio, UniMedida, Descuento, Exento, Subtotal', 'length', 'max'=>20),
+			array('NumVenta, CodProducto, Descripcion, Cantidad, Precio, UniMedida, Descuento, Exento, Subtotal', 'length', 'max'=>200),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('Item, NumVenta, CodProducto, Cantidad, Precio, UniMedida, Descuento, Exento, Subtotal', 'safe', 'on'=>'search'),
