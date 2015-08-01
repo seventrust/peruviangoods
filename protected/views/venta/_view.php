@@ -1,63 +1,154 @@
 <?php
-/* @var $this VentaController */
-/* @var $data Venta */
+/** @var VentaController $this */
+/** @var Venta $data */
 ?>
-
 <div class="view">
+                    
+        <?php if (!empty($data->CodCliente)): ?>
+        <div class="field">
+            <div class="field_name">
+                <b><?php echo CHtml::encode($data->getAttributeLabel('CodCliente')); ?>:</b>
+            </div>
+            <div class="field_value">
+                <?php echo CHtml::encode($data->CodCliente); ?>
+            </div>
+        </div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Fecha')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->Fecha), array('view', 'id'=>$data->Fecha)); ?>
-	<br />
+        <?php endif; ?>
+                
+        <?php if (!empty($data->CodBodega)): ?>
+        <div class="field">
+            <div class="field_name">
+                <b><?php echo CHtml::encode($data->getAttributeLabel('CodBodega')); ?>:</b>
+            </div>
+            <div class="field_value">
+                <?php echo CHtml::encode($data->CodBodega); ?>
+            </div>
+        </div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('NumVenta')); ?>:</b>
-	<?php echo CHtml::encode($data->NumVenta); ?>
-	<br />
+        <?php endif; ?>
+                
+        <?php if (!empty($data->Fecha)): ?>
+        <div class="field">
+            <div class="field_name">
+                <b><?php echo CHtml::encode($data->getAttributeLabel('Fecha')); ?>:</b>
+            </div>
+            <div class="field_value">
+                <?php echo Yii::app()->getDateFormatter()->formatDateTime($data->Fecha, 'medium', 'medium'); ?>
+            <br/>
+                 <?php echo date('D, d M y H:i:s', strtotime($data->Fecha)); ?>
+                            </div>
+        </div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('CodCliente')); ?>:</b>
-	<?php echo CHtml::encode($data->CodCliente); ?>
-	<br />
+        <?php endif; ?>
+                
+        <?php if (!empty($data->Vencimiento)): ?>
+        <div class="field">
+            <div class="field_name">
+                <b><?php echo CHtml::encode($data->getAttributeLabel('Vencimiento')); ?>:</b>
+            </div>
+            <div class="field_value">
+                <?php echo Yii::app()->getDateFormatter()->formatDateTime($data->Vencimiento, 'medium', 'medium'); ?>
+            <br/>
+                 <?php echo date('D, d M y H:i:s', strtotime($data->Vencimiento)); ?>
+                            </div>
+        </div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('CodBodega')); ?>:</b>
-	<?php echo CHtml::encode($data->CodBodega); ?>
-	<br />
+        <?php endif; ?>
+                
+        <?php if (!empty($data->ForPago)): ?>
+        <div class="field">
+            <div class="field_name">
+                <b><?php echo CHtml::encode($data->getAttributeLabel('ForPago')); ?>:</b>
+            </div>
+            <div class="field_value">
+                <?php echo CHtml::encode($data->ForPago); ?>
+            </div>
+        </div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Vencimiento')); ?>:</b>
-	<?php echo CHtml::encode($data->Vencimiento); ?>
-	<br />
+        <?php endif; ?>
+                
+        <?php if (!empty($data->TotExento)): ?>
+        <div class="field">
+            <div class="field_name">
+                <b><?php echo CHtml::encode($data->getAttributeLabel('TotExento')); ?>:</b>
+            </div>
+            <div class="field_value">
+                <?php echo CHtml::encode($data->TotExento); ?>
+            </div>
+        </div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('ForPago')); ?>:</b>
-	<?php echo CHtml::encode($data->ForPago); ?>
-	<br />
+        <?php endif; ?>
+                
+        <?php if (!empty($data->TotDescuento)): ?>
+        <div class="field">
+            <div class="field_name">
+                <b><?php echo CHtml::encode($data->getAttributeLabel('TotDescuento')); ?>:</b>
+            </div>
+            <div class="field_value">
+                <?php echo CHtml::encode($data->TotDescuento); ?>
+            </div>
+        </div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('TotExento')); ?>:</b>
-	<?php echo CHtml::encode($data->TotExento); ?>
-	<br />
+        <?php endif; ?>
+                
+        <?php if (!empty($data->TotNeto)): ?>
+        <div class="field">
+            <div class="field_name">
+                <b><?php echo CHtml::encode($data->getAttributeLabel('TotNeto')); ?>:</b>
+            </div>
+            <div class="field_value">
+                <?php echo CHtml::encode($data->TotNeto); ?>
+            </div>
+        </div>
 
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('TotDescuento')); ?>:</b>
-	<?php echo CHtml::encode($data->TotDescuento); ?>
-	<br />
+        <?php endif; ?>
+                
+        <?php if (!empty($data->TotIva)): ?>
+        <div class="field">
+            <div class="field_name">
+                <b><?php echo CHtml::encode($data->getAttributeLabel('TotIva')); ?>:</b>
+            </div>
+            <div class="field_value">
+                <?php echo CHtml::encode($data->TotIva); ?>
+            </div>
+        </div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('TotNeto')); ?>:</b>
-	<?php echo CHtml::encode($data->TotNeto); ?>
-	<br />
+        <?php endif; ?>
+                
+        <?php if (!empty($data->TotImpuesto)): ?>
+        <div class="field">
+            <div class="field_name">
+                <b><?php echo CHtml::encode($data->getAttributeLabel('TotImpuesto')); ?>:</b>
+            </div>
+            <div class="field_value">
+                <?php echo CHtml::encode($data->TotImpuesto); ?>
+            </div>
+        </div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('TotIva')); ?>:</b>
-	<?php echo CHtml::encode($data->TotIva); ?>
-	<br />
+        <?php endif; ?>
+                
+        <?php if (!empty($data->TotRetencion)): ?>
+        <div class="field">
+            <div class="field_name">
+                <b><?php echo CHtml::encode($data->getAttributeLabel('TotRetencion')); ?>:</b>
+            </div>
+            <div class="field_value">
+                <?php echo CHtml::encode($data->TotRetencion); ?>
+            </div>
+        </div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('TotImpuesto')); ?>:</b>
-	<?php echo CHtml::encode($data->TotImpuesto); ?>
-	<br />
+        <?php endif; ?>
+                
+        <?php if (!empty($data->Total)): ?>
+        <div class="field">
+            <div class="field_name">
+                <b><?php echo CHtml::encode($data->getAttributeLabel('Total')); ?>:</b>
+            </div>
+            <div class="field_value">
+                <?php echo CHtml::encode($data->Total); ?>
+            </div>
+        </div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('TotRetencion')); ?>:</b>
-	<?php echo CHtml::encode($data->TotRetencion); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Total')); ?>:</b>
-	<?php echo CHtml::encode($data->Total); ?>
-	<br />
-
-	*/ ?>
-
-</div>
+        <?php endif; ?>
+    </div>

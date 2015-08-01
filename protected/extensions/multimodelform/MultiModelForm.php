@@ -406,6 +406,8 @@ class MultiModelForm extends CWidget
      * @param array $element
      * @return string
      */
+    
+    
     public static function afterNewIdAutoComplete($element)
     {
         $options = isset($element['options']) ? $element['options'] : array();

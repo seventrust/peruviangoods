@@ -62,29 +62,22 @@ class VentaController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Venta;
-                $detalle = new Detalleventa;
-                //$this->performAjaxValidation(array($model, $detalle));
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Venta'], $_POST['Detalleventa']))
-		{
-			$model->attributes=$_POST['Venta'];                       
-                        $detalle->attributes=$_POST['Detalleventa'];
-                        
-                        $valid=$model->validate();
-                        $valid=$detalle->validate() && $valid;
-                        if($valid){
-                            $model->save(false);
-                            $detalle->save(false);
-                            $this->redirect('index');
-                        }
-				
-		}
-		$this->render('create',array(
-			'model'=>$model, 'detalle'=>$detalle,
-		));
+            $a=new Venta;
+            $b=new Detalleventa;
+            $this->performAjaxValidation(array($a,$b));
+            if(isset($_POST['Venta'],$_POST['Detalleventa']))
+            {
+                $a->attributes=$_POST['Venta'];
+                $b->attributes=$_POST['Detalleventa'];
+                
+                if($a->save()){
+                    $b->NumVenta=$a->NumVenta;
+                    $b->save();
+                    $this->redirect(array('view','id'=>$a->NumVenta));
+                
+                    }
+                }
+            $this->render('create',array('a'=>$a,'b'=>$b));
 	}
         
         public function actionCreate1() {
@@ -98,18 +91,24 @@ class VentaController extends Controller
             if(isset($_POST['Venta']))
             {
                 $model->attributes=$_POST['Venta'];
-                
-
                 if( //validate detail before saving the master
                     MultiModelForm::validate($member,$validatedMembers,$deleteItems) &&
                     $model->save()
                    )
-                   {
-                     //the value for the foreign key 'groupid'
-                     $masterValues = array ('NumVenta'=>$model->NumVenta);
-                     if (MultiModelForm::save($member,$validatedMembers,$deleteMembers,$masterValues)){
-                     $this->redirect(array('view','id'=>$model->NumVenta));
-                     
+                   {    
+                        
+                        //the value for the foreign key 'groupid'
+                        $masterValues = array ('NumVenta'=>$model->NumVenta);
+                        if (MultiModelForm::save($member,$validatedMembers,$deleteMembers,$masterValues)){
+                            
+                            $codigo = $_POST['Detalleventa']['CodProducto'];
+                            $final = $_POST['Detalleventa']['Cantidad'];
+                            for($i=0; $i<count($codigo); $i++)
+                            {
+                                Yii::app()->db->createCommand('update productos set CanExistencia = (CanExistencia - '.$final[$i].') where CodProducto = "'.$codigo[$i].'"')->query();
+                            }
+                            $this->redirect(array('view','id'=>$model->NumVenta));
+                           
                      }
                     }
             }

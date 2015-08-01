@@ -7,6 +7,8 @@
 // CWebApplication properties can be configured here.
 
 require_once( dirname(__FILE__) . '/../components/numero_venta.php');
+Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
+Yii::setPathOfAlias('booster', dirname(__FILE__).'/../extensions/yii');
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Sistema de Control y Gestión de Inventario',
@@ -24,18 +26,23 @@ return array(
                 'ext.bootstrap-theme.helpers.*',
                 'ext.bootstrap-theme.behaviors.*',
                 'ext.multimodelform.MultiModelForm.*',
+                'ext.AweCrud.components.*',
+                'ext.yiiext.behaviors.activerecord-relation.EActiveRecordRelationBehavior.*',
 	),
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
-				'gii'=>array(
+                        'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'12345',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
                         'generatorPaths' => array(
                             'ext.awegen',
+                            'ext.AweCrud.generators',
                             'ext.bootstrap-theme.gii',
+                            'bootstrap.gii',
+                            'booster.gii',
                         ),
 		),
 		
@@ -49,6 +56,9 @@ return array(
                             'themeUrl' => '/css/jqueryui',
                             'theme' => 'tema',
                         ),
+                        
+                        
+                        
                         'CJuiDialog' => array(
                             'themeUrl' => '/css/jqueryui',
                             'theme' => 'tema',
@@ -56,6 +66,12 @@ return array(
                         'CJuiDatePicker' => array(
                             'themeUrl' => '/css/jqueryui',
                             'theme' => 'tema',
+                        ),
+                        'booster' => array(
+                            'class' => 'booster.components.Booster',
+                        ),
+                        'bootstrap'=>array(
+                        'class'=>'bootstrap.components.Bootstrap',
                         ),
                     ),
                 ),

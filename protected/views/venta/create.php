@@ -1,17 +1,18 @@
 <?php
-/* @var $this VentaController */
-/* @var $model Venta */
-
+/** @var VentaController $this */
+/** @var Venta $model */
 $this->breadcrumbs=array(
-	'Ventas'=>array('index'),
-	'Create',
+	$model->label(2) => array('index'),
+	Yii::t('AweCrud.app', 'Create'),
 );
 
 $this->menu=array(
-	array('label'=>'List Venta', 'url'=>array('index')),
-	array('label'=>'Manage Venta', 'url'=>array('admin')),
+    //array('label' => Yii::t('AweCrud.app', 'List').' '.Venta::label(2), 'icon' => 'list', 'url' => array('index')),
+    array('label' => Yii::t('AweCrud.app', 'Manage'), 'icon' => 'list-alt', 'url' => array('admin')),
 );
 ?>
 
-<h1>Nota de Venta</h1>
-<?php $this->renderPartial('_form', array('model'=>$model, 'detalle'=>$detalle) )?>
+<fieldset>
+    <legend><?php echo Yii::t('AweCrud.app', 'Create') . ' ' . Venta::label(); ?></legend>
+    <?php echo $this->renderPartial('_form', array('model' => $model)); ?>
+</fieldset>

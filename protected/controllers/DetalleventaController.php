@@ -33,4 +33,15 @@ class DetalleventaController extends Controller
 		);
 	}
 	*/
+        public function actionAdmin()
+	{
+		$model=new Detalleventa('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Detalleventa']))
+			$model->attributes=$_GET['Detalleventa'];
+
+		$this->render('admin',array(
+			'model'=>$model,
+		));
+	}
 }

@@ -1,17 +1,14 @@
 <?php
 /* @var $this VentaController */
 /* @var $model Venta */
-
 $this->breadcrumbs=array(
 	'Ventas'=>array('index'),
 	'Manage',
 );
-
 $this->menu=array(
 	array('label'=>'List Venta', 'url'=>array('index')),
 	array('label'=>'Create Venta', 'url'=>array('create')),
 );
-
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();

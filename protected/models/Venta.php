@@ -1,5 +1,4 @@
 <?php
-
 /**
  * This is the model class for table "venta".
  *
@@ -27,7 +26,6 @@ class Venta extends CActiveRecord
 	{
 		return 'venta';
 	}
-
 	/**
 	 * @return array validation rules for model attributes.
 	 */
@@ -43,7 +41,6 @@ class Venta extends CActiveRecord
 			array('NumVenta, CodCliente, CodBodega, Fecha, Vencimiento, ForPago, TotExento, TotDescuento, TotNeto, TotIva, TotImpuesto, TotRetencion, Total', 'safe', 'on'=>'search'),
 		);
 	}
-
 	/**
 	 * @return array relational rules.
 	 */
@@ -55,7 +52,6 @@ class Venta extends CActiveRecord
                     'detalleventas' => array(self::HAS_MANY, 'Detalleventa', 'NumVenta'),
 		);
 	}
-
 	/**
 	 * @return array customized attribute labels (name=>label)
 	 */
@@ -77,7 +73,6 @@ class Venta extends CActiveRecord
 			'Total' => 'Total',
 		);
 	}
-
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 *
@@ -93,9 +88,7 @@ class Venta extends CActiveRecord
 	public function search()
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
-
 		$criteria=new CDbCriteria;
-
 		$criteria->compare('NumVenta',$this->NumVenta,true);
 		$criteria->compare('CodCliente',$this->CodCliente,true);
 		$criteria->compare('CodBodega',$this->CodBodega,true);
@@ -109,12 +102,10 @@ class Venta extends CActiveRecord
 		$criteria->compare('TotImpuesto',$this->TotImpuesto,true);
 		$criteria->compare('TotRetencion',$this->TotRetencion,true);
 		$criteria->compare('Total',$this->Total,true);
-
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
-
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

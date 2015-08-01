@@ -1,5 +1,4 @@
 <?php
-
 /**
  * This is the model class for table "detalleventa".
  *
@@ -24,7 +23,6 @@ class Detalleventa extends CActiveRecord
 	{
 		return 'detalleventa';
 	}
-
 	/**
 	 * @return array validation rules for model attributes.
 	 */
@@ -41,7 +39,6 @@ class Detalleventa extends CActiveRecord
 			array('Item, NumVenta, CodProducto, Cantidad, Precio, UniMedida, Descuento, Exento, Subtotal', 'safe', 'on'=>'search'),
 		);
 	}
-
 	/**
 	 * @return array relational rules.
 	 */
@@ -54,7 +51,6 @@ class Detalleventa extends CActiveRecord
                     'producto' => array(self::HAS_MANY, 'Producto', 'CodProducto'),
 		);
 	}
-
 	/**
 	 * @return array customized attribute labels (name=>label)
 	 */
@@ -73,7 +69,6 @@ class Detalleventa extends CActiveRecord
 			'Subtotal' => 'Subtotal',
 		);
 	}
-
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 *
@@ -89,9 +84,7 @@ class Detalleventa extends CActiveRecord
 	public function search()
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
-
 		$criteria=new CDbCriteria;
-
 		$criteria->compare('Item',$this->Item);
 		$criteria->compare('NumVenta',$this->NumVenta,true);
 		$criteria->compare('CodProducto',$this->CodProducto,true);
@@ -101,13 +94,11 @@ class Detalleventa extends CActiveRecord
 		$criteria->compare('Descuento',$this->Descuento,true);
 		$criteria->compare('Exento',$this->Exento,true);
 		$criteria->compare('Subtotal',$this->Subtotal,true);
-
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
        
-
         /**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
