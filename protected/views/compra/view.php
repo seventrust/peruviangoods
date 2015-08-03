@@ -9,14 +9,14 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'List Compra', 'url'=>array('index')),
-	array('label'=>'Create Compra', 'url'=>array('create')),
+	array('label'=>'Crear Compra', 'url'=>array('create')),
 	array('label'=>'Update Compra', 'url'=>array('update', 'id'=>$model->NumCompra)),
 	array('label'=>'Delete Compra', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->NumCompra),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Manage Compra', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Compra #<?php echo $model->NumCompra; ?></h1>
+<h1> Compra #<?php echo $model->NumCompra; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

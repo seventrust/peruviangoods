@@ -1,28 +1,26 @@
 <?php
 
 /**
- * This is the model class for table "detalleventa".
+ * This is the model class for table "detalleajuste".
  *
- * The followings are the available columns in table 'detalleventa':
+ * The followings are the available columns in table 'detalleajuste':
+ * @property integer $Id
+ * @property integer $IdAjuste
  * @property integer $Item
- * @property string $NumVenta
  * @property string $CodProducto
- * @property string $Descripcion
- * @property string $Cantidad
- * @property string $Precio
- * @property string $UniMedida
- * @property string $Descuento
- * @property string $Exento
- * @property string $Subtotal
+ * @property integer $CantTeorica
+ * @property integer $CantFisica
+ * @property integer $Campo1
+ * @property integer $campo2
  */
-class Detallecompra extends CActiveRecord
+class Detalleajuste extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'detallecompra';
+		return 'detalleajuste';
 	}
 
 	/**
@@ -33,12 +31,12 @@ class Detallecompra extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('CodProducto, Descripcion, Cantidad', 'required'),
-			array('Item', 'numerical', 'integerOnly'=>true),
-			array('NumCompra, CodProducto, Descripcion, Cantidad, Precio, UniMedida, Descuento, Exento, Subtotal', 'length', 'max'=>20),
+			array('IdAjuste, Item, CodProducto, CantTeorica, CantFisica, Campo1, campo2', 'required'),
+			array('IdAjuste, Item, CantTeorica, CantFisica, Campo1, campo2', 'numerical', 'integerOnly'=>true),
+			array('CodProducto', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('Item, NumCompra, CodProducto, Cantidad, Precio, UniMedida, Descuento, Exento, Subtotal', 'safe', 'on'=>'search'),
+			array('Id, IdAjuste, Item, CodProducto, CantTeorica, CantFisica, Campo1, campo2', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -50,9 +48,6 @@ class Detallecompra extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-                    'NumCompra' => array(self::BELONGS_TO, 'Compra', 'NumCompra'),
-                    'Compras' => array(self::HAS_MANY, 'compra', 'NumCompra'),
-                    'productos'=>array(self::HAS_MANY,'Productos','CodProducto'),
 		);
 	}
 
@@ -62,16 +57,14 @@ class Detallecompra extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
+			'Id' => 'ID',
+			'IdAjuste' => 'Id Ajuste',
 			'Item' => 'Item',
-			'NumCompra' => 'Compra Número',
-			'CodProducto' => 'Codigo',
-                        'Descripcion' => 'Descripcion',
-			'Cantidad' => 'Cantidad',
-			'Precio' => 'Precio',
-			'UniMedida' => 'Medida',
-			'Descuento' => 'Descuento',
-			'Exento' => 'Exento',
-			'Subtotal' => 'Subtotal',
+			'CodProducto' => 'Cod Producto',
+			'CantTeorica' => 'Cant Teorica',
+			'CantFisica' => 'Cant Fisica',
+			'Campo1' => 'Campo1',
+			'campo2' => 'Campo2',
 		);
 	}
 
@@ -93,15 +86,14 @@ class Detallecompra extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
+		$criteria->compare('Id',$this->Id);
+		$criteria->compare('IdAjuste',$this->IdAjuste);
 		$criteria->compare('Item',$this->Item);
-		$criteria->compare('NumCompra',$this->NumCompra,true);
 		$criteria->compare('CodProducto',$this->CodProducto,true);
-		$criteria->compare('Cantidad',$this->Cantidad,true);
-		$criteria->compare('Precio',$this->Precio,true);
-		$criteria->compare('UniMedida',$this->UniMedida,true);
-		$criteria->compare('Descuento',$this->Descuento,true);
-		$criteria->compare('Exento',$this->Exento,true);
-		$criteria->compare('Subtotal',$this->Subtotal,true);
+		$criteria->compare('CantTeorica',$this->CantTeorica);
+		$criteria->compare('CantFisica',$this->CantFisica);
+		$criteria->compare('Campo1',$this->Campo1);
+		$criteria->compare('campo2',$this->campo2);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -112,7 +104,7 @@ class Detallecompra extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Detalleventa the static model class
+	 * @return Detalleajuste the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

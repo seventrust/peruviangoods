@@ -1,6 +1,6 @@
 <?php
 
-class ClienteController extends Controller
+class ProductosController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -15,6 +15,7 @@ class ClienteController extends Controller
 	{
 		return array(
 			'accessControl', // perform access control for CRUD operations
+			'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
 
@@ -36,7 +37,7 @@ class ClienteController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('gri'),
+				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -61,16 +62,16 @@ class ClienteController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Cliente;
+		$model=new Productos;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Cliente']))
+		if(isset($_POST['Productos']))
 		{
-			$model->attributes=$_POST['Cliente'];
+			$model->attributes=$_POST['Productos'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->CodCliente));
+				$this->redirect(array('view','id'=>$model->Id));
 		}
 
 		$this->render('create',array(
@@ -90,11 +91,11 @@ class ClienteController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Cliente']))
+		if(isset($_POST['Productos']))
 		{
-			$model->attributes=$_POST['Cliente'];
+			$model->attributes=$_POST['Productos'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->CodCliente));
+				$this->redirect(array('view','id'=>$model->Id));
 		}
 
 		$this->render('update',array(
@@ -107,27 +108,32 @@ class ClienteController extends Controller
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
 	 * @param integer $id the ID of the model to be deleted
 	 */
-	public function actionDelete($id)
-	{
-		if(Yii::app()->request->isPostRequest)
-		{
-			// we only allow deletion via POST request
-			$this->loadModel($id)->delete();
+//	public function actionDelete($id)
+//	{
+//		$this->loadModel($id)->delete();
+//
+//		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+//		if(!isset($_GET['ajax']))
+//			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+//	}
 
-			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-			if(!isset($_GET['ajax']))
-				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
-		}
-		else
-			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
-	}
-
+        public function actionEnable($id)
+        {
+            $model=  Productos::model()->findByPk($id);
+            if($model->Estatus==1)
+                $model->Estatus=0;
+            else {
+                $model->Estatus=1;
+                $model->save();
+                $this->redirect(array("index"));
+            }
+        }
 	/**
 	 * Lists all models.
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Cliente');
+		$dataProvider=new CActiveDataProvider('Productos');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -138,24 +144,27 @@ class ClienteController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Cliente('search');
+		$model=new Productos('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Cliente']))
-			$model->attributes=$_GET['Cliente'];
+		if(isset($_GET['Productos']))
+			$model->attributes=$_GET['Productos'];
 
 		$this->render('admin',array(
 			'model'=>$model,
 		));
 	}
 
+      
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
-	 * @param integer the ID of the model to be loaded
+	 * @param integer $id the ID of the model to be loaded
+	 * @return Productos the loaded model
+	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Cliente::model()->findByPk((int)$id);
+		$model=Productos::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -163,11 +172,11 @@ class ClienteController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param CModel the model to be validated
+	 * @param Productos $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='cliente-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='productos-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

@@ -231,6 +231,7 @@ class CompraController extends Controller
                   'label' => $item->Descripcion,
                   'PreVenta' => $item->PreVenta,
                   'UniMedida'=>$item->UniMedida,
+                  
               );
              }
             }

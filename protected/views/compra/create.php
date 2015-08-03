@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Compras'=>array('index'),
-	'Create',
+	'Crear',
 );
 
 $this->menu=array(
@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Compras</h1>
+<!--<h1>Compras</h1>-->
 <?php // echo $this->renderPartial('_form', array('model'=>$model, 'member'=>$member,'validatedMembers'=>$validatedMembers));?>
 <?php $this->renderPartial('_form', array('model'=>$model, 'member'=>$member,'validatedMembers'=>$validatedMembers, 'forma'=>$forma));?>
