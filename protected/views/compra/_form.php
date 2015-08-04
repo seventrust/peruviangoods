@@ -185,7 +185,7 @@ function init(x) {
     
     
 </div>
- <div id='miId'>...</div>
+
  <div >
      <table class="table">
          <th>
@@ -255,7 +255,7 @@ function init(x) {
              
              <?php
  
-//    echo CHtml::script('function alertIds(newElem,sourceElem) {alert(newElem.attr("id"));}');
+    echo CHtml::script('function alertIds(newElem,sourceElem) {alert(newElem.attr("id"));}');
 
     
     
@@ -295,14 +295,20 @@ function init(x) {
                     'common_id_string'=>'Descripcion',
                          'size'=>'120',
                          'minLength'=>'2', // Minimo de caracteres que hay que digitar antes de relizar la busqueda
-//                         'select'=>"js:function(event, ui) { 
-//                          $('#Detallecompra_CodProducto').val(ui.item.id); 
-//                          $('#Detallecompra_Precio').val(ui.item.PreVenta); // HTML-Id del campo
-//                          $('#Detallecompra_UniMedida').val(ui.item.UniMedida);
-//                          $('#Detallecompra_Descuento').val(0);
-//                          $('#Detallecompra_Exento').val(0);
-//                                                    
-//                         }",
+                         'select'=>"js:function(event, ui) { 
+                          var nomobj_texto = this.id;
+//                          var nomobj_texto = this.attr('id');
+
+                          var indexid = nomobj_texto.substring(25,nomobj_texto.length); 
+                          $('#Detallecompra_Cantidad').val(indexid);
+                          $('#Detallecompra_CodProducto'+indexid).val(ui.item.id); 
+                          $('#Detallecompra_Precio'+indexid).val(ui.item.PreVenta); // HTML-Id del campo
+                          $('#Detallecompra_UniMedida'+indexid).val(ui.item.UniMedida);
+                          $('#Detallecompra_Descuento'+indexid).val(0);
+                          $('#Detallecompra_Exento'+indexid).val(0);
+//                           alert(indexid);     
+
+                         }",
 //                    'change'=>"js:function(){calcularPrecioIVA()}"
                     
                 ),
@@ -315,13 +321,13 @@ function init(x) {
                     
                 ),
                  
-                    
+                   
                  
 //                    'onchange'=>'
 //                        var nomobj_texto = this.id;
 //                        //28->Tamaño del nombre del campo sin numeración -> #Revisionsignosvitales_svi_id Enumera los campos desde el 2do.
-//                        var indexid = nomobj_texto.substring(25,nomobj_texto.length); 
-//                        var nombre1 = "#Detallecompra_Precio1"+indexid; 
+//                        var indexid = nomobj_texto.substring(22,nomobj_texto.length); 
+//                        var nombre1 = "#Detallecompra_Precio"+indexid; 
 ////                        var nombre2 = "#Revisionsignosvitales_rsv_comentario2"+indexid; 
 //                        // Ejecutar función para obtener los datos via GET
 //                        var targetUrl ="'.$this->createUrl("compra/autocomplete").'";    
@@ -390,7 +396,10 @@ function init(x) {
             'jsAfterNewId' => MultiModelForm::afterNewIdAutoComplete($memberFormConfig['elements']['Descripcion']),
             //array of member instances loaded from db
 //            'jsBeforeNewId' => "alert(this.attr('id'));",
-//              'jsAfterNewId' =>  "alert(this.attr('id'));",
+//              'jsAfterCloneCallback'=>'alertIds',
+                
+                
+//                'jsAfterNewId' => "alert(this.attr('id'));",
 
                 
                 
