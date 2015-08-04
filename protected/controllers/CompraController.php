@@ -71,6 +71,7 @@ class CompraController extends Controller
             if(isset($_POST['Compra']))
             {
                 $model->attributes=$_POST['Compra'];
+                
                 if(
                     MultiModelForm::validate($member,$validatedMembers,$deleteItems) &&
                     $model->save())
@@ -79,26 +80,33 @@ class CompraController extends Controller
                     if 
                          (MultiModelForm::save($member,$validatedMembers,$deleteMembers,$masterValues)){
 //                        $this->redirect(array('view','id'=>$model->Id));
-                        
+                           
+                           
+                            $numdocumento=$_POST['Compra']['NumCompra'];
+                            
                            $codigo = $_POST['Detallecompra']['CodProducto'];
-                           $final = $_POST['Detallecompra']['Cantidad'];
+                           $cantidad = $_POST['Detallecompra']['Cantidad'];
+                           $saldoanterior=$_POST['Detallecompra']['Saldo'];
+                           $precio=$_POST['Detallecompra']['Precio'];
+                           $subtotal=$_POST['Detallecompra']['Subtotal'];
+                           
                            for($i=0; $i<count($codigo); $i++)
                            {
-                                Yii::app()->db->createCommand('update productos set CanExistencia = (CanExistencia + '.$final[$i].') where CodProducto = "'.$codigo[$i].'"')->query();
+                               $saldoactual[$i]=$saldoanterior[$i]+$cantidad[$i];
+                               
+                               
+                                Yii::app()->db->createCommand('update productos set CanExistencia = (CanExistencia + '.$cantidad[$i].') where CodProducto = "'.$codigo[$i].'"')->query();
+                               
+                                yii::app()->db->createCommand('insert into kardex (NumDocumento, CodProducto, TipoMovimiento, Cantidad, SaldoAnterior, SaldoActual, Precio, Subtotal,Usuario)'
+                                                            . ' Values('.$numdocumento.','.$codigo[$i].',"compra",'.$cantidad[$i].','.$saldoanterior[$i].','.$saldoactual[$i].','.$precio[$i].','.$subtotal[$i].',"'.Yii::app()->user->name.'")')->query();
+//                                                                 
+//                                yii::app()->db->createCommand('insert into kardex (Fecha,NumDocumento, CodProducto, TipoMovimiento, Cantidad, SaldoAnterior, SaldoActual, Precio, Subtotal)'
+//                                                            . ' Values(today,'.$numdocumento.','.$codigo[$i].',"compra",'.$cantidad[$i].','.$saldoanterior[$i].','.$saldoactual[$i].','.$precio[$i].','.$subtotal[$i].')')->query();
+//                                                                 
                            }
                             $this->redirect(array('view','id'=>$model->NumCompra));
                      }
-                    }                  
-//                    $criteria=new CDbCriteria;    
-//                    $criteria->addCondition('CodProducto=:CodProducto');
-//                    $criteria->params=array(':CodProducto'=>$member->CodProducto);   
-//                    $objProducto = Productos::model()->find($criteria);
-//                    $objProducto->CanExistencia = $objProducto->CanExistencia + $member->Cantidad;
-                   
-//                    $producto=Yii::app()->db->createCommand()->update('producto', array('CanExistencia'=>'CanExistencia',),
-//                            'CodProducto=:CodProducto', array(':id'=>1));
-
-	 
+                    }   
                     
             }
 
@@ -229,8 +237,9 @@ class CompraController extends Controller
                   'id' => $item->CodProducto,
                   'value' => $item->Descripcion,
                   'label' => $item->Descripcion,
-                  'PreVenta' => $item->PreVenta,
+                  'Precio' => $item->PreCompra,
                   'UniMedida'=>$item->UniMedida,
+                  'Saldo'=>$item->CanExistencia,
                   
               );
              }

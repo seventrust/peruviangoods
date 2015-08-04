@@ -36,11 +36,11 @@ class Compra extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-                    array('NumCompra, CodProveedor, CodBodega, Fecha, Vencimiento, ForPago, TotExento, TotDescuento, TotNeto,  Total,SubTotal', 'required'),
-                    array('NumCompra, CodProveedor, CodBodega, ForPago, TotExento, TotDescuento, TotNeto, TotIva, TotImpuesto, TotRetencion, Total,SubTotal', 'length', 'max'=>10),
+                    array('NumCompra, CodProveedor, CodBodega, Fecha, Vencimiento, ForPago, TotExento, TotDescuento, TotNeto,  Total', 'required'),
+                    array('NumCompra, CodProveedor, CodBodega, ForPago, TotExento, TotDescuento, TotNeto, TotIva, TotImpuesto, TotRetencion, Total', 'length', 'max'=>10),
                     // The following rule is used by search().
                     // @todo Please remove those attributes that should not be searched.
-                    array('NumCompra, CodProveedor, CodBodega, Fecha, Vencimiento, ForPago, TotExento, TotDescuento, TotNeto, TotIva, TotImpuesto, TotRetencion, Total,SubTotal', 'safe', 'on'=>'search'),
+                    array('NumCompra, CodProveedor, CodBodega, Fecha, Vencimiento, ForPago, TotExento, TotDescuento, TotNeto, TotIva, TotImpuesto, TotRetencion, Total', 'safe', 'on'=>'search'),
 		);
 	}
 

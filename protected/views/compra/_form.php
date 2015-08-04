@@ -266,26 +266,7 @@ function init(x) {
                  'size'=>'10',
                 'maxlength'=>10,
                 'style'=>'WIDTH:100px',
-               
-//				'type'=>'dropdownlist',
-//				//it is important to add an empty item because of new records
-//				'items'=>array(''=>'-',2008=>2008,2009=>2009,2010=>2010,2011=>2011,),
-//                 
             ),
-             
-//             'item_id'=>array(              
-//               'type'=>'zii.widgets.jui.CJuiAutoComplete',
-//               'source'=>$auto,
-//                                        'options'=>array(
-//                                                'minLength'=>3,
-//                                                'showAnim'=>'fold',
-//                                        ),
-//                                        'htmlOptions'=>array(
-//
-//                                       'size'=>4,
-//                                       'onFocus'=>"init(this.id)",
-//                                   ),),
-
               
              'Descripcion'=>array(
                 'type'=>'zii.widgets.jui.CJuiAutoComplete',   
@@ -296,48 +277,22 @@ function init(x) {
                          'size'=>'120',
                          'minLength'=>'2', // Minimo de caracteres que hay que digitar antes de relizar la busqueda
                          'select'=>"js:function(event, ui) { 
-                          var nomobj_texto = this.id;
-//                          var nomobj_texto = this.attr('id');
-
+                          var nomobj_texto = this.id; //El identificador del campo en mi caso #Detallecompra_Descripcion 
                           var indexid = nomobj_texto.substring(25,nomobj_texto.length); 
-                          $('#Detallecompra_Cantidad').val(indexid);
                           $('#Detallecompra_CodProducto'+indexid).val(ui.item.id); 
-                          $('#Detallecompra_Precio'+indexid).val(ui.item.PreVenta); // HTML-Id del campo
+                          $('#Detallecompra_Precio'+indexid).val(ui.item.Precio); 
                           $('#Detallecompra_UniMedida'+indexid).val(ui.item.UniMedida);
+                          $('#Detallecompra_Saldo'+indexid).val(ui.item.Saldo); 
                           $('#Detallecompra_Descuento'+indexid).val(0);
                           $('#Detallecompra_Exento'+indexid).val(0);
-//                           alert(indexid);     
-
                          }",
-//                    'change'=>"js:function(){calcularPrecioIVA()}"
-                    
                 ),
                 'htmlOptions'=> array(
                         'size'=>30,
                    'onFocus'=>"init(this.id)",
                         'placeholder'=>'Buscar ...',
                         'title'=>'Indique el producto.'
-                    
-                    
                 ),
-                 
-                   
-                 
-//                    'onchange'=>'
-//                        var nomobj_texto = this.id;
-//                        //28->Tamaño del nombre del campo sin numeración -> #Revisionsignosvitales_svi_id Enumera los campos desde el 2do.
-//                        var indexid = nomobj_texto.substring(22,nomobj_texto.length); 
-//                        var nombre1 = "#Detallecompra_Precio"+indexid; 
-////                        var nombre2 = "#Revisionsignosvitales_rsv_comentario2"+indexid; 
-//                        // Ejecutar función para obtener los datos via GET
-//                        var targetUrl ="'.$this->createUrl("compra/autocomplete").'";    
-//                        $.getJSON(targetUrl, { id: $(this).val() }, function(data) {
-//                        // Ubicamos los valor que estaban en el JSON en los campos 
-//                            $(nombre1).val(ui.item.PreVenta);
-////                            $(nombre2).val(data.B);
-//                        });'
-//                        ),
-                 
             ),
                     
             'Cantidad'=>array(
@@ -346,7 +301,7 @@ function init(x) {
                 'maxlength'=>8,
                 'size'=>8,
                'style'=>'WIDTH:80px',
-               'onchage'=>'calcularPrecioIVA()',
+//               'onchage'=>'calcularPrecioIVA()',
                 
             ),
             'Precio'=>array(
@@ -373,12 +328,20 @@ function init(x) {
                 'size'=>8,
                 'style'=>'WIDTH:80px',
             ),
-            'SubTotal'=>array(
+            'Subtotal'=>array(
                 'type'=>'text',
                 'maxlength'=>10,
                 'size'=>8,
                 'style'=>'WIDTH:80px',
-                'onchage'=>'calcularPrecioIVA()',
+               
+            ),
+              'Saldo'=>array(
+//                'type'=>'hidden',
+                  'type'=>'text',
+                'maxlength'=>10,
+                'size'=>8,
+                'style'=>'WIDTH:80px',
+             
             ),
         ));
     

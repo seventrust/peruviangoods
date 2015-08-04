@@ -35,10 +35,10 @@ class Detallecompra extends CActiveRecord
 		return array(
 			array('CodProducto, Descripcion, Cantidad', 'required'),
 			array('Item', 'numerical', 'integerOnly'=>true),
-			array('NumCompra, CodProducto, Descripcion, Cantidad, Precio, UniMedida, Descuento, Exento, Subtotal', 'length', 'max'=>20),
+			array('NumCompra, CodProducto, Descripcion, Cantidad, Precio, UniMedida, Descuento, Exento, Subtotal,Saldo', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('Item, NumCompra, CodProducto, Cantidad, Precio, UniMedida, Descuento, Exento, Subtotal', 'safe', 'on'=>'search'),
+			array('Item, NumCompra, CodProducto, Cantidad, Precio, UniMedida, Descuento, Exento, Subtotal,Saldo', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -72,6 +72,7 @@ class Detallecompra extends CActiveRecord
 			'Descuento' => 'Descuento',
 			'Exento' => 'Exento',
 			'Subtotal' => 'Subtotal',
+                        'Saldo'=>'Saldo',
 		);
 	}
 
@@ -102,7 +103,7 @@ class Detallecompra extends CActiveRecord
 		$criteria->compare('Descuento',$this->Descuento,true);
 		$criteria->compare('Exento',$this->Exento,true);
 		$criteria->compare('Subtotal',$this->Subtotal,true);
-
+                $criteria->compare('Saldo',$this->Saldo,true);
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
