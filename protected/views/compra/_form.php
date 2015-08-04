@@ -12,12 +12,25 @@
         echo $form->errorSummary(array_merge(array($model),$validatedMembers));
     ?>
 
+<script TYPE="text/javascript" LANGUAGE="JavaScript"> 
+function init(x) {
+                var descrip = x.replace("Detallecompra_CodProducto","Detallecompra_Descripcion");
+                var unitprice = x.replace("Detallecompra_CodProducto","Detallecompra_Precio");       
+                var obj =$member; 
+                $("#"+x).autocomplete("Detallecompra_Descripcion").autocomplete({source:obj,minLength:3,
+                select: function( event, ui ) {$("#"+descrip).val(ui.item.label);
+                $("#"+unitprice).val(ui.item.PreVenta);}});
+                this.autocomplete();
+                alert(obj);
+                }
+ </script> 
+    
 <script>
 
     function calcularPrecioIVA(){
      var subtotal=parseInt(document.getElementById("Detallecompra_Precio").valueOf());
     
-       alert(subtotal);
+//       alert(subtotal);
     }
     
     $('#precio'+contador).on('click', '',function(){
@@ -43,6 +56,8 @@
         totalCuenta = roundNumber(totalCuenta, 2);
         $('#total').attr('readonly', 'readonly').val(totalCuenta);
     });
+    
+    
 </script>
 
    
@@ -251,8 +266,27 @@
                  'size'=>'10',
                 'maxlength'=>10,
                 'style'=>'WIDTH:100px',
+               
+//				'type'=>'dropdownlist',
+//				//it is important to add an empty item because of new records
+//				'items'=>array(''=>'-',2008=>2008,2009=>2009,2010=>2010,2011=>2011,),
+//                 
             ),
              
+//             'item_id'=>array(              
+//               'type'=>'zii.widgets.jui.CJuiAutoComplete',
+//               'source'=>$auto,
+//                                        'options'=>array(
+//                                                'minLength'=>3,
+//                                                'showAnim'=>'fold',
+//                                        ),
+//                                        'htmlOptions'=>array(
+//
+//                                       'size'=>4,
+//                                       'onFocus'=>"init(this.id)",
+//                                   ),),
+
+              
              'Descripcion'=>array(
                 'type'=>'zii.widgets.jui.CJuiAutoComplete',   
                 'source'=>$this->createUrl('compra/autocomplete'),
@@ -261,26 +295,45 @@
                     'common_id_string'=>'Descripcion',
                          'size'=>'120',
                          'minLength'=>'2', // Minimo de caracteres que hay que digitar antes de relizar la busqueda
-                         'select'=>"js:function(event, ui) { 
-                          $('#Detallecompra_CodProducto').val(ui.item.id); 
-                          $('#Detallecompra_Precio').val(ui.item.PreVenta); // HTML-Id del campo
-                          $('#Detallecompra_UniMedida').val(ui.item.UniMedida);
-                          $('#Detallecompra_Descuento').val(0);
-                          $('#Detallecompra_Exento').val(0);
-                                                    
-                         }",
-                    'change'=>"js:function(){calcularPrecioIVA()}"
+//                         'select'=>"js:function(event, ui) { 
+//                          $('#Detallecompra_CodProducto').val(ui.item.id); 
+//                          $('#Detallecompra_Precio').val(ui.item.PreVenta); // HTML-Id del campo
+//                          $('#Detallecompra_UniMedida').val(ui.item.UniMedida);
+//                          $('#Detallecompra_Descuento').val(0);
+//                          $('#Detallecompra_Exento').val(0);
+//                                                    
+//                         }",
+//                    'change'=>"js:function(){calcularPrecioIVA()}"
                     
                 ),
                 'htmlOptions'=> array(
                         'size'=>30,
-                   
+                   'onFocus'=>"init(this.id)",
                         'placeholder'=>'Buscar ...',
                         'title'=>'Indique el producto.'
                     
+                    
                 ),
+                 
+                    
+                 
+//                    'onchange'=>'
+//                        var nomobj_texto = this.id;
+//                        //28->Tamaño del nombre del campo sin numeración -> #Revisionsignosvitales_svi_id Enumera los campos desde el 2do.
+//                        var indexid = nomobj_texto.substring(25,nomobj_texto.length); 
+//                        var nombre1 = "#Detallecompra_Precio1"+indexid; 
+////                        var nombre2 = "#Revisionsignosvitales_rsv_comentario2"+indexid; 
+//                        // Ejecutar función para obtener los datos via GET
+//                        var targetUrl ="'.$this->createUrl("compra/autocomplete").'";    
+//                        $.getJSON(targetUrl, { id: $(this).val() }, function(data) {
+//                        // Ubicamos los valor que estaban en el JSON en los campos 
+//                            $(nombre1).val(ui.item.PreVenta);
+////                            $(nombre2).val(data.B);
+//                        });'
+//                        ),
+                 
             ),
-
+                    
             'Cantidad'=>array(
                 'type'=>'text',
                 //it is important to add an empty item because of new records
@@ -314,7 +367,7 @@
                 'size'=>8,
                 'style'=>'WIDTH:80px',
             ),
-            'Subtotal'=>array(
+            'SubTotal'=>array(
                 'type'=>'text',
                 'maxlength'=>10,
                 'size'=>8,
