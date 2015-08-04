@@ -23257,3 +23257,257 @@ Stack trace:
 REQUEST_URI=/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
 HTTP_REFERER=http://localhost:8080/peruviangoods/css/jquery.css
 ---
+2015/08/04 23:33:20 [error] [exception.CException] exception 'CException' with message 'Property "Detallecompra.Subtotal" is not defined.' in C:\yii-1.1.16.bca042\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\yii-1.1.16.bca042\framework\db\ar\CActiveRecord.php(145): CComponent->__get('Subtotal')
+#1 C:\yii-1.1.16.bca042\framework\web\helpers\CHtml.php(2717): CActiveRecord->__get('Subtotal')
+#2 C:\yii-1.1.16.bca042\framework\web\helpers\CHtml.php(2451): CHtml::resolveValue(Object(Detallecompra), 'Subtotal[]')
+#3 C:\yii-1.1.16.bca042\framework\web\helpers\CHtml.php(1533): CHtml::activeInputField('text', Object(Detallecompra), 'Subtotal[]', Array)
+#4 C:\yii-1.1.16.bca042\framework\web\form\CFormInputElement.php(232): CHtml::activeTextField(Object(Detallecompra), 'Subtotal[]', Array)
+#5 C:\yii-1.1.16.bca042\framework\web\form\CFormInputElement.php(194): CFormInputElement->renderInput()
+#6 C:\xampp\htdocs\peruviangoods\protected\extensions\multimodelform\MultiModelForm.php(1861): CFormInputElement->render()
+#7 C:\xampp\htdocs\peruviangoods\protected\extensions\multimodelform\MultiModelForm.php(1942): MultiModelRenderForm->renderFormElements()
+#8 C:\xampp\htdocs\peruviangoods\protected\extensions\multimodelform\MultiModelForm.php(1460): MultiModelRenderForm->render()
+#9 C:\yii-1.1.16.bca042\framework\web\CBaseController.php(181): MultiModelForm->run()
+#10 C:\xampp\htdocs\peruviangoods\protected\views\compra\_form.php(374): CBaseController->widget('ext.multimodelf...', Array)
+#11 C:\yii-1.1.16.bca042\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#12 C:\yii-1.1.16.bca042\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\yii-1.1.16.bca042\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\peruviangoods\protected\views\compra\create.php(18): CController->renderPartial('_form', Array)
+#15 C:\yii-1.1.16.bca042\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#16 C:\yii-1.1.16.bca042\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#17 C:\yii-1.1.16.bca042\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#18 C:\yii-1.1.16.bca042\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#19 C:\xampp\htdocs\peruviangoods\protected\controllers\CompraController.php(121): CController->render('create', Array)
+#20 C:\yii-1.1.16.bca042\framework\web\actions\CInlineAction.php(49): CompraController->actionCreate()
+#21 C:\yii-1.1.16.bca042\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#22 C:\yii-1.1.16.bca042\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#23 C:\yii-1.1.16.bca042\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#24 C:\yii-1.1.16.bca042\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#25 C:\yii-1.1.16.bca042\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#26 C:\yii-1.1.16.bca042\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#27 C:\yii-1.1.16.bca042\framework\web\CController.php(291): CFilterChain->run()
+#28 C:\yii-1.1.16.bca042\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 C:\yii-1.1.16.bca042\framework\web\CWebApplication.php(282): CController->run('create')
+#30 C:\yii-1.1.16.bca042\framework\web\CWebApplication.php(141): CWebApplication->runController('compra/create')
+#31 C:\yii-1.1.16.bca042\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#32 C:\xampp\htdocs\peruviangoods\index.php(13): CApplication->run()
+#33 {main}
+REQUEST_URI=/peruviangoods/index.php/compra/create
+HTTP_REFERER=http://localhost:8080/peruviangoods/compra/
+---
+2015/08/04 23:49:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\yii-1.1.16.bca042\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\yii-1.1.16.bca042\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\yii-1.1.16.bca042\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruviangoods\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost:8080/peruviangoods/css/jquery.css
+---
+2015/08/04 23:49:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\yii-1.1.16.bca042\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\yii-1.1.16.bca042\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\yii-1.1.16.bca042\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruviangoods\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost:8080/peruviangoods/css/jquery.css
+---
+2015/08/04 23:51:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "producto".' in C:\yii-1.1.16.bca042\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\yii-1.1.16.bca042\framework\web\CWebApplication.php(141): CWebApplication->runController('producto')
+#1 C:\yii-1.1.16.bca042\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruviangoods\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruviangoods/index.php/producto
+---
+2015/08/05 00:11:52 [warning] [application] Failed to set unsafe attribute "Id" of "Medida".
+in C:\xampp\htdocs\peruviangoods\protected\controllers\MedidaController.php (71)
+in C:\xampp\htdocs\peruviangoods\index.php (13)
+2015/08/05 00:12:12 [warning] [application] Failed to set unsafe attribute "Id" of "Medida".
+in C:\xampp\htdocs\peruviangoods\protected\controllers\MedidaController.php (71)
+in C:\xampp\htdocs\peruviangoods\index.php (13)
+2015/08/05 00:12:12 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `medida` (`Estatus`, `Descripcion`) VALUES (:yp0, :yp1).
+in C:\xampp\htdocs\peruviangoods\protected\controllers\MedidaController.php (72)
+in C:\xampp\htdocs\peruviangoods\index.php (13)
+2015/08/05 00:12:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `medida` (`Estatus`, `Descripcion`) VALUES (:yp0, :yp1)' in C:\yii-1.1.16.bca042\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\yii-1.1.16.bca042\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\yii-1.1.16.bca042\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\peruviangoods\protected\controllers\MedidaController.php(72): CActiveRecord->save()
+#3 C:\yii-1.1.16.bca042\framework\web\actions\CInlineAction.php(49): MedidaController->actionCreate()
+#4 C:\yii-1.1.16.bca042\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\yii-1.1.16.bca042\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\yii-1.1.16.bca042\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\yii-1.1.16.bca042\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\yii-1.1.16.bca042\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\yii-1.1.16.bca042\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\yii-1.1.16.bca042\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\yii-1.1.16.bca042\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\yii-1.1.16.bca042\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\yii-1.1.16.bca042\framework\web\CWebApplication.php(141): CWebApplication->runController('medida/create')
+#14 C:\yii-1.1.16.bca042\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\peruviangoods\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/peruviangoods/index.php/medida/create
+HTTP_REFERER=http://localhost:8080/peruviangoods/index.php/medida/create
+---
+2015/08/05 00:13:04 [warning] [application] Failed to set unsafe attribute "Id" of "Medida".
+in C:\xampp\htdocs\peruviangoods\protected\controllers\MedidaController.php (71)
+in C:\xampp\htdocs\peruviangoods\index.php (13)
+2015/08/05 00:13:15 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\yii-1.1.16.bca042\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\yii-1.1.16.bca042\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\yii-1.1.16.bca042\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\yii-1.1.16.bca042\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\yii-1.1.16.bca042\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\yii-1.1.16.bca042\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\yii-1.1.16.bca042\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\yii-1.1.16.bca042\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\yii-1.1.16.bca042\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\yii-1.1.16.bca042\framework\web\CWebApplication.php(141): CWebApplication->runController('medida/admin')
+#9 C:\yii-1.1.16.bca042\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\peruviangoods\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/peruviangoods/index.php/medida/admin
+HTTP_REFERER=http://localhost:8080/peruviangoods/index.php/medida/index
+---
+2015/08/05 00:13:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\yii-1.1.16.bca042\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\yii-1.1.16.bca042\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\yii-1.1.16.bca042\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\yii-1.1.16.bca042\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\yii-1.1.16.bca042\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\yii-1.1.16.bca042\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\yii-1.1.16.bca042\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\yii-1.1.16.bca042\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\yii-1.1.16.bca042\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\yii-1.1.16.bca042\framework\web\CWebApplication.php(141): CWebApplication->runController('medida/admin')
+#9 C:\yii-1.1.16.bca042\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\peruviangoods\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/peruviangoods/index.php/medida/admin
+HTTP_REFERER=http://localhost:8080/peruviangoods/index.php/medida/2
+---
+2015/08/05 00:25:27 [error] [exception.CException] exception 'CException' with message 'Productos and its behaviors do not have a method or closure named "getMenuCategoria".' in C:\yii-1.1.16.bca042\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\yii-1.1.16.bca042\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getMenuCategori...', Array)
+#1 C:\xampp\htdocs\peruviangoods\protected\views\productos\_form.php(72): CActiveRecord->__call('getMenuCategori...', Array)
+#2 C:\xampp\htdocs\peruviangoods\protected\views\productos\_form.php(72): Productos->getMenuCategoria()
+#3 C:\yii-1.1.16.bca042\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#4 C:\yii-1.1.16.bca042\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#5 C:\yii-1.1.16.bca042\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\peruviangoods\protected\views\productos\create.php(18): CController->renderPartial('_form', Array)
+#7 C:\yii-1.1.16.bca042\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\yii-1.1.16.bca042\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\yii-1.1.16.bca042\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\yii-1.1.16.bca042\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#11 C:\xampp\htdocs\peruviangoods\protected\controllers\ProductosController.php(79): CController->render('create', Array)
+#12 C:\yii-1.1.16.bca042\framework\web\actions\CInlineAction.php(49): ProductosController->actionCreate()
+#13 C:\yii-1.1.16.bca042\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\yii-1.1.16.bca042\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 C:\yii-1.1.16.bca042\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\yii-1.1.16.bca042\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 C:\yii-1.1.16.bca042\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\yii-1.1.16.bca042\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\yii-1.1.16.bca042\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\yii-1.1.16.bca042\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\yii-1.1.16.bca042\framework\web\CWebApplication.php(282): CController->run('create')
+#22 C:\yii-1.1.16.bca042\framework\web\CWebApplication.php(141): CWebApplication->runController('productos/creat...')
+#23 C:\yii-1.1.16.bca042\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\peruviangoods\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/peruviangoods/index.php/productos/create
+---
+2015/08/05 00:25:52 [error] [exception.CException] exception 'CException' with message 'Productos and its behaviors do not have a method or closure named "getMenuCategoria".' in C:\yii-1.1.16.bca042\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\yii-1.1.16.bca042\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getMenuCategori...', Array)
+#1 C:\xampp\htdocs\peruviangoods\protected\views\productos\_form.php(72): CActiveRecord->__call('getMenuCategori...', Array)
+#2 C:\xampp\htdocs\peruviangoods\protected\views\productos\_form.php(72): Productos->getMenuCategoria()
+#3 C:\yii-1.1.16.bca042\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#4 C:\yii-1.1.16.bca042\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#5 C:\yii-1.1.16.bca042\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\peruviangoods\protected\views\productos\create.php(18): CController->renderPartial('_form', Array)
+#7 C:\yii-1.1.16.bca042\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\yii-1.1.16.bca042\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\yii-1.1.16.bca042\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\yii-1.1.16.bca042\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#11 C:\xampp\htdocs\peruviangoods\protected\controllers\ProductosController.php(79): CController->render('create', Array)
+#12 C:\yii-1.1.16.bca042\framework\web\actions\CInlineAction.php(49): ProductosController->actionCreate()
+#13 C:\yii-1.1.16.bca042\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\yii-1.1.16.bca042\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 C:\yii-1.1.16.bca042\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\yii-1.1.16.bca042\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 C:\yii-1.1.16.bca042\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\yii-1.1.16.bca042\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\yii-1.1.16.bca042\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\yii-1.1.16.bca042\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\yii-1.1.16.bca042\framework\web\CWebApplication.php(282): CController->run('create')
+#22 C:\yii-1.1.16.bca042\framework\web\CWebApplication.php(141): CWebApplication->runController('productos/creat...')
+#23 C:\yii-1.1.16.bca042\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\peruviangoods\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/peruviangoods/index.php/productos/create
+---
+2015/08/05 00:25:55 [error] [exception.CException] exception 'CException' with message 'Productos and its behaviors do not have a method or closure named "getMenuCategoria".' in C:\yii-1.1.16.bca042\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\yii-1.1.16.bca042\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getMenuCategori...', Array)
+#1 C:\xampp\htdocs\peruviangoods\protected\views\productos\_form.php(72): CActiveRecord->__call('getMenuCategori...', Array)
+#2 C:\xampp\htdocs\peruviangoods\protected\views\productos\_form.php(72): Productos->getMenuCategoria()
+#3 C:\yii-1.1.16.bca042\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#4 C:\yii-1.1.16.bca042\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#5 C:\yii-1.1.16.bca042\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\peruviangoods\protected\views\productos\create.php(18): CController->renderPartial('_form', Array)
+#7 C:\yii-1.1.16.bca042\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\yii-1.1.16.bca042\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\yii-1.1.16.bca042\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\yii-1.1.16.bca042\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#11 C:\xampp\htdocs\peruviangoods\protected\controllers\ProductosController.php(79): CController->render('create', Array)
+#12 C:\yii-1.1.16.bca042\framework\web\actions\CInlineAction.php(49): ProductosController->actionCreate()
+#13 C:\yii-1.1.16.bca042\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\yii-1.1.16.bca042\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 C:\yii-1.1.16.bca042\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\yii-1.1.16.bca042\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 C:\yii-1.1.16.bca042\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\yii-1.1.16.bca042\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\yii-1.1.16.bca042\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\yii-1.1.16.bca042\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\yii-1.1.16.bca042\framework\web\CWebApplication.php(282): CController->run('create')
+#22 C:\yii-1.1.16.bca042\framework\web\CWebApplication.php(141): CWebApplication->runController('productos/creat...')
+#23 C:\yii-1.1.16.bca042\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\peruviangoods\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/peruviangoods/index.php/productos/create
+---
+2015/08/05 00:26:01 [error] [exception.CException] exception 'CException' with message 'Productos and its behaviors do not have a method or closure named "getMenuCategoria".' in C:\yii-1.1.16.bca042\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\yii-1.1.16.bca042\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getMenuCategori...', Array)
+#1 C:\xampp\htdocs\peruviangoods\protected\views\productos\_form.php(72): CActiveRecord->__call('getMenuCategori...', Array)
+#2 C:\xampp\htdocs\peruviangoods\protected\views\productos\_form.php(72): Productos->getMenuCategoria()
+#3 C:\yii-1.1.16.bca042\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#4 C:\yii-1.1.16.bca042\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#5 C:\yii-1.1.16.bca042\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\peruviangoods\protected\views\productos\create.php(18): CController->renderPartial('_form', Array)
+#7 C:\yii-1.1.16.bca042\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\yii-1.1.16.bca042\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\yii-1.1.16.bca042\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\yii-1.1.16.bca042\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#11 C:\xampp\htdocs\peruviangoods\protected\controllers\ProductosController.php(79): CController->render('create', Array)
+#12 C:\yii-1.1.16.bca042\framework\web\actions\CInlineAction.php(49): ProductosController->actionCreate()
+#13 C:\yii-1.1.16.bca042\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\yii-1.1.16.bca042\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 C:\yii-1.1.16.bca042\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\yii-1.1.16.bca042\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 C:\yii-1.1.16.bca042\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\yii-1.1.16.bca042\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\yii-1.1.16.bca042\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\yii-1.1.16.bca042\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\yii-1.1.16.bca042\framework\web\CWebApplication.php(282): CController->run('create')
+#22 C:\yii-1.1.16.bca042\framework\web\CWebApplication.php(141): CWebApplication->runController('productos/creat...')
+#23 C:\yii-1.1.16.bca042\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\peruviangoods\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/peruviangoods/index.php/productos/create
+HTTP_REFERER=http://localhost:8080/peruviangoods/productos
+---

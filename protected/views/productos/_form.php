@@ -23,32 +23,51 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-       
-    <div class="table">
-        <table>
+  <div class="table-responsive">
+        <table class="table">     
             <th>
                 <?php echo $form->labelEx($model,'CodProducto'); ?>
 		<?php echo $form->textField($model,'CodProducto',array('size'=>10,'maxlength'=>10)); ?>
                 <?php #echo TbHtml::textField($model,'CodProducto',array('size'=>10,'maxlength'=>10), array('placeholder' => 'Text input')); ?>
 		<?php echo $form->error($model,'CodProducto'); ?>
             </th>
-            <th>
+        </table>
+  </div>
+    <div class="table-responsive">
+        <table class="table">  
+            <th style="width: 500px">
                 <?php echo $form->labelEx($model,'Descripcion'); ?>
 		<?php echo $form->textField($model,'Descripcion',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'Descripcion'); ?>
             </th>
+        </table>
+    </div>
+    <div class="table-responsive">
+        <table class="table">  
+            <th>
+                <?php echo $form->labelEx($model,'Categoria'); ?>
+                <?php echo $form->dropDownList($model,'CodCategoria',CHtml::listData(Categoria::model()->findAll(),'CodCategoria','Descripcion'),array('empty'=>' ')); ?>
+                <?php echo $form->error($model,'CodCategoria'); ?>
+           
+            </th>
+            
             <th>
                 <?php echo $form->labelEx($model,'UniMedida'); ?>
-		<?php echo $form->textField($model,'UniMedida',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->dropDownList($model,'UniMedida',CHtml::listData(Medida::model()->findAll(),'Id','Descripcion'),array('empty'=>' ')); ?>
 		<?php echo $form->error($model,'UniMedida'); ?>
+                
             </th>
+           
+        </table>
+    </div>
+    <div class="table-responsive">
+     <table class="table"> 
+            
             <th>
                 <?php echo $form->labelEx($model,'CanExistencia'); ?>
 		<?php echo $form->textField($model,'CanExistencia',array('size'=>10,'maxlength'=>10)); ?>
 		<?php echo $form->error($model,'CanExistencia'); ?>
             </th>
-        </table>
-        <table>
             <th>
                 <?php echo $form->labelEx($model,'PreCompra'); ?>
 		<?php echo $form->textField($model,'PreCompra',array('size'=>10,'maxlength'=>10)); ?>
@@ -59,12 +78,7 @@
 		<?php echo $form->textField($model,'PreVenta',array('size'=>10,'maxlength'=>10)); ?>
 		<?php echo $form->error($model,'PreVenta'); ?>
             </th>
-            <th>
-                <?php echo $form->labelEx($model,'Categoria'); ?>
-                <?php echo $form->dropDownList($model,'CodCategoria',CHtml::listData(Categoria::model()->findAll(),'CodCategoria','Descripcion'),array('empty'=>' ')); ?>
-                <?php echo $form->error($model,'CodCategoria'); ?>
-                
-            </th>
+            
             <th>
                 <?php echo $form->labelEx($model,'Activo'); ?>
            	<?php echo $form->checkBox($model,'Estatus',array()); ?>
