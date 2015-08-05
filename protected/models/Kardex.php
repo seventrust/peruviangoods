@@ -61,16 +61,16 @@ class Kardex extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'Id' => 'ID',
+//			'Id' => 'ID',
 			'Fecha' => 'Fecha',
 			'NumDocumento' => 'Num Documento',
 			'CodProducto' => 'Cod Producto',
 			'TipoMovimiento' => 'Tipo Movimiento',
-			'Cantidad' => 'Cantidad',
-			'SaldoAnterior' => 'Saldo Anterior',
-			'SaldoActual' => 'Saldo Actual',
-			'Precio' => 'Precio',
-			'Subtotal' => 'Subtotal',
+//			'Cantidad' => 'Cantidad',
+//			'SaldoAnterior' => 'Saldo Anterior',
+//			'SaldoActual' => 'Saldo Actual',
+//			'Precio' => 'Precio',
+//			'Subtotal' => 'Subtotal',
 			'Usuario' => 'Usuario',
 		);
 	}
@@ -93,20 +93,21 @@ class Kardex extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('Id',$this->Id);
+//		$criteria->compare('Id',$this->Id);
 		$criteria->compare('Fecha',$this->Fecha,true);
 		$criteria->compare('NumDocumento',$this->NumDocumento,true);
 		$criteria->compare('CodProducto',$this->CodProducto,true);
 		$criteria->compare('TipoMovimiento',$this->TipoMovimiento,true);
-		$criteria->compare('Cantidad',$this->Cantidad,true);
-		$criteria->compare('SaldoAnterior',$this->SaldoAnterior,true);
-		$criteria->compare('SaldoActual',$this->SaldoActual,true);
-		$criteria->compare('Precio',$this->Precio,true);
-		$criteria->compare('Subtotal',$this->Subtotal,true);
+//		$criteria->compare('Cantidad',$this->Cantidad,true);
+//		$criteria->compare('SaldoAnterior',$this->SaldoAnterior,true);
+//		$criteria->compare('SaldoActual',$this->SaldoActual,true);
+//		$criteria->compare('Precio',$this->Precio,true);
+//		$criteria->compare('Subtotal',$this->Subtotal,true);
 		$criteria->compare('Usuario',$this->Usuario,true);
 
-		return new CActiveDataProvider($this, array(
+		return $_SESSION['kardex.excel']=new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+                    
 		));
 	}
 

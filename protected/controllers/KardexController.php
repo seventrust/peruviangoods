@@ -146,7 +146,8 @@ class KardexController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Kardex('search');
+		yii::app()->request->sendFile("test.xls", "<table><tr>test <td></td><td></td></tr></table>");
+                $model=new Kardex('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Kardex']))
 			$model->attributes=$_GET['Kardex'];
@@ -181,4 +182,17 @@ class KardexController extends Controller
 			Yii::app()->end();
 		}
 	}
+        
+        public function actionExcel()
+        {       
+                $d = $_SESSION['kardex.excel'];      
+                $this->toExcel($d, array(
+                        'id',
+                        'Fecha',
+                        'NumDocumento',
+                        'CodProducto',
+                        'TipoMovimiento',
+                ),
+                time());
+        }
 }
