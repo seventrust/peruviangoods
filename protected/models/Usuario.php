@@ -39,7 +39,7 @@ class Usuario extends CActiveRecord
 			array('Estatus', 'length', 'max'=>1),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('Id, CodUsuario, Nombre, Contrasena, Correo, Tipo, Departamento, Estatus', 'safe', 'on'=>'search'),
+			array('Id, CodUsuario, Nombre, Contrasena, Correo, Tipo, Departamento', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -61,7 +61,7 @@ class Usuario extends CActiveRecord
 	{
 		return array(
 			'Id' => 'ID',
-			'CodUsuario' => 'Cod Usuario',
+			'CodUsuario' => 'Código de Usuario',
 			'Nombre' => 'Nombre',
 			'Contrasena' => 'Contrasena',
 			'Correo' => 'Correo',

@@ -146,7 +146,7 @@ class KardexController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		yii::app()->request->sendFile("test.xls", "<table><tr>test <td></td><td></td></tr></table>");
+//		yii::app()->request->sendFile("test.xls", "<table><tr>test <td></td><td></td></tr></table>");
                 $model=new Kardex('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Kardex']))

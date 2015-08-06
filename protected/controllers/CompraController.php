@@ -38,7 +38,7 @@ class CompraController extends Controller
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
                 'actions'=>array('admin','delete','autocomplete','AutocompleteProveedor'),
-                'users'=>array('admin'),
+                'users'=>array('admin','gri'),
             ),
             array('deny',  // deny all users
                 'users'=>array('*'),

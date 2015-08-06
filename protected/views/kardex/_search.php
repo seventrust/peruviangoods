@@ -3,7 +3,6 @@
 	'method'=>'get',
 )); ?>
 
-	<?php // echo $form->textFieldRow($model,'Id',array('class'=>'span5')); ?>
 <div class="table-responsive">
     <table class="table">
         <th>

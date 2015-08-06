@@ -333,6 +333,7 @@ function init(x) {
                 'maxlength'=>10,
                 'size'=>8,
                 'style'=>'WIDTH:80px',
+                
                
             ),
               'Saldo'=>array(
@@ -341,6 +342,7 @@ function init(x) {
                 'maxlength'=>10,
                 'size'=>8,
                 'style'=>'WIDTH:80px',
+                'readonly'=>true,
              
             ),
         ));
