@@ -49,6 +49,8 @@ class Producto extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
                     'codigo' => array(self::HAS_MANY, 'Detalleventa', 'CodProducto'),
+                    
+                    'nomenclatura' => array(self::HAS_MANY, 'Producto', 'CodProducto'),
 		);
 	}
 

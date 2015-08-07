@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl?>/css/jquery.css"/>
+<script src="<?php echo Yii::app()->request->baseUrl?>/js/jquery-ui.js"></script>
 <?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	'action'=>Yii::app()->createUrl($this->route),
 	'method'=>'get',
@@ -7,17 +9,21 @@
 <div class="table-responsive">
     <table class="table">
         <th>
-            <?php echo $form->textFieldRow($model,'Fecha',array('class'=>'span2')); 
-//             $this->widget('bootstrap.widgets.TbDatePicker', array(
-//            'model' => $model,
-//            'attribute' => 'Fecha',
-//            'options' => array(
-//                'size' => '10',         // textField size
-//                'maxlength' => '10',    // textField maxlength
-//                'autoclose' => true,
-//    ),
-//  ));
-            ?>
+            <?php echo $form->labelEx($model, 'Fecha');?>
+            <?php 
+                $this->widget('zii.widgets.jui.CJuiDatePicker',array(
+                    'attribute'=>'Fecha',
+                    'model'=>$model,
+                    'language'=>'es',
+                    'options'=>array(
+                        'dateFormat'=>'yy-mm-dd',
+                        'showButtonPanel'=>TRUE,
+                        'changeYear'=>TRUE,
+                        
+                    )
+                ))
+             ?>
+            <?php echo $form->error($model,'Fecha'); ?>
         </th>
         <th>
             <?php echo $form->textFieldRow($model,'NumDocumento',array('class'=>'span2','maxlength'=>20)); ?>

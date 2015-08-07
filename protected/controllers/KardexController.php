@@ -17,7 +17,21 @@ class KardexController extends Controller
 			'accessControl', // perform access control for CRUD operations
 		);
 	}
-
+        
+        public function behaviors()
+        {
+            return array(
+                'eexcelview'=>array(
+                    'class'=>'ext.eexcelview.EExcelBehavior',
+                ),
+                'exportableGrid' => array(
+                    'class' => 'application.components.ExportableGridBehavior',
+                    'filename' => 'Movimiento_Por_Fecha.csv',
+                    'csvDelimiter' => ';', //i.e. Excel friendly csv delimiter
+                )
+                );
+                    
+        }
 	/**
 	 * Specifies the access control rules.
 	 * This method is used by the 'accessControl' filter.
@@ -31,7 +45,7 @@ class KardexController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update', 'admin', 'toexcel'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -133,25 +147,96 @@ class KardexController extends Controller
 //		));
                 $model=new Kardex('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Kardex']))
-			$model->attributes=$_GET['Kardex'];
-
-		$this->render('admin',array(
+		if(isset($_GET['Kardex'])){
+			$model->attributes=$_GET['Kardex'];}
+                 if ($this->isExportRequest()) { //<==== [[ADD THIS BLOCK BEFORE RENDER]]
+                    //set_time_limit(0); //Uncomment to export lage datasets
+                    //Add to the csv a single line of text
+                    $this->exportCSV(array('VENTAS FILTRADAS POR:'), null, false);
+                    //Add to the csv a single model data with 3 empty rows after the data
+                    $this->exportCSV($model, array_keys($model->attributeLabels()), false, 3);
+                    //Add to the csv a lot of models from a CDataProvider
+                    $this->exportCSV($model->search(), array(
+                        'NumDocumento',
+                        'Fecha',
+                        'CodProducto',
+                        'Descripcion',
+                        'UniMedida',
+                        'SaldoAnterior', 
+                        'SaldoActual',
+                        'Precio',
+                        'Usuario'
+                        ));
+                }   
+                $this->render('admin',array(
 			'model'=>$model,
 		));
+                
 	}
+        
+        public function actionToExcel() {
+            
+                    // Load data (scoped)
+            $dataProvider=new CActiveDataProvider('Kardex', array(
+            'criteria'=>array(
+                'condition'=>'NumDocumento=55',
+                'order'=>'Fecha DESC',
+                )));
+            
 
-	/**
+                // Export it
+            $this->toExcel($dataProvider,
+                array(
+                    'NumDocumento',
+                    'Fecha',
+                    'CodProducto',
+                    'TipoMovimiento',
+                    'Cantidad',
+                    'SaldoAnterior',
+                    'SaldoActual',
+                    'Usuario',
+                    
+                ),
+                'Test File',
+                array(
+                    'creator' => 'Zen',
+                ),
+                'Excel5'
+            );
+
+        }
+
+        /**
 	 * Manages all models.
 	 */
 	public function actionAdmin()
 	{
-		yii::app()->request->sendFile("test.xls", "<table><tr>test <td></td><td></td></tr></table>");
+//		yii::app()->request->sendFile("test.xls", "<table><tr>test <td></td><td></td></tr></table>");
                 $model=new Kardex('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Kardex']))
-			$model->attributes=$_GET['Kardex'];
-
+		if(isset($_GET['Kardex'])){
+                $model->attributes=$_GET['Kardex'];
+                
+                }
+                if ($this->isExportRequest()) { //<==== [[ADD THIS BLOCK BEFORE RENDER]]
+                    //set_time_limit(0); //Uncomment to export lage datasets
+                    //Add to the csv a single line of text
+                    $this->exportCSV(array('VENTAS FILTRADAS POR:'), null, false);
+                    //Add to the csv a single model data with 3 empty rows after the data
+                    $this->exportCSV($model, array_keys($model->attributeLabels()), false, 3);
+                    //Add to the csv a lot of models from a CDataProvider
+                    $this->exportCSV($model->search(), array(
+                        'NumDocumento',
+                        'Fecha',
+                        'CodProducto',
+                        'Descripcion',
+                        'UniMedida',
+                        'SaldoAnterior', 
+                        'SaldoActual',
+                        'Precio',
+                        'Usuario'
+                        ));
+                }
 		$this->render('admin',array(
 			'model'=>$model,
 		));

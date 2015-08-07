@@ -24,4 +24,6 @@ class Controller extends CController
         public function init() {
             $this->attachBehavior('bootstrap', new BController($this));
         }
+        
+         
 }

@@ -34,9 +34,10 @@ $('.search-form form').submit(function(){
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('bootstrap.widgets.TbGridView',array(
+<?php $gridWidget = $this->widget('bootstrap.widgets.TbGridView',array(
 	'id'=>'kardex-grid',
 	'dataProvider'=>$model->search(),
+        'htmlOptions'=>array('width'=>40),
 	'filter'=>$model,
 	'columns'=>array(
 //		'Id',
@@ -57,3 +58,4 @@ $('.search-form form').submit(function(){
 //		),
 	),
 )); ?>
+<?php $this->renderExportGridButton($gridWidget,'Export Grid Results',array('class'=>'btn btn-info pull-right')); ?>

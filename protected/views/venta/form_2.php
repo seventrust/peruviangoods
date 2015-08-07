@@ -1,10 +1,9 @@
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl?>/css/jquery.css"/>
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/jquery-ui.js"></script>
-<script src="<?php echo Yii::app()->request->baseUrl?>/js/jquery-ui.js"></script>
+
+<script src="<?php echo Yii::app()->request->baseUrl?>/js/example.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){
-    $('#contador').html(1);
-});
+
 
 </script>
 <div id="contador"></div>
@@ -99,7 +98,8 @@ $(document).ready(function(){
                        'htmlOptions'=> array(
                         'size'=>40,
                         'placeholder'=>'Buscar ...',
-                        'title'=>'Indique el producto.'
+                        'title'=>'Indique el producto.',
+                        'style'=>'width: 80px',
                         ),
                       )); 
         ?>
@@ -128,7 +128,7 @@ $(document).ready(function(){
     <th>
     <div class="required">
         <?php echo $form->labelEx($model, 'CodBodega');?>
-        <?php echo $form->textField($model, 'CodBodega');?>
+        <?php echo $form->textField($model, 'CodBodega', array('value'=>Yii::app()->user->name, 'readonly'=>true));?>
         <?php echo $form->error($model,'CodBodega'); ?>
     </div>
     </th>
@@ -147,6 +147,8 @@ $(document).ready(function(){
                 'type'=>'text',
                 'maxlength'=>80,
                 'class'=>'CodProducto',
+                'style'=>'WIDTH:90px',
+                
             ),
             'Descripcion'=>array(
                 'type'=>'zii.widgets.jui.CJuiAutoComplete',                
@@ -156,24 +158,16 @@ $(document).ready(function(){
                          'size'=>'80',
                          'minLength'=>'2', // Minimo de caracteres que hay que digitar antes de relizar la busqueda
                          'select'=>"js:function(event, ui) { 
-                         var contador = parseInt($('#contador').html());
+                         var nomobj_texto = this.id; //El identificador del campo en mi caso #Detallecompra_Descripcion 
+                         var indexid = nomobj_texto.substring(24,nomobj_texto.length); 
+                         $('#Detalleventa_CodProducto'+indexid).val(ui.item.id); // HTML-Id del campo
+                         $('#Detalleventa_Precio'+indexid).val(ui.item.precio);
+                         $('#Detalleventa_Saldo'+indexid).val(ui.item.saldo);
+                         $('#Detalleventa_UniMedida'+indexid).val(ui.item.unidad);   
+                         $('#contador').html(indexid);
                          
-                  
-                         $('#Detalleventa_CodProducto').val(ui.item.id); // HTML-Id del campo
-                         $('#Detalleventa_Precio').val(ui.item.precio);
-                         
-                         $('#Detalleventa_CodProducto'+contador).val(ui.item.id); // HTML-Id del campo
-                         $('#Detalleventa_Precio'+contador).val(ui.item.precio);
-                         
-                         contador++;
-                         alert (contador);
-                         
-                         $('#contador').html(contador);
-                        
                          }",
-                         
-                        
-                                      
+                
                 ),
                 'htmlOptions'=> array(
                         'size'=>120,
@@ -187,6 +181,8 @@ $(document).ready(function(){
                 'type'=>'text',
                 'maxlength'=>120,
                 'class'=>'Precio',
+                'style'=>'WIDTH:80px',
+                'readonly'=>true,
                 
             ),  
             'Cantidad'=>array(
@@ -194,7 +190,48 @@ $(document).ready(function(){
                 //it is important to add an empty item because of new records
                 'maxlength'=>120,
                 'class'=>'Cantidad',
+                'style'=>'WIDTH:80px',
             ),
+            'UniMedida'=>array(
+                'type'=>'text',
+                'maxlength'=>8,
+                'class'=>'UniMedida',
+                'size'=>8,
+                'style'=>'WIDTH:80px',
+                'readonly'=>true,
+            ),
+             'Saldo'=>array(
+                'type'=>'text',
+                'maxlength'=>10,
+                'class'=>'Saldo',
+                'size'=>8,
+                'style'=>'WIDTH:80px',
+                'readonly'=>true,
+             
+            ),
+            'Descuento'=>array(
+                'type'=>'text',
+                'maxlength'=>8,
+                'size'=>8,
+                'class'=>'Descuento',
+                'style'=>'WIDTH:80px',
+            ),
+            'Exento'=>array(
+                'type'=>'text',
+                'maxlength'=>10,
+                'class'=>'Exento',
+                'size'=>8,
+                'style'=>'WIDTH:80px',
+            ),
+            'Subtotal'=>array(
+                'type'=>'text',
+                'maxlength'=>10,
+                'class'=>'Subtotal',
+                'size'=>8,
+                'style'=>'WIDTH:80px',
+               
+            ),
+             
         ));
     
     $this->widget('ext.multimodelform.MultiModelForm',array(
@@ -205,9 +242,7 @@ $(document).ready(function(){
             //if submitted not empty from the controller,
             //the form will be rendered with validation errors
             'validatedItems' => $validatedMembers,
-            'jsAfterNewId' => MultiModelForm::afterNewIdAutoComplete($memberFormConfig['elements']['Descripcion']),
-           
-                                            
+            'jsAfterNewId' => MultiModelForm::afterNewIdAutoComplete($memberFormConfig['elements']['Descripcion']),                            
             'addItemText' => 'Agregar',
             'removeText' => 'Quitar',
             'removeConfirm' => 'Desea quitar la fila seleccionada',
@@ -249,7 +284,7 @@ $(document).ready(function(){
     <th>
     <div>
         <?php echo $form->labelEx($model, 'TotIva');?>
-        <?php echo $form->textField($model, 'TotIva');?>
+        <?php echo $form->textField($model, 'TotIva', array('value'=>'19', 'readonly'=>true));?>
         <?php echo $form->error($model,'TotIva'); ?>
     </div>
     </th>
@@ -257,7 +292,7 @@ $(document).ready(function(){
     <th>
     <div>
         <?php echo $form->labelEx($model, 'TotImpuesto');?>
-        <?php echo $form->textField($model, 'TotImpuesto');?>
+        <?php echo $form->textField($model, 'TotImpuesto', array('value'=>'21', 'readonly'=>true));?>
         <?php echo $form->error($model,'TotImpuesto'); ?>
     </div>
     </th>

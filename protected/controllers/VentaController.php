@@ -60,27 +60,27 @@ class VentaController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
-	{
-            $a=new Venta;
-            $b=new Detalleventa;
-            $this->performAjaxValidation(array($a,$b));
-            if(isset($_POST['Venta'],$_POST['Detalleventa']))
-            {
-                $a->attributes=$_POST['Venta'];
-                $b->attributes=$_POST['Detalleventa'];
-                
-                if($a->save()){
-                    $b->NumVenta=$a->NumVenta;
-                    $b->save();
-                    $this->redirect(array('view','id'=>$a->NumVenta));
-                
-                    }
-                }
-            $this->render('create',array('a'=>$a,'b'=>$b));
-	}
+//	public function actionCreate()
+//	{
+//            $a=new Venta;
+//            $b=new Detalleventa;
+//            $this->performAjaxValidation(array($a,$b));
+//            if(isset($_POST['Venta'],$_POST['Detalleventa']))
+//            {
+//                $a->attributes=$_POST['Venta'];
+//                $b->attributes=$_POST['Detalleventa'];
+//                
+//                if($a->save()){
+//                    $b->NumVenta=$a->NumVenta;
+//                    $b->save();
+//                    $this->redirect(array('view','id'=>$a->NumVenta));
+//                
+//                    }
+//                }
+//            $this->render('create',array('a'=>$a,'b'=>$b));
+//	}
         
-        public function actionCreate1() {
+        public function actionCreate() {
             Yii::import('ext.multimodelform.MultiModelForm');
             $model = new Venta();
             $member = new Detalleventa();
@@ -100,18 +100,37 @@ class VentaController extends Controller
                         //the value for the foreign key 'groupid'
                         $masterValues = array ('NumVenta'=>$model->NumVenta);
                         if (MultiModelForm::save($member,$validatedMembers,$deleteMembers,$masterValues)){
-                            
-                            $codigo = $_POST['Detalleventa']['CodProducto'];
-                            $final = $_POST['Detalleventa']['Cantidad'];
-                            for($i=0; $i<count($codigo); $i++)
-                            {
-                                Yii::app()->db->createCommand('update productos set CanExistencia = (CanExistencia - '.$final[$i].') where CodProducto = "'.$codigo[$i].'"')->query();
-                            }
+                           
+                           $numdocumento=$_POST['Venta']['NumVenta'];
+                           $codigo = $_POST['Detalleventa']['CodProducto'];
+                           $cantidad = $_POST['Detalleventa']['Cantidad'];
+                           $saldoanterior=$_POST['Detalleventa']['Saldo'];
+                           $precio=$_POST['Detalleventa']['Precio'];
+                           $subtotal=$_POST['Detalleventa']['Subtotal'];
+                           
+                           for($i=0; $i<count($codigo); $i++)
+                           {
+                               $saldoactual[$i]=$saldoanterior[$i]-$cantidad[$i];
+                               
+                               
+                                Yii::app()->db->createCommand('update productos set CanExistencia = (CanExistencia - '.$cantidad[$i].') where CodProducto = "'.$codigo[$i].'"')->query();
+                               
+                                Yii::app()->db->createCommand('insert into kardex (NumDocumento, CodProducto, TipoMovimiento, Cantidad, SaldoAnterior, SaldoActual, Precio, Subtotal,Usuario)'
+                                                            . ' Values('.$numdocumento.',"'.$codigo[$i].'","venta",'.$cantidad[$i].','.$saldoanterior[$i].','.$saldoactual[$i].','.$precio[$i].','.$subtotal[$i].',"'.Yii::app()->user->name.'")')->query();
+//                                                                 
+//                            $codigo = $_POST['Detalleventa']['CodProducto'];
+//                            $final = $_POST['Detalleventa']['Cantidad'];
+//                            for($i=0; $i<count($codigo); $i++)
+//                            {
+//                               
+//
+//                            // Yii::app()->db->createCommand('update productos set CanExistencia = (CanExistencia - '.$final[$i].') where CodProducto = "'.$codigo[$i].'"')->query();
+                          }
                             $this->redirect(array('view','id'=>$model->NumVenta));
                            
                      }
                     }
-            }
+                   }
 
             $this->render('create2',array(
                 'model'=>$model,
@@ -205,6 +224,9 @@ class VentaController extends Controller
                 'value' => $item->Descripcion,
                 'precio' => $item->PreCompra,
                 'label' => $item->Descripcion,
+                'saldo' => $item->CanExistencia,
+                'unidad'=> $item->UniMedida,
+                
               );
              }
             }

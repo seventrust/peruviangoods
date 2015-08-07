@@ -22,12 +22,14 @@ return array(
 		'application.models.*',
 		'application.components.*',
                 'application.extensions.awegen.components.*',
+                'application.extensions.phpexcel.Classes.PHPExcel',
                 'ext.bootstrap-theme.widgets.*',
                 'ext.bootstrap-theme.helpers.*',
                 'ext.bootstrap-theme.behaviors.*',
                 'ext.multimodelform.MultiModelForm.*',
                 'ext.AweCrud.components.*',
                 'ext.yiiext.behaviors.activerecord-relation.EActiveRecordRelationBehavior.*',
+                
 	),
 
 	'modules'=>array(
@@ -91,6 +93,7 @@ return array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+                                
 			),
 		),
 	
