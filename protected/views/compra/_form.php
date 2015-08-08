@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl?>/css/jquery.css" />
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/jquery-ui.js"></script>
-<script src="<?php echo Yii::app()->request->baseUrl?>/js/example.js"></script>
+<!--<script src="<?php echo Yii::app()->request->baseUrl?>/js/compra.js"></script>-->
 
 <div id="contador"></div>
 
@@ -66,7 +66,7 @@ function init(x) {
    
     
     
-<!--<script>
+<script>
     
     
     function myFunction() {
@@ -182,7 +182,7 @@ function init(x) {
         document.getElementById('inafecto').value = 0;
         
     }
-</script>-->
+</script>
 
 <div>
     
@@ -289,6 +289,7 @@ function init(x) {
                 'maxlength'=>10,
                 'style'=>'WIDTH:100px',
                 'readonly'=>TRUE,
+                 'class'=>'CodProducto',
             ),
               
              'Descripcion'=>array(
@@ -326,6 +327,7 @@ function init(x) {
                 'size'=>8,
                'style'=>'WIDTH:80px',
 //               'onchage'=>'calcularPrecioIVA()',
+                'class'=>'Cantidad',
                 
             ),
             'Precio'=>array(
@@ -333,6 +335,7 @@ function init(x) {
                 'maxlength'=>8,
                 'size'=>8,
                 'style'=>'WIDTH:80px',
+                 'class'=>'Precio',
             ),
             'UniMedida'=>array(
                 'type'=>'text',
@@ -340,24 +343,29 @@ function init(x) {
                 'size'=>8,
                 'style'=>'WIDTH:80px',
                 'readonly'=>TRUE,
+                 'class'=>'UniMedida',
             ),
             'Descuento'=>array(
                 'type'=>'text',
                 'maxlength'=>8,
                 'size'=>8,
                 'style'=>'WIDTH:80px',
+                 'class'=>'Descuento',
             ),
             'Exento'=>array(
                 'type'=>'text',
                 'maxlength'=>10,
                 'size'=>8,
                 'style'=>'WIDTH:80px',
+                 'class'=>'Exento',
             ),
             'Subtotal'=>array(
                 'type'=>'text',
                 'maxlength'=>10,
                 'size'=>8,
                 'style'=>'WIDTH:80px',
+                 'class'=>'Subtotal',
+                 'readonly'=>true,
                 
                
             ),
@@ -368,6 +376,7 @@ function init(x) {
                 'size'=>8,
                 'style'=>'WIDTH:80px',
                 'readonly'=>true,
+                 'class'=>'Saldo',
              
             ),
         ));

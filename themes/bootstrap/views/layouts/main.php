@@ -55,16 +55,18 @@
 		</div>
 	</div>
 	
-	<div class="container">
-	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('BBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-			'separator'=>' / ',
-		)); ?><!-- breadcrumbs -->
-	<?php endif?>
-	</div>
+<!--	<div class="container">
+	<?php // if(isset($this->breadcrumbs)):?>
+		<?php // $this->widget('BBreadcrumbs', array(
+//			'links'=>$this->breadcrumbs,
+//			'separator'=>' / ',
+//		)); ?> breadcrumbs 
+	<?php // endif?>
+	</div>-->
 	
 	<?php echo $content; ?>
+    
+
 	
 	<footer class="footer">
 		<div class="container">
