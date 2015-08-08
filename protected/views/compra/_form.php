@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl?>/css/jquery.css" />
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/jquery-ui.js"></script>
-<script src="<?php echo Yii::app()->request->baseUrl?>/js/example.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl?>/js/compra.js"></script>
 
 <div id="contador"></div>
 
@@ -66,7 +66,7 @@ function init(x) {
    
     
     
-<!--<script>
+<script>
     
     
     function myFunction() {
@@ -182,7 +182,7 @@ function init(x) {
         document.getElementById('inafecto').value = 0;
         
     }
-</script>-->
+</script>
 
 <div>
     
@@ -289,6 +289,7 @@ function init(x) {
                 'maxlength'=>10,
                 'style'=>'WIDTH:100px',
                 'readonly'=>TRUE,
+                 'class'=>'CodProducto',
             ),
               
              'Descripcion'=>array(
@@ -297,22 +298,23 @@ function init(x) {
                 'options'=>array(
                     'showAnim'=>'fold',
                     'common_id_string'=>'Descripcion',
-                         'size'=>'120',
+                         'size'=>'200',
                          'minLength'=>'2', // Minimo de caracteres que hay que digitar antes de relizar la busqueda
                          'select'=>"js:function(event, ui) { 
                           var nomobj_texto = this.id; //El identificador del campo en mi caso #Detallecompra_Descripcion 
                           var indexid = nomobj_texto.substring(25,nomobj_texto.length); 
+                          $('#contador').html(indexid);
                           $('#Detallecompra_CodProducto'+indexid).val(ui.item.id); 
                           $('#Detallecompra_Precio'+indexid).val(ui.item.Precio); 
                           $('#Detallecompra_UniMedida'+indexid).val(ui.item.UniMedida);
                           $('#Detallecompra_Saldo'+indexid).val(ui.item.Saldo); 
                           $('#Detallecompra_Descuento'+indexid).val(0);
                           $('#Detallecompra_Exento'+indexid).val(0);
-                          $('#contador').html(indexid);
+                          
                          }",
                 ),
                 'htmlOptions'=> array(
-                        'size'=>30,
+                        'size'=>200,
                    'onFocus'=>"init(this.id)",
                         'placeholder'=>'Buscar ...',
                         'title'=>'Indique el producto.'
@@ -326,6 +328,7 @@ function init(x) {
                 'size'=>8,
                'style'=>'WIDTH:80px',
 //               'onchage'=>'calcularPrecioIVA()',
+                'class'=>'Cantidad',
                 
             ),
             'Precio'=>array(
@@ -333,6 +336,7 @@ function init(x) {
                 'maxlength'=>8,
                 'size'=>8,
                 'style'=>'WIDTH:80px',
+                 'class'=>'Precio',
             ),
             'UniMedida'=>array(
                 'type'=>'text',
@@ -340,24 +344,29 @@ function init(x) {
                 'size'=>8,
                 'style'=>'WIDTH:80px',
                 'readonly'=>TRUE,
+                 'class'=>'UniMedida',
             ),
             'Descuento'=>array(
                 'type'=>'text',
                 'maxlength'=>8,
                 'size'=>8,
                 'style'=>'WIDTH:80px',
+                 'class'=>'Descuento',
             ),
             'Exento'=>array(
                 'type'=>'text',
                 'maxlength'=>10,
                 'size'=>8,
                 'style'=>'WIDTH:80px',
+                 'class'=>'Exento',
             ),
             'Subtotal'=>array(
                 'type'=>'text',
                 'maxlength'=>10,
                 'size'=>8,
                 'style'=>'WIDTH:80px',
+                 'class'=>'Subtotal',
+                 'readonly'=>true,
                 
                
             ),
@@ -368,6 +377,7 @@ function init(x) {
                 'size'=>8,
                 'style'=>'WIDTH:80px',
                 'readonly'=>true,
+                 'class'=>'Saldo',
              
             ),
         ));
@@ -386,7 +396,7 @@ function init(x) {
             'jsAfterNewId' => MultiModelForm::afterNewIdAutoComplete($memberFormConfig['elements']['Descripcion']),
             //array of member instances loaded from db
 //            'jsBeforeNewId' => "alert(this.attr('id'));",
-//              'jsAfterCloneCallback'=>'alertIds',
+              'jsAfterCloneCallback'=>'alertIds',
                 
                 
 //                'jsAfterNewId' => "alert(this.attr('id'));",
