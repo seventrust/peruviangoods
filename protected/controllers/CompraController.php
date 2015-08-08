@@ -95,7 +95,7 @@ class CompraController extends Controller
                                $saldoactual[$i]=$saldoanterior[$i]+$cantidad[$i];
                                
                                
-                                Yii::app()->db->createCommand('update productos set CanExistencia = (CanExistencia + '.$cantidad[$i].') where CodProducto = "'.$codigo[$i].'"')->query();
+                                Yii::app()->db->createCommand('update productos set CanExistencia = (CanExistencia + '.$cantidad[$i].'),PreCompra where CodProducto = "'.$codigo[$i].'"')->query();
                                
                                 yii::app()->db->createCommand('insert into kardex (NumDocumento, CodProducto, TipoMovimiento, Cantidad, SaldoAnterior, SaldoActual, Precio, Subtotal,Usuario)'
                                                             . ' Values('.$numdocumento.','.$codigo[$i].',"compra",'.$cantidad[$i].','.$saldoanterior[$i].','.$saldoactual[$i].','.$precio[$i].','.$subtotal[$i].',"'.Yii::app()->user->name.'")')->query();
@@ -256,8 +256,9 @@ class CompraController extends Controller
   
          echo CJSON::encode($arr);
         }
+              
         
-//              
+            
 //        public function actionAutocompleteProveedor($term) 
 //        {
 //            $criteria = new CDbCriteria;

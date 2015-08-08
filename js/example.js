@@ -73,17 +73,19 @@ function fechaHoy() {
   return hoy;
 }
 
+
+//DESDE AQUI
 function update_total() {
   var total = 0;
-  $('.price').each(function(i){
-    price = $(this).val().replace("$","");
+  $('.Subtotal').each(function(i){
+    price = $(this).val();
     if (!isNaN(price)) total += Number(price);
   });
   total = roundNumber(total,2);
-  $('#subtotal').val(total);
+  $('#Venta_TotNeto').val(total);
   
   var total_si = 0;
-  var iva = parseFloat($('#iva').val()/100);
+  var iva = parseFloat($('#Venta_TotIva').val()/100);
   total_si += total*iva;
   
   var total_ci = 0;
@@ -91,7 +93,7 @@ function update_total() {
   
   
   total_ci = roundNumber(total_ci,2);
-  $('#total').val(total_ci);
+  $('#Venta_Total').val(total_ci);
   
   update_balance();
 }
@@ -132,7 +134,18 @@ $(document).ready(function() {
   });
   
   bind();
-  
+  //QUIEN HACE TODO ES ESTE SEÑOR
+  var index = $('#contador').html();
+
+$('#Detalleventa_Subtotal'+index).mouseenter( function(){
+    var i = $('#Detalleventa_Precio'+index).val();
+    var j = $('#Detalleventa_Cantidad'+index).val();
+    var k = parseFloat(i)*parseFloat(j);
+    $('#Detalleventa_Subtotal'+index).val(k);
+   index = $('#contador').html();
+   update_total();
+});
+
   $(".delete").click(function(){
     $(this).parents('.item-row').remove();
     update_total();
