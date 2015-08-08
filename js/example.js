@@ -1,3 +1,4 @@
+
 /*function print_today() {
   // ***********************************************
   // AUTHOR: WWW.CGISCRIPT.NET, LLC
@@ -137,7 +138,7 @@ $(document).ready(function() {
   //QUIEN HACE TODO ES ESTE SEÑOR
   var index = $('#contador').html();
 
-$('#Detalleventa_Subtotal'+index).mouseenter( function(){
+$('#Detalleventa_Cantidad'+index).change( function(){
     var i = $('#Detalleventa_Precio'+index).val();
     var j = $('#Detalleventa_Cantidad'+index).val();
     var k = parseFloat(i)*parseFloat(j);

@@ -1,6 +1,9 @@
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl?>/css/jquery.css" />
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/jquery-ui.js"></script>
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/example.js"></script>
+
+<div id="contador"></div>
+
 <div class="form wide">
  
     <?php $form=$this->beginWidget('CActiveForm', array(
@@ -204,9 +207,7 @@ function init(x) {
                         'dateFormat'=>'yy-mm-dd',
                         'showButtonPanel'=>TRUE,
                         'changeYear'=>TRUE,
-//                        'yearRange'=>'-80:-10',
-//                        'minDate'=>'-80Y',
-//                        'maxDate'=>'-10Y',
+
                     )
                 ))
              ?>
@@ -236,6 +237,27 @@ function init(x) {
             <?php echo $form->labelEx($model,'Proveedor'); ?>
             <?php echo $form->dropDownList($model,'CodProveedor',CHtml::listData(Proveedor::model()->findAll(),'CodProveedor','Descripcion'),array('empty'=>' ')); ?>           
             <?php echo $form->error($model,'CodProveedor'); ?>
+               <?php // $this->widget('zii.widgets.jui.CJuiAutoComplete',
+//                      array(
+//                       'id'=>'Proveedor',
+//                       'name'=>'Descripcion', // Nombre para el campo de autocompletar
+//                       'model'=>$model,
+//                       'value'=>$model->isNewRecord ? '' : $model->Compra->CodProveedor.' ',
+//                       'source'=>$this->createUrl('compra/AutocompleteProveedor'), // URL que genera el conjunto de datos
+//                       'options'=> array(
+//                         'showAnim'=>'fold',
+//                         'size'=>'30',
+//                         'minLength'=>'1', // Minimo de caracteres que hay que digitar antes de relizar la busqueda
+//                         'select'=>"js:function(event, ui) { 
+//                          $('#Proveedor').val(ui.item.id); 
+//                           }"
+//                         ),
+//                       'htmlOptions'=> array(
+//                        'size'=>40,
+//                        'placeholder'=>'Proveedor',
+//                        'title'=>'Indique el Proveedor.'
+//                        ),
+//                      ));                  ?>
         </th>
         <th>
             <?php echo $form->labelEx($model,'Bodega'); ?>
@@ -266,6 +288,7 @@ function init(x) {
                  'size'=>'10',
                 'maxlength'=>10,
                 'style'=>'WIDTH:100px',
+                'readonly'=>TRUE,
             ),
               
              'Descripcion'=>array(
@@ -285,6 +308,7 @@ function init(x) {
                           $('#Detallecompra_Saldo'+indexid).val(ui.item.Saldo); 
                           $('#Detallecompra_Descuento'+indexid).val(0);
                           $('#Detallecompra_Exento'+indexid).val(0);
+                          $('#contador').html(indexid);
                          }",
                 ),
                 'htmlOptions'=> array(
@@ -315,6 +339,7 @@ function init(x) {
                 'maxlength'=>8,
                 'size'=>8,
                 'style'=>'WIDTH:80px',
+                'readonly'=>TRUE,
             ),
             'Descuento'=>array(
                 'type'=>'text',
@@ -333,6 +358,7 @@ function init(x) {
                 'maxlength'=>10,
                 'size'=>8,
                 'style'=>'WIDTH:80px',
+                
                
             ),
               'Saldo'=>array(
@@ -341,6 +367,7 @@ function init(x) {
                 'maxlength'=>10,
                 'size'=>8,
                 'style'=>'WIDTH:80px',
+                'readonly'=>true,
              
             ),
         ));

@@ -1,3 +1,4 @@
+
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl?>/css/jquery.css"/>
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/jquery-ui.js"></script>
 

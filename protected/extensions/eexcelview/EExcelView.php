@@ -1,3 +1,4 @@
+
 <?php
 
 Yii::import('zii.widgets.grid.CGridView');
@@ -282,4 +283,4 @@ Yii::import('zii.widgets.grid.CGridView');
 				throw new Exception("Invalid Column # ".($index + 1));
 		}		
 		
-	}
+        }
