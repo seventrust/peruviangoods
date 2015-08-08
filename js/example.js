@@ -135,16 +135,22 @@ $(document).ready(function() {
   });
   
   bind();
+  
   //QUIEN HACE TODO ES ESTE SEÑOR
   var index = $('#contador').html();
 
 $('#Detalleventa_Cantidad'+index).change( function(){
+    var index = $('#contador').html();
     var i = $('#Detalleventa_Precio'+index).val();
     var j = $('#Detalleventa_Cantidad'+index).val();
-    var k = parseFloat(i)*parseFloat(j);
+    var l = $('#Detalleventa_Descuento'+index).val();
+    var m = $('#Detalleventa_Exento'+index).val();
+    var k = (parseFloat(i)*parseFloat(j))-(parseFloat(l)+parseFloat(m));
     $('#Detalleventa_Subtotal'+index).val(k);
+   
    index = $('#contador').html();
    update_total();
+   
 });
 
   $(".delete").click(function(){

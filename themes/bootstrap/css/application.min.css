@@ -7,7 +7,6 @@ html,body{background-color:#eee;}
 .footer{background-color:#eee;min-width:940px;margin-top:30px;text-shadow:0 1px 0 #fff;border-top:1px solid #e5e5e5;-webkit-box-shadow:inset 0 5px 15px rgba(0,0,0,.025);-moz-box-shadow:inset 0 5px 15px rgba(0,0,0,.025);box-shadow:inset 0 5px 15px rgba(0,0,0,.025);padding:30px 0;}
 .footer p{color:#555;text-align:center;}
 
-//UNA MODIFICACION PARA EL DROPDOWN MENU
 .dropdown-submenu {
     position: relative;
 }
@@ -55,31 +54,3 @@ html,body{background-color:#eee;}
     -moz-border-radius: 6px 0 6px 6px;
     border-radius: 6px 0 6px 6px;
 }
-
-2) change your TbNavbar widget
-
-<?php
-$this->widget('bootstrap.widgets.TbNavbar', array(
-     '...'
-    'items' => array(
-        array(
-            'class' => 'bootstrap.widgets.TbMenu',
-            'submenuHtmlOptions' => array('class' => 'multi-level'),  
-            'items' => array(
-                array('label' => 'Top', 'url' => '#', 'items' => array(
-                        '...',
-                        array('label' => 'Level One', 'url' => '#',),
-                        array('label' => 'Level One', 'url' => '#', 'itemOptions' =>   array('class' => 'dropdown-submenu'),
-                            'items' => array(
-                                  '...',
-                                array('label' => 'Level One', 'url' => '#',),
- 
-                            ),
-                        ),
-                    )
-                ),
-            ),
-        ),
-    ),
-));
-?>

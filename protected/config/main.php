@@ -20,6 +20,7 @@ return array(
         
         'aliases' => array(        
             'yiistrap' => realpath(__DIR__ . '/../extensions/yiistrap'), // change this if necessary
+            'bootstrap' => realpath(__DIR__.'/../extensions/bootstrap'),
         ),
 	// autoloading model and component classes
 	'import'=>array(
@@ -39,6 +40,11 @@ return array(
                 'yiistrap.helpers.*',
                 'yiistrap.widgets.*',
                 'ext.yiiext.behaviors.activerecord-relation.EActiveRecordRelationBehavior.*',
+            //BOOTSTRAP
+                'bootstrap.widgets.*',
+                'bootstrap.form.*',
+                'bootstrap.components.*',
+                
                 
 	),
 
