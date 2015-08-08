@@ -45,9 +45,7 @@
                         'dateFormat'=>'yy-mm-dd',
                         'showButtonPanel'=>TRUE,
                         'changeYear'=>TRUE,
-                        'yearRange'=>'-80:-10',
-                        'minDate'=>'-80Y',
-                        'maxDate'=>'-10Y',
+                        
                     )
                 ))
              ?>

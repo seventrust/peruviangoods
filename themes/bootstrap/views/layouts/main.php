@@ -11,7 +11,7 @@
 	<link href="<?php echo Yii::app()->theme->baseUrl; ?>/css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?php echo Yii::app()->theme->baseUrl; ?>/css/application.min.css" rel="stylesheet">
 	<link href="<?php echo Yii::app()->theme->baseUrl; ?>/css/bootstrap-responsive.css" rel="stylesheet">
-
+        
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
 		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -29,19 +29,22 @@
 		<div class="navbar-inner">
 			<div class="container">
 				<a class="brand" href="<?php echo $this->createAbsoluteUrl('//'); ?>"><?php echo CHtml::encode(Yii::app()->name); ?></a>
-				<?php $this->widget('zii.widgets.CMenu',array(
-					'items'=>array(
-						array('label'=>'Inicio', 'url'=>array('/site/index')),
-//                                            array('label'=>'Compra', 'url'=>array('/site/page', 'view'=>'about')),
-						array('label'=>'Compra', 'url'=>array('/site/page', 'view'=>'about')),
+				<div id="menu-top">
+                                    <?php $this->widget('yiistrap.widgets.TbNav', array(
+                                        'type' => TbHtml::NAV_TYPE_PILLS,
+                                        'items' => array(
                                             
-						array('label'=>'Contact', 'url'=>array('/site/contact')),
-						array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-					),
-					'htmlOptions'=>array(
-						'class'=>'nav',
-					),
-				)); ?>
+                                            array('label' => 'Dropdown', 'items' => array(
+                                                array('label' => 'Action', 'url' => '#'),
+                                                array('label' => 'Another action', 'url' => '#'),
+                                                array('label' => 'Something else here', 'url' => '#'),
+                                                TbHtml::menuDivider(),
+                                                array('label' => 'Separate link', 'url' => '#'),
+                                            ),
+                                        ),
+                                    ))); ?>
+                                </div>
+                                
 				<?php $this->widget('zii.widgets.CMenu',array(
 					'items'=>array(
 						array('label'=>Yii::app()->user->name, 'url'=>array('site/profile'), 'visible'=>!Yii::app()->user->isGuest),

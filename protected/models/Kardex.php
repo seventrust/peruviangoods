@@ -35,7 +35,7 @@ class Kardex extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('NumDocumento, CodProducto, TipoMovimiento, Cantidad, SaldoAnterior, SaldoActual, Precio, Subtotal, Usuario', 'required'),
-			array('NumDocumento, CodProducto, Usuario', 'length', 'max'=>20),
+			array('NumDocumento, CodProducto, Usuario', 'length', 'max'=>100),
 			array('TipoMovimiento, Cantidad, SaldoAnterior, SaldoActual, Precio, Subtotal', 'length', 'max'=>10),
 			array('Fecha', 'safe'),
 			// The following rule is used by search().
@@ -52,7 +52,8 @@ class Kardex extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-                    'productos' => array(self::BELONGS_TO, 'Kardex', 'CodProducto'),
+                    'productos' => array(self::BELONGS_TO, 'Producto', 'CodProducto'),
+                    
 		);
 	}
 

@@ -9,6 +9,7 @@
 require_once( dirname(__FILE__) . '/../components/numero_venta.php');
 Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
 Yii::setPathOfAlias('booster', dirname(__FILE__).'/../extensions/yii');
+
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Sistema de Control y Gestión de Inventario',
@@ -16,7 +17,10 @@ return array(
         'theme'=>'bootstrap',
 	// preloading 'log' component
 	'preload'=>array('log'),
-
+        
+        'aliases' => array(        
+            'yiistrap' => realpath(__DIR__ . '/../extensions/yiistrap'), // change this if necessary
+        ),
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',
@@ -28,6 +32,12 @@ return array(
                 'ext.bootstrap-theme.behaviors.*',
                 'ext.multimodelform.MultiModelForm.*',
                 'ext.AweCrud.components.*',
+            //YII
+                'yiistrap.behaviors.*',
+                'yiistrap.components.*',
+                'yiistrap.form.*',
+                'yiistrap.helpers.*',
+                'yiistrap.widgets.*',
                 'ext.yiiext.behaviors.activerecord-relation.EActiveRecordRelationBehavior.*',
                 
 	),
@@ -45,6 +55,7 @@ return array(
                             'ext.bootstrap-theme.gii',
                             'bootstrap.gii',
                             'booster.gii',
+                            'yiistrap.gii',
                         ),
 		),
 		
@@ -74,6 +85,9 @@ return array(
                         ),
                         'bootstrap'=>array(
                         'class'=>'bootstrap.components.Bootstrap',
+                        ),
+                        'bootstrap' => array(
+                        'class' => 'yiistrap.components.TbApi',   
                         ),
                     ),
                 ),

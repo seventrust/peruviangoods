@@ -50,7 +50,7 @@ class Producto extends CActiveRecord
 		return array(
                     'codigo' => array(self::HAS_MANY, 'Detalleventa', 'CodProducto'),
                     
-                    'nomenclatura' => array(self::HAS_MANY, 'Producto', 'CodProducto'),
+                    'nomenclatura' => array(self::HAS_MANY, 'Kardex', 'CodProducto'),
 		);
 	}
 
