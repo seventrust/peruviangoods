@@ -36,7 +36,7 @@ class ClienteController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('gri'),
+				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -70,7 +70,7 @@ class ClienteController extends Controller
 		{
 			$model->attributes=$_POST['Cliente'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->CodCliente));
+				$this->redirect(array('view','id'=>$model->Id));
 		}
 
 		$this->render('create',array(
@@ -94,7 +94,7 @@ class ClienteController extends Controller
 		{
 			$model->attributes=$_POST['Cliente'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->CodCliente));
+				$this->redirect(array('view','id'=>$model->Id));
 		}
 
 		$this->render('update',array(
@@ -155,7 +155,7 @@ class ClienteController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=Cliente::model()->findByPk((int)$id);
+		$model=Cliente::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;

@@ -100,13 +100,16 @@ class CompraController extends Controller
                                Yii::app()->db->createCommand('update productos set CanExistencia = (CanExistencia + '.$cantidad[$i].'),PreCompra='.$precio[$i].' where CodProducto = "'.$codigo[$i].'"')->query();
                                
                                 yii::app()->db->createCommand('insert into kardex (Rut,ForPago,NumDocumento, CodProducto, TipoMovimiento, Cantidad, SaldoAnterior, SaldoActual, Precio, Subtotal,Usuario)'
-                                                            . ' Values('.$rut.','.$forpago.','.$numdocumento.',"'.$codigo[$i].'","compra",'.$cantidad[$i].','.$saldoanterior[$i].','.$saldoactual[$i].','.$precio[$i].','.$subtotal[$i].',"'.$usuario.'")')->query();
+                                                            . ' Values("'.$rut.'",'.$forpago.','.$numdocumento.',"'.$codigo[$i].'","compra",'.$cantidad[$i].','.$saldoanterior[$i].','.$saldoactual[$i].','.$precio[$i].','.$subtotal[$i].',"'.$usuario.'")')->query();
 //                                                                 
 //                                yii::app()->db->createCommand('insert into kardex (Fecha,NumDocumento, CodProducto, TipoMovimiento, Cantidad, SaldoAnterior, SaldoActual, Precio, Subtotal)'
 //                                                            . ' Values(today,'.$numdocumento.','.$codigo[$i].',"compra",'.$cantidad[$i].','.$saldoanterior[$i].','.$saldoactual[$i].','.$precio[$i].','.$subtotal[$i].')')->query();
 //                                                                 
                            }
-                            $this->redirect(array('view','id'=>$model->NumCompra));
+//                            $this->redirect(array('view','id'=>$model->NumCompra));
+//                           $this->redirect(array('view','NumCompra'=>$model->NumCompra));
+//                          $this->render('admin',array('model'=>$model,));
+                           $this->redirect(array('view','id'=>$model->Id));
                      }
                     }   
                     

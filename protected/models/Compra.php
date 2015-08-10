@@ -70,13 +70,13 @@ class Compra extends CActiveRecord
                         'Fecha' => 'Fecha',
                         'Vencimiento' => 'Vencimiento',
                         'ForPago' => 'For Pago',
-                        'TotExento' => 'Tot Exento',
-                        'TotDescuento' => 'Tot Descuento',
-                        'TotNeto' => 'Tot Neto',
-                        'TotIva' => 'Tot Iva',
-                        'TotImpuesto' => 'Tot Impuesto',
-                        'TotRetencion' => 'Tot Retencion',
-                        'Total' => 'Total',
+                        'TotExento' => 'Total Exento',
+                        'TotDescuento' => 'Total Descuento',
+                        'TotNeto' => 'Total Neto',
+                        'TotIva' => 'Total Iva',
+                        'TotImpuesto' => 'Total Impuesto',
+                        'TotRetencion' => 'Total Retencion',
+                        'Total' => 'Gran Total',
 		);
 	}
 

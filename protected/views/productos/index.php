@@ -1,20 +1,17 @@
 <?php
-/* @var $this ProductosController */
-/* @var $dataProvider CActiveDataProvider */
-
 $this->breadcrumbs=array(
 	'Productoses',
 );
 
 $this->menu=array(
-	array('label'=>'Create Productos', 'url'=>array('create')),
-	array('label'=>'Manage Productos', 'url'=>array('admin')),
+	array('label'=>'Create Productos','url'=>array('create')),
+	array('label'=>'Manage Productos','url'=>array('admin')),
 );
 ?>
 
-<h1>Productos</h1>
+<h1>Productoses</h1>
 
-<?php $this->widget('zii.widgets.CListView', array(
+<?php $this->widget('bootstrap.widgets.TbListView',array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
 )); ?>

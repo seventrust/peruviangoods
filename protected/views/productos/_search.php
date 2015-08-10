@@ -1,70 +1,38 @@
-<?php
-/* @var $this ProductosController */
-/* @var $model Productos */
-/* @var $form CActiveForm */
-?>
-
-<div class="wide form">
-
-<?php $form=$this->beginWidget('CActiveForm', array(
+<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	'action'=>Yii::app()->createUrl($this->route),
 	'method'=>'get',
 )); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'Id'); ?>
-		<?php echo $form->textField($model,'Id'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'Id',array('class'=>'span5','maxlength'=>20)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'CodProducto'); ?>
-		<?php echo $form->textField($model,'CodProducto',array('size'=>10,'maxlength'=>10)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'CodProducto',array('class'=>'span5','maxlength'=>40)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'Descripcion'); ?>
-		<?php echo $form->textField($model,'Descripcion',array('size'=>50,'maxlength'=>50)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'Descripcion',array('class'=>'span5','maxlength'=>200)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'UniMedida'); ?>
-		<?php echo $form->textField($model,'UniMedida',array('size'=>10,'maxlength'=>10)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'UniMedida',array('class'=>'span5','maxlength'=>10)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'CanExistencia'); ?>
-		<?php echo $form->textField($model,'CanExistencia',array('size'=>10,'maxlength'=>10)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'CanExistencia',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'PreCompra'); ?>
-		<?php echo $form->textField($model,'PreCompra',array('size'=>10,'maxlength'=>10)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'PreCompra',array('class'=>'span5','maxlength'=>10)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'PreVenta'); ?>
-		<?php echo $form->textField($model,'PreVenta',array('size'=>10,'maxlength'=>10)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'PreVenta',array('class'=>'span5','maxlength'=>10)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'Foto'); ?>
-		<?php echo $form->textArea($model,'Foto',array('rows'=>6, 'cols'=>50)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'PreVenta1',array('class'=>'span5','maxlength'=>10)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'CodCategoria'); ?>
-		<?php echo $form->textField($model,'CodCategoria',array('size'=>10,'maxlength'=>10)); ?>
-	</div>
+	<?php echo $form->textAreaRow($model,'Foto',array('rows'=>6, 'cols'=>50, 'class'=>'span8')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'Estatus'); ?>
-		<?php echo $form->textField($model,'Estatus',array('size'=>1,'maxlength'=>1)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'CodCategoria',array('class'=>'span5','maxlength'=>10)); ?>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+	<?php echo $form->textFieldRow($model,'Estatus',array('class'=>'span5','maxlength'=>1)); ?>
+
+	<?php echo $form->textFieldRow($model,'CodProveedor',array('class'=>'span5','maxlength'=>20)); ?>
+
+	<div class="form-actions">
+		<?php $this->widget('bootstrap.widgets.TbButton', array(
+			'buttonType'=>'submit',
+			'type'=>'primary',
+			'label'=>'Search',
+		)); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
-
-</div><!-- search-form -->

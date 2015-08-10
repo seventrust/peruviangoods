@@ -1,19 +1,18 @@
 <?php
-$this->pageCaption='Update Cliente '.$model->CodCliente;
-$this->pageTitle=Yii::app()->name . ' - ' . $this->pageCaption;
-$this->pageDescription='';
 $this->breadcrumbs=array(
 	'Clientes'=>array('index'),
-	$model->CodCliente=>array('view','id'=>$model->CodCliente),
+	$model->Id=>array('view','id'=>$model->Id),
 	'Update',
 );
 
 $this->menu=array(
-	array('label'=>'List Clientes', 'url'=>array('index')),
-	array('label'=>'Create Cliente', 'url'=>array('create')),
-	array('label'=>'View Cliente', 'url'=>array('view', 'id'=>$model->CodCliente)),
-	array('label'=>'Manage Clientes', 'url'=>array('admin')),
+	array('label'=>'List Cliente','url'=>array('index')),
+	array('label'=>'Create Cliente','url'=>array('create')),
+	array('label'=>'View Cliente','url'=>array('view','id'=>$model->Id)),
+	array('label'=>'Manage Cliente','url'=>array('admin')),
 );
 ?>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<h1>Update Cliente <?php echo $model->Id; ?></h1>
+
+<?php echo $this->renderPartial('_form',array('model'=>$model)); ?>

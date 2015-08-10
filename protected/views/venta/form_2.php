@@ -1,7 +1,5 @@
-
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl?>/css/jquery.css"/>
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/jquery-ui.js"></script>
-
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/example.js"></script>
 <script type="text/javascript">
 
@@ -15,26 +13,22 @@
             'enableAjaxValidation'=>false,
     )); ?>
  
-    <p class="note">Fields with <span class="required">*</span> are required.</p>
- 
     <?php
         //show errorsummary at the top for all models
         //build an array of all models to check
         echo $form->errorSummary(array_merge(array($model),$validatedMembers));
     ?>
 
-    <div class="table-responsive">
+    <div>
     <table class="table">
         <th> 
-            <div class="required">
                 <?php echo $form->labelEx($model,'NumVenta'); ?>
                 <?php echo $form->textField($model,'NumVenta'); ?>
                 <?php echo $form->error($model,'NunVenta'); ?>
-            </div>
+           
         </th>
     
         <th>
-            <div class="required">
             <?php echo $form->labelEx($model, 'Fecha');?>
             <?php 
                 $this->widget('zii.widgets.jui.CJuiDatePicker',array(
@@ -50,11 +44,11 @@
                 ))
              ?>
             <?php echo $form->error($model,'Fecha'); ?>
-            </div>
+            
         </th>
     
      <th>
-        <div class="required">
+        
         <?php echo $form->labelEx($model, 'Vencimiento');?>
          <?php 
             $this->widget('zii.widgets.jui.CJuiDatePicker',array(
@@ -69,12 +63,12 @@
             ))
          ?>
         <?php echo $form->error($model,'Vencimiento'); ?>
-    </div>
+    <!--</div>-->
     </th>
     </table>
-    <table>
-    <th>
-        <div class="required">
+        <table class="table">
+            <th>
+        <!--<div class="required">-->
         <?php echo $form->labelEx($model, 'CodCliente');?>
         <?php
              $this->widget('zii.widgets.jui.CJuiAutoComplete',
@@ -103,26 +97,30 @@
                       )); 
         ?>
         <?php echo $form->error($model,'CodCliente'); ?>
-    </div>
+    <!--</div>-->
     </th>
+    
     <th>
-    <div class="required">
+    <!--<div class="required">-->
         <label>Cliente</label>
         <input type="text" id="nombreCliente"/>
-    </div>
+    <!--</div>-->
     </th>
     <th>
-    <div class="required">
+    <!--<div class="required">-->
         <label>Direccion</label>
-        <input type="text" id="direccion"/>
-    </div>
+        <input type="text" id="direccion" style="WIDTH:10"/>
+    <!--</div>-->
     </th>
     <th>
-    <div class="required">
+    <!--<div class="required">-->
         <label>Telefono</label>
         <input type="text" id="telefono"/>
-    </div>
+    <!--</div>-->
     </th>
+        </table>
+    
+    
     
     <th>
     <div class="required">
@@ -132,8 +130,17 @@
     </div>
     </th>
     
+    <div class="required">
+        <th>
+        <?php echo $form->labelEx($model, 'ForPago');?>
+        <?php echo $form->dropDownList($model, 'ForPago', array('Debito', 'Credito', 'Efectivo', 'Cheque', 'Vale'));?>
+        <?php echo $form->error($model,'ForPago'); ?>
+        </th>
+    </div>
+    
+    
 
-    <div>
+   
     <?php
     
     // see http://www.yiiframework.com/doc/guide/1.1/en/form.table
@@ -250,13 +257,7 @@
         ));
     ?>
         
-            <th>
-    <div class="required">
-        <?php echo $form->labelEx($model, 'ForPago');?>
-        <?php echo $form->dropDownList($model, 'ForPago', array('Debito', 'Credito', 'Efectivo', 'Cheque', 'Vale'));?>
-        <?php echo $form->error($model,'ForPago'); ?>
-    </div>
-    </th>
+            
     <th>
     <div class="required">
         <?php echo $form->labelEx($model, 'TotExento');?>
@@ -312,10 +313,13 @@
     </div>
     </th>
     </table>
-    <div class="required buttons">
-        <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
-    </div>
+        
+    <p class="note">Campos con <span class="required">*</span> son requeridos.</p>
+        <div class="row buttons">
+            <?php echo CHtml::submitButton($model->isNewRecord ? 'Guardar' : 'Save'); ?>
+        </div>
  
     <?php $this->endWidget(); ?>
  
     </div><!-- form -->
+</div>

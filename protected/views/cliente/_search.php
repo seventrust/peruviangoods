@@ -1,49 +1,40 @@
-<div class="wide form">
-
-<?php $form=$this->beginWidget('BActiveForm', array(
+<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	'action'=>Yii::app()->createUrl($this->route),
 	'method'=>'get',
 )); ?>
 
-	<div class="clearfix">
-		<?php echo $form->label($model,'CodCliente'); ?>
-		<div class="input">
-			<?php echo $form->textField($model,'CodCliente',array('size'=>10,'maxlength'=>10)); ?>
-		</div>
-	</div>
+	<?php echo $form->textFieldRow($model,'Id',array('class'=>'span5')); ?>
 
-	<div class="clearfix">
-		<?php echo $form->label($model,'Descripcion'); ?>
-		<div class="input">
-			<?php echo $form->textField($model,'Descripcion',array('size'=>50,'maxlength'=>50)); ?>
-		</div>
-	</div>
+	<?php echo $form->textFieldRow($model,'CodCliente',array('class'=>'span5','maxlength'=>10)); ?>
 
-	<div class="clearfix">
-		<?php echo $form->label($model,'Direccion'); ?>
-		<div class="input">
-			<?php echo $form->textField($model,'Direccion',array('size'=>60,'maxlength'=>100)); ?>
-		</div>
-	</div>
+	<?php echo $form->textFieldRow($model,'Descripcion',array('class'=>'span5','maxlength'=>200)); ?>
 
-	<div class="clearfix">
-		<?php echo $form->label($model,'Telefono'); ?>
-		<div class="input">
-			<?php echo $form->textField($model,'Telefono',array('size'=>20,'maxlength'=>20)); ?>
-		</div>
-	</div>
+	<?php echo $form->textFieldRow($model,'Fantasia',array('class'=>'span5','maxlength'=>200)); ?>
 
-	<div class="clearfix">
-		<?php echo $form->label($model,'Estatus'); ?>
-		<div class="input">
-			<?php echo $form->textField($model,'Estatus',array('size'=>1,'maxlength'=>1)); ?>
-		</div>
-	</div>
+	<?php echo $form->textFieldRow($model,'Giro',array('class'=>'span5','maxlength'=>200)); ?>
 
-	<div class="actions">
-		<?php echo BHtml::submitButton('Search'); ?>
+	<?php echo $form->textFieldRow($model,'Direccion',array('class'=>'span5','maxlength'=>100)); ?>
+
+	<?php echo $form->textFieldRow($model,'Telefono',array('class'=>'span5','maxlength'=>50)); ?>
+
+	<?php echo $form->textFieldRow($model,'Fax',array('class'=>'span5','maxlength'=>20)); ?>
+
+	<?php echo $form->textFieldRow($model,'Correo',array('class'=>'span5','maxlength'=>100)); ?>
+
+	<?php echo $form->textFieldRow($model,'Contacto',array('class'=>'span5','maxlength'=>100)); ?>
+
+	<?php echo $form->textFieldRow($model,'Observaciones',array('class'=>'span5','maxlength'=>200)); ?>
+
+	<?php echo $form->textFieldRow($model,'IdTipo',array('class'=>'span5')); ?>
+
+	<?php echo $form->textFieldRow($model,'Estatus',array('class'=>'span5','maxlength'=>1)); ?>
+
+	<div class="form-actions">
+		<?php $this->widget('bootstrap.widgets.TbButton', array(
+			'buttonType'=>'submit',
+			'type'=>'primary',
+			'label'=>'Search',
+		)); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
-
-</div><!-- search-form -->

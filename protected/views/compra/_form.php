@@ -1,3 +1,4 @@
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl?>/css/jquery.css" />
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/jquery-ui.js"></script>
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/compra.js"></script>
@@ -14,175 +15,6 @@
     <?php
         echo $form->errorSummary(array_merge(array($model),$validatedMembers));
     ?>
-
-<!--<script TYPE="text/javascript" LANGUAGE="JavaScript"> 
-function init(x) {
-                var descrip = x.replace("Detallecompra_CodProducto","Detallecompra_Descripcion");
-                var unitprice = x.replace("Detallecompra_CodProducto","Detallecompra_Precio");       
-                var obj =$member; 
-                $("#"+x).autocomplete("Detallecompra_Descripcion").autocomplete({source:obj,minLength:3,
-                select: function( event, ui ) {$("#"+descrip).val(ui.item.label);
-                $("#"+unitprice).val(ui.item.PreVenta);}});
-                this.autocomplete();
-                alert(obj);
-                }
- </script> 
-    
-<script>
-
-    function calcularPrecioIVA(){
-     var subtotal=parseInt(document.getElementById("Detallecompra_Precio").valueOf());
-    
-//       alert(subtotal);
-    }
-    
-    $('#precio'+contador).on('click', '',function(){
-        var precioU = $('#precioU'+contador).val();	
-        var cantidad = $('#cantidad'+contador).val();
-
-        var totalP =  parseFloat(precioU) * parseFloat(cantidad) ;
-
-        totalP = roundNumber(totalP, 2);	
-        $('#precio'+contador).val(totalP);
-
-
-        var subtotal=0;
-        for(var i = 1; i<=contador; i++){
-                subtotal += parseFloat($('#precio'+i).val());
-        }
-        subtotal= roundNumber(subtotal, 2);
-        $('#subtotal').attr('readonly', 'readonly').val(parseFloat(subtotal));
-
-        var totalCuenta = parseFloat($('#subtotal').val()) * parseFloat($('#iva').val());
-        totalCuenta += parseFloat($('#subtotal').val());
-
-        totalCuenta = roundNumber(totalCuenta, 2);
-        $('#total').attr('readonly', 'readonly').val(totalCuenta);
-    });
-    
-    
-</script>
-
-   
-    
-    
-<script>
-    
-    
-    function myFunction() {
-    
-        alert('si carga myFunction');
-    }
-
-    function prueba(codigo) {
-        
-        var nomobj_texto = codigo.id;
-        indexid = nomobj_texto.substring(6,nomobj_texto.length);
-        jQuery.ajax({
-            url: "_form.php?r=compra/prueba",
-            type: 'post',
-            async: false,
-            contentType: "application/json",
-            data: "{Detallecompra_CodProducto: " + codigo.value + "}",
-            success: function(data, textStatus, jqXHR){
-//                    // llamado cuando el action responde con un echo
-//                    // aqui "data" sera lo que tu hayas enviado desde el action
-//                    // puede ser json o texto simple,
-//                    // si es texto simple puedes hacer:
-//                    // alert(data);
-//                    // si es json puedes hacer:
-//                    //
-//                                        
-//                    //$('#descripcion_articulo'+indexid).value = data.descripcion;
-//                    //$('#precio_catalogo'+indexid).value = data.descripcion;
-                    
-                   document.getElementById('descripcion_articulo'+indexid).value =
-                        data.descripcion_articulo;
-                   document.getElementById('Detallecompra_Precio'+indexid).value =
-                        data.Detallecompra_Precio;
-                   document.getElementById('Detallecompra_Descuento'+indexid).value = '25.00';
-                   document.getElementById('Detallecompra_CodProducto'+indexid).value =
-                        data.Detallecompra_CodProducto;
-                },
-            error: function(jqXHR, textStatus, errorThrown){
-                   // llamado cuando el action emite una excepcion
-                   //
-                   alert(jqXHR.responseText);
-                }
-        });
-    }
-    
-    function totaliza_linea_venta() {
-    
-        var cantidad = 0;
-        var precio   = 0;
-        var dscto    = 0;
-        var subtotal = 0;
-//        var precio_empresaria = 0;
-        
-        cantidad = document.getElementById('Detallecompra_Cantidad'+indexid).value;
-        precio   = document.getElementById('Detallecompra_Precio'+indexid).value;
-        dscto    = document.getElementById('Detallecompra_Descuento'+indexid).value ;
-        precio_empresaria = precio * (1 - dscto/100) ;
-        subtotal = cantidad * precio_empresaria ;
-        document.getElementById('Detallecompra_Subtotal'+indexid).value = subtotal.toFixed(2);
-        document.getElementById('Detallecompra_Precio'+indexid).value = Detallecompra_Precio.toFixed(2);
-        
-        totaliza_venta();
-    }
-    
-    function totaliza_venta() {
-        var subtotal = 0;
-        var total    = 0;
-        var igv      = 0;
-        var totBruto = 0;
-        var total2   = 0;
-        var cantidad = 0;
-        var precio   = 0;
-        var tasa     = 0;
-        var totDscto = 0;
-        var i        = 0;
-        var totItems = 0;
-
-        do {
-            i++;
-            if(i==1) {
-               cantidad = document.getElementById('Detallecompra_Cantidad').value;
-               precio   = document.getElementById('Detallecompra_Precio').value;
-               total2   = total2 + cantidad * precio;
-               subtotal = document.getElementById('Detallecompra_Subtotal').value;
-               totItems = totItems + 1*cantidad
-            }else{
-               if(document.getElementById('Detallecompra_Subtotal'+i)==null) {
-                   break;
-               }
-               cantidad = document.getElementById('Detallecompra_Cantidad'+i).value;
-               precio   = document.getElementById('Detallecompra_Precio'+i).value;
-               total2   = total2 + cantidad * precio;
-               subtotal = document.getElementById('Detallecompra_Subtotal'+i).value;
-               totItems = totItems + 1*cantidad
-            }
-            if(!isNaN(parseFloat(subtotal))) {
-                total = total + parseFloat(subtotal);
-            }        
-        } while(1==1);
-
-        totDscto = total2 - total;
-        totBruto = total / 1.18;
-        igv      = total - totBruto;
-        totBruto = totBruto + totDscto;
-        document.getElementById('total_bruto').value = totBruto.toFixed(2);
-        document.getElementById('total_dscto').value = totDscto.toFixed(2);
-
-        document.getElementById('total_igv').value = igv.toFixed(2);
-        document.getElementById('total_general').value = total.toFixed(2);
-        document.getElementById('total_items').value = totItems;
-
-        document.getElementById('pvp').value = total2.toFixed(2);
-        document.getElementById('inafecto').value = 0;
-        
-    }
-</script>-->
 
 <div>
     
@@ -325,7 +157,7 @@ function init(x) {
                 //it is important to add an empty item because of new records
                 'maxlength'=>8,
                 'size'=>8,
-               'style'=>'WIDTH:80px',
+               'style'=>'WIDTH:70px',
 //               'onchage'=>'calcularPrecioIVA()',
                 'class'=>'Cantidad',
                 
@@ -334,14 +166,14 @@ function init(x) {
                 'type'=>'text',
                 'maxlength'=>8,
                 'size'=>8,
-                'style'=>'WIDTH:80px',
+                'style'=>'WIDTH:70px',
                  'class'=>'Precio',
             ),
             'UniMedida'=>array(
                 'type'=>'text',
                 'maxlength'=>8,
                 'size'=>8,
-                'style'=>'WIDTH:80px',
+                'style'=>'WIDTH:70px',
                 'readonly'=>TRUE,
                  'class'=>'UniMedida',
             ),
@@ -349,23 +181,23 @@ function init(x) {
                 'type'=>'text',
                 'maxlength'=>8,
                 'size'=>8,
-                'style'=>'WIDTH:80px',
+                'style'=>'WIDTH:70px',
                  'class'=>'Descuento',
             ),
             'Exento'=>array(
                 'type'=>'text',
                 'maxlength'=>10,
                 'size'=>8,
-                'style'=>'WIDTH:80px',
+                'style'=>'WIDTH:70px',
                  'class'=>'Exento',
             ),
             'Subtotal'=>array(
                 'type'=>'text',
                 'maxlength'=>10,
                 'size'=>8,
-                'style'=>'WIDTH:80px',
+                'style'=>'WIDTH:70px',
                  'class'=>'Subtotal',
-//                 'readonly'=>true,
+                'readonly'=>true,
                 
                
             ),
@@ -374,7 +206,7 @@ function init(x) {
                   'type'=>'text',
                 'maxlength'=>10,
                 'size'=>8,
-                'style'=>'WIDTH:80px',
+                'style'=>'WIDTH:70px',
                 'readonly'=>true,
                  'class'=>'Saldo',
              
@@ -420,7 +252,7 @@ function init(x) {
         <table class="table">
             <tr>
                 <?php echo $form->labelEx($model,'TotExento'); ?>
-                <?php echo $form->textField($model,'TotExento',array('size'=>10,'maxlength'=>10)); ?>
+                <?php echo $form->textField($model,'TotExento',array('size'=>10,'maxlength'=>10, 'readonly'=>'true')); ?>
                 <?php echo $form->error($model,'TotExento'); ?>
             </tr>
             
@@ -459,16 +291,17 @@ function init(x) {
                 <?php echo $form->textField($model,'Total',array('size'=>10,'maxlength'=>10)); ?>
                 <?php echo $form->error($model,'Total'); ?>    
             </tr>
-
-                           
-        <p class="note">Campos con <span class="required">*</span> son requeridos.</p>
-            <div class="row buttons">
-        <?php echo CHtml::submitButton($model->isNewRecord ? 'Guardar' : 'Save'); ?>
-         
         </table>
      </div>
-   
+   <tr>
+                <p class="note">Campos con <span class="required">*</span> son requeridos.</p>
+                <div class="row buttons">
+                <?php echo CHtml::submitButton($model->isNewRecord ? 'Guardar' : 'Save'); ?>
+                </div>
+            </tr>    
     </div>
     <?php $this->endWidget(); ?>
+    
+     
  
     </div><!-- form -->

@@ -77,12 +77,42 @@ function fechaHoy() {
 //DESDE AQUI
 function update_total() {
   var total = 0;
+    
   $('.Subtotal').each(function(i){
     price = $(this).val();
     if (!isNaN(price)) total += Number(price);
   });
   total = roundNumber(total,2);
   $('#Compra_TotNeto').val(total);
+  
+  
+  var totalexento=0;
+  $('.Exento').each(function(i){
+    price = $(this).val();
+    if (!isNaN(price)) totalexento += Number(price);
+  });
+  totalexento = roundNumber(totalexento,2);
+  $('#Compra_TotExento').val(totalexento);
+  
+  
+  
+    var totaldscto=0;
+  $('.Descuento').each(function(i){
+    price = $(this).val();
+    if (!isNaN(price)) totaldscto += Number(price);
+  });
+  totaldscto = roundNumber(totaldscto,2);
+  $('#Compra_TotDescuento').val(totaldscto);
+  
+  
+      var totaldscto=0;
+  $('.Descuento').each(function(i){
+    price = $(this).val();
+    if (!isNaN(price)) totaldscto += Number(price);
+  });
+  totaldscto = roundNumber(totaldscto,2);
+  $('#Compra_TotDescuento').val(totaldscto);
+  
   
   var total_si = 0;
   var iva = parseFloat($('#Compra_TotIva').val()/100);
@@ -134,22 +164,73 @@ $(document).ready(function() {
   });
   
   bind();
-  //QUIEN HACE TODO ES ESTE SEÑOR
-  var index = $('#contador').html();
-    $('#Detallecompra_Cantidad'+index).change( function(){
-    var index = $('#contador').html();
-    alert(index);
-    var i = $('#Detallecompra_Precio'+index).val();
-    var j = $('#Detallecompra_Cantidad'+index).val();
-    var l = $('#Detallecompra_Descuento'+index).val();
-    var m = $('#Detallecompra_Exento'+index).val();
-    var k = (parseFloat(i)*parseFloat(j))-(parseFloat(l)+parseFloat(m));
-    $('#Detallecompra_Subtotal'+index).val(k);
-    alert(k);
-    index = $('#contador').html();
-    update_total();
-   
-});
+  //CUANDO CAMBIA LA CANTIDAD
+        var index = $('#contador').html();
+          $('#Detallecompra_Cantidad'+index).change( function() {
+          var index = $('#contador').html();
+      //    alert(index);
+          var i = $('#Detallecompra_Precio'+index).val();
+          var j = $('#Detallecompra_Cantidad'+index).val();
+          var l = $('#Detallecompra_Descuento'+index).val();
+          var m = $('#Detallecompra_Exento'+index).val();
+          var k = (parseFloat(i)*parseFloat(j))-(parseFloat(l)+parseFloat(m));
+          $('#Detallecompra_Subtotal'+index).val(k);
+      //    alert(k);
+          index = $('#contador').html();
+          update_total();
+
+      }); 
+      
+ //CUANDO CAMBIA EL PRECIO
+        var index = $('#contador').html();
+            $('#Detallecompra_Precio'+index).change( function() {
+            var index = $('#contador').html();
+        //    alert(index);
+            var i = $('#Detallecompra_Precio'+index).val();
+            var j = $('#Detallecompra_Cantidad'+index).val();
+            var l = $('#Detallecompra_Descuento'+index).val();
+            var m = $('#Detallecompra_Exento'+index).val();
+            var k = (parseFloat(i)*parseFloat(j))-(parseFloat(l)+parseFloat(m));
+            $('#Detallecompra_Subtotal'+index).val(k);
+        //    alert(k);
+            index = $('#contador').html();
+            update_total();
+
+        });
+
+//CUANDO CAMBIA EL DESCUENTO
+        var index = $('#contador').html();
+            $('#Detallecompra_Descuento'+index).change( function() {
+            var index = $('#contador').html();
+        //    alert(index);
+            var i = $('#Detallecompra_Precio'+index).val();
+            var j = $('#Detallecompra_Cantidad'+index).val();
+            var l = $('#Detallecompra_Descuento'+index).val();
+            var m = $('#Detallecompra_Exento'+index).val();
+            var k = (parseFloat(i)*parseFloat(j))-(parseFloat(l)+parseFloat(m));
+            $('#Detallecompra_Subtotal'+index).val(k);
+        //    alert(k);
+            index = $('#contador').html();
+            update_total();
+
+        });
+        
+//CUANDO CAMBIA EL EXENTO
+        var index = $('#contador').html();
+            $('#Detallecompra_Exento'+index).change( function() {
+            var index = $('#contador').html();
+        //    alert(index);
+            var i = $('#Detallecompra_Precio'+index).val();
+            var j = $('#Detallecompra_Cantidad'+index).val();
+            var l = $('#Detallecompra_Descuento'+index).val();
+            var m = $('#Detallecompra_Exento'+index).val();
+            var k = (parseFloat(i)*parseFloat(j))-(parseFloat(l)+parseFloat(m));
+            $('#Detallecompra_Subtotal'+index).val(k);
+        //    alert(k);
+            index = $('#contador').html();
+            update_total();
+
+        });
 
   $(".delete").click(function(){
     $(this).parents('.item-row').remove();

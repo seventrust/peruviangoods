@@ -43,11 +43,31 @@
                                                     'class' => 'bootstrap.widgets.TbMenu',
                                                     'submenuHtmlOptions' => array('class' => 'multi-level'),  
                                                     'items' => array(
-                                                            array('label' => 'Level One', 'url' => '#', 'itemOptions' =>   array('class' => 'dropdown-submenu'),
+                                                            array('label' => 'Maestros', 'url' => '#', 'itemOptions' =>   array('class' => 'dropdown-submenu'),
                                                                 'items'=>array(
-                                                                    array('label'=>'Level Two', 'url'=>array('compra/create')),
+                                                                    array('label'=>'Productos', 'url'=>array('productos/create')),
+                                                                    array('label'=>'Bodegas', 'url'=>array('bodega/create')),
+                                                                    array('label'=>'Categoria de productos', 'url'=>array('categoria/create')),
+                                                                    array('label'=>'Clientes', 'url'=>array('cliente/create')),
+                                                                    array('label'=>'Proveedores', 'url'=>array('proveedor/create')),
+                                                                    array('label'=>'Tipo Cliente', 'url'=>array('cliente/create')),
+                                                                    array('label'=>'Usuarios', 'url'=>array('usuario/create')),
                                                                 )),
-                                                          
+                                                            array('label' => 'Compras', 'url' => '#', 'itemOptions' =>   array('class' => 'dropdown-submenu'),
+                                                                'items'=>array(
+                                                                    array('label'=>'Crear', 'url'=>array('compra/create')),
+                                                                    array('label'=>'Administrar', 'url'=>array('compra/admin')),
+                                                                )),
+                                                            array('label' => 'Ventas', 'url' => '#', 'itemOptions' =>   array('class' => 'dropdown-submenu'),
+                                                                'items'=>array(
+                                                                    array('label'=>'Crear', 'url'=>array('Venta/create')),
+                                                                    array('label'=>'Administrar', 'url'=>array('Venta/admin')),
+                                                                )),
+                                                            array('label' => 'Kardex', 'url' => '#', 'itemOptions' =>   array('class' => 'dropdown-submenu'),
+                                                                'items'=>array(
+//                                                                    array('label'=>'Crear', 'url'=>array('kardex/create')),
+                                                                    array('label'=>'Administrar', 'url'=>array('kardex/admin')),
+                                                                )),
 
                                                                    
 
