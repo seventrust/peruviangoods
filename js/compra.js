@@ -136,9 +136,9 @@ $(document).ready(function() {
   bind();
   //QUIEN HACE TODO ES ESTE SEÑOR
   var index = $('#contador').html();
-$('#Detallecompra_Cantidad'+index).change( function(){
+    $('#Detallecompra_Cantidad'+index).change( function(){
     var index = $('#contador').html();
-alert(index);
+    alert(index);
     var i = $('#Detallecompra_Precio'+index).val();
     var j = $('#Detallecompra_Cantidad'+index).val();
     var l = $('#Detallecompra_Descuento'+index).val();
@@ -146,8 +146,8 @@ alert(index);
     var k = (parseFloat(i)*parseFloat(j))-(parseFloat(l)+parseFloat(m));
     $('#Detallecompra_Subtotal'+index).val(k);
     alert(k);
-   index = $('#contador').html();
-   update_total();
+    index = $('#contador').html();
+    update_total();
    
 });
 

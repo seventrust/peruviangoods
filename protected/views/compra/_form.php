@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl?>/css/jquery.css" />
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/jquery-ui.js"></script>
-<!--<script src="<?php echo Yii::app()->request->baseUrl?>/js/compra.js"></script>-->
+<script src="<?php echo Yii::app()->request->baseUrl?>/js/compra.js"></script>
 
 <div id="contador"></div>
 
@@ -15,7 +15,7 @@
         echo $form->errorSummary(array_merge(array($model),$validatedMembers));
     ?>
 
-<script TYPE="text/javascript" LANGUAGE="JavaScript"> 
+<!--<script TYPE="text/javascript" LANGUAGE="JavaScript"> 
 function init(x) {
                 var descrip = x.replace("Detallecompra_CodProducto","Detallecompra_Descripcion");
                 var unitprice = x.replace("Detallecompra_CodProducto","Detallecompra_Precio");       
@@ -182,7 +182,7 @@ function init(x) {
         document.getElementById('inafecto').value = 0;
         
     }
-</script>
+</script>-->
 
 <div>
     
@@ -365,7 +365,7 @@ function init(x) {
                 'size'=>8,
                 'style'=>'WIDTH:80px',
                  'class'=>'Subtotal',
-                 'readonly'=>true,
+//                 'readonly'=>true,
                 
                
             ),
