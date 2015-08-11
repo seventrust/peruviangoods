@@ -68,6 +68,11 @@
 //                                                                    array('label'=>'Crear', 'url'=>array('kardex/create')),
                                                                     array('label'=>'Administrar', 'url'=>array('kardex/admin')),
                                                                 )),
+                                                            array('label' => 'Login', 'url' => '#', 'itemOptions' =>   array('class' => 'dropdown-submenu'),
+                                                                'items'=>array(
+//                                                                    array('label'=>'Crear', 'url'=>array('kardex/create')),
+                                                                    array('label'=>'Iniciar', 'url'=>array('site/login')),
+                                                                )),
 
                                                                    
 
@@ -82,16 +87,16 @@
                                         ?>
                                     </div>
                                 </div>
-                                
-				<?php $this->widget('zii.widgets.CMenu',array(
-					'items'=>array(
-						array('label'=>Yii::app()->user->name, 'url'=>array('site/profile'), 'visible'=>!Yii::app()->user->isGuest),
-						array('label'=>'Logout', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest, 'htmlOptions'=>array('class'=>'btn'))
-					),
-					'htmlOptions'=>array(
-						'class'=>'nav pull-right',
-					),
-				)); ?>
+                               
+				<?php // $this->widget('zii.widgets.CMenu',array(
+//					'items'=>array(
+//						array('label'=>Yii::app()->user->name, 'url'=>array('site/profile'), 'visible'=>!Yii::app()->user->isGuest),
+//						array('label'=>'Logout', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest, 'htmlOptions'=>array('class'=>'btn'))
+//					),
+//					'htmlOptions'=>array(
+//						'class'=>'nav pull-right',
+//					),
+//				)); ?>
 			</div>
 		</div>
 	</div>
