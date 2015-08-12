@@ -28,16 +28,16 @@ class CompraController extends Controller
     {
         return array(
             array('allow',  // allow all users to perform 'index' and 'view' actions
-                'actions'=>array('index','view','autocomplete','autocompleteproveedor'),
+                'actions'=>array('index','view','autocomplete','autocompletel'),
                 'users'=>array('*'),
             ),
                       
                         array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions'=>array('create','update','autocomplete','autocompleteproveedor'),
+                'actions'=>array('create','update','autocomplete','autocompletel'),
                 'users'=>array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions'=>array('admin','delete','autocomplete','AutocompleteProveedor'),
+                'actions'=>array('admin','delete','autocomplete','autocompletel'),
                 'users'=>array('admin','gri'),
             ),
             array('deny',  // deny all users
@@ -109,7 +109,7 @@ class CompraController extends Controller
 //                            $this->redirect(array('view','id'=>$model->NumCompra));
 //                           $this->redirect(array('view','NumCompra'=>$model->NumCompra));
 //                          $this->render('admin',array('model'=>$model,));
-                           $this->redirect(array('view','id'=>$model->Id));
+                           $this->redirect(array('view','id'=>$model->Id, ));
                      }
                     }   
                     
@@ -261,7 +261,41 @@ class CompraController extends Controller
   
          echo CJSON::encode($arr);
         }
-              
+          public function actionAutoCompletel() {
+           
+            $criteria = new CDbCriteria;
+            $criteria->compare('LOWER(CodProveedor)', strtolower($_GET['term']), true);
+//          $criteria->compare('LOWER(CodProducto)', strtolower($_GET['term']), true, 'OR');
+            $criteria->order = 'CodProveedor';
+            $criteria->limit = 30; 
+            $data = Proveedor::model()->findAll($criteria);
+
+            if (!empty($data))
+            {
+             $arr = array();
+             foreach ($data as $item) {
+              $arr[] = array(
+                'id' => $item->CodProveedor,
+                'value' => $item->CodProveedor,
+                'label' => $item->CodProveedor,
+                'direccion' => $item->Direccion,
+                'nombre'=> $item->Descripcion,
+                'telefono'=> $item->Telefono,
+              );
+             }
+            }
+            else
+            {
+             $arr = array();
+             $arr[] = array(
+              'id' => '',
+              'value' => 'No se han encontrado resultados para su búsqueda',
+              'label' => 'No se han encontrado resultados para su búsqueda',
+             );
+         }
+
+         echo CJSON::encode($arr);
+        }     
         
             
 //        public function actionAutocompleteProveedor($term) 

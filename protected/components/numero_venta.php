@@ -11,7 +11,7 @@
 
 // Funcion general para la conexion a la base de datos
 function conexion() {
-    $link = mysqli_connect('localhost', 'root', '1234567', 'sistema_pruebas');
+    $link = mysqli_connect('localhost', 'root', '', 'peruvianprueba');
     return $link;
     
 }
@@ -19,15 +19,15 @@ function getOrden() {
 
     //mysqli_select_db('pruebas', $link);
     
-    $sql = "SELECT NumVenta from venta";
+    $sql = "SELECT NumCompra from compra";
     $resultado = mysqli_query(conexion(), $sql);
     //$resultado = mysql_query($sql) or die( "error en $sql, " . mysql_error() );
     while($row = mysqli_fetch_array($resultado)){
-        $orden = $row['NumVenta'];
+        $orden = $row['NumCompra'];
     }
     
 
-    echo $orden+=4;
+    echo (int) $orden+=1;
 }
 
 

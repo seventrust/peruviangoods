@@ -5,10 +5,10 @@ return array(
 	//'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 	// uncomment the following lines to use a MySQL database
 	
-	'connectionString' => 'mysql:host=localhost;dbname=sistema_pruebas',
+	'connectionString' => 'mysql:host=localhost;dbname=peruvianprueba',
 	'emulatePrepare' => true,
 	'username' => 'root',
-	'password' => '1234567',
+	'password' => '',
 	'charset' => 'utf8',
 	
 );

@@ -17,7 +17,7 @@
 
         <?php echo $form->dropDownListRow($model,'CodCategoria',CHtml::listData(Categoria::model()->findAll(),'CodCategoria','Descripcion'),array('empty'=>' ')); ?>
         
-	<?php // echo $form->textFieldRow($model,'CanExistencia',array('class'=>'span5')); ?>
+	<?php echo $form->textFieldRow($model,'CanExistencia',array('class'=>'span2')); ?>
 
 	<?php // echo $form->textFieldRow($model,'PreCompra',array('class'=>'span5','maxlength'=>10)); ?>
 

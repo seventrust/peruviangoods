@@ -2,7 +2,11 @@
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl?>/css/jquery.css" />
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/jquery-ui.js"></script>
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/compra.js"></script>
-
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#Compra_NumCompra').val(<?php echo getOrden()?>);
+}); 
+</script>
 <div id="contador"></div>
 
 <div class="form wide">
@@ -17,7 +21,7 @@
     ?>
 
 <div>
-    
+  
     
 </div>
 
@@ -25,7 +29,7 @@
      <table class="table">
          <th>
             <?php echo $form->labelEx($model,'NumCompra'); ?>
-            <?php echo $form->textField($model,'NumCompra'); ?>
+            <?php echo $form->textField($model,'NumCompra' ); ?>
             <?php echo $form->error($model,'NumCompra'); ?>
          </th>
         <th>
@@ -63,35 +67,59 @@
         </th>
      </table>
     
-     <table class="table">
-         
-        <th>
-            <?php echo $form->labelEx($model,'Proveedor'); ?>
-            <?php echo $form->dropDownList($model,'CodProveedor',CHtml::listData(Proveedor::model()->findAll(),'CodProveedor','Descripcion'),array('empty'=>' ')); ?>           
-            <?php echo $form->error($model,'CodProveedor'); ?>
-               <?php // $this->widget('zii.widgets.jui.CJuiAutoComplete',
-//                      array(
-//                       'id'=>'Proveedor',
-//                       'name'=>'Descripcion', // Nombre para el campo de autocompletar
-//                       'model'=>$model,
-//                       'value'=>$model->isNewRecord ? '' : $model->Compra->CodProveedor.' ',
-//                       'source'=>$this->createUrl('compra/AutocompleteProveedor'), // URL que genera el conjunto de datos
-//                       'options'=> array(
-//                         'showAnim'=>'fold',
-//                         'size'=>'30',
-//                         'minLength'=>'1', // Minimo de caracteres que hay que digitar antes de relizar la busqueda
-//                         'select'=>"js:function(event, ui) { 
-//                          $('#Proveedor').val(ui.item.id); 
-//                           }"
-//                         ),
-//                       'htmlOptions'=> array(
-//                        'size'=>40,
-//                        'placeholder'=>'Proveedor',
-//                        'title'=>'Indique el Proveedor.'
-//                        ),
-//                      ));                  ?>
-        </th>
-        <th>
+<table class="table">
+            <th>
+        <!--<div class="required">-->
+        <?php echo $form->labelEx($model, 'CodProveedor');?>
+        <?php
+             $this->widget('zii.widgets.jui.CJuiAutoComplete',
+                      array(
+                       'id'=>'CodProveedor',
+                       'name'=>'Compra[CodProveedor]', // Nombre para el campo de autocompletar
+                       'model'=>$model,
+                       'value'=>$model->CodProveedor,
+                       'source'=>$this->createUrl('compra/autocompletel'), // URL que genera el conjunto de datos
+                       'options'=> array(
+                         'showAnim'=>'fold',
+                         'size'=>'30',
+                         'minLength'=>'2', // Minimo de caracteres que hay que digitar antes de relizar la busqueda
+                         'select'=>"js:function(event, ui) { 
+                          $('#nombreCliente').val(ui.item.nombre); // HTML-Id del campo
+                          $('#direccion').val(ui.item.direccion);
+                          $('#telefono').val(ui.item.telefono);
+                           }"
+                         ),
+                       'htmlOptions'=> array(
+                        'size'=>40,
+                        'placeholder'=>'Buscar ...',
+                        'title'=>'Indique el RUT del proveedor.',
+                        'style'=>'width: 80px',
+                        ),
+                      )); 
+        ?>
+        <?php echo $form->error($model,'CodProveedor'); ?>
+    <!--</div>-->
+    </th>
+    
+    <th>
+    <!--<div class="required">-->
+        <label>Cliente</label>
+        <input type="text" id="nombreCliente"/>
+    <!--</div>-->
+    </th>
+    <th>
+    <!--<div class="required">-->
+        <label>Direccion</label>
+        <input type="text" id="direccion" style="WIDTH:10"/>
+    <!--</div>-->
+    </th>
+    <th>
+    <!--<div class="required">-->
+        <label>Telefono</label>
+        <input type="text" id="telefono"/>
+    <!--</div>-->
+    </th>
+        </table>
             <?php echo $form->labelEx($model,'Bodega'); ?>
             <?php echo $form->dropDownList($model,'CodBodega',CHtml::listData(Bodega::model()->findAll(),'CodBodega','Descripcion'),array('empty'=>' ')); ?>
             <?php echo $form->error($model,'CodBodega'); ?>
@@ -220,20 +248,14 @@
             'tableView'=>true,
             //if submitted not empty from the controller,
             //the form will be rendered with validation errors
-            'validatedItems' => $validatedMembers,
-            
+            'validatedItems' => $validatedMembers,            
 //            'clearInputs'=>true,
 //             'jsBeforeNewId' => "alert(this.attr('id'));",   
             'jsAfterNewId' => MultiModelForm::afterNewIdAutoComplete($memberFormConfig['elements']['Descripcion']),
             //array of member instances loaded from db
 //            'jsBeforeNewId' => "alert(this.attr('id'));",
-//              'jsAfterCloneCallback'=>'alertIds',
-                
-                
+//              'jsAfterCloneCallback'=>'alertIds',             
 //                'jsAfterNewId' => "alert(this.attr('id'));",
-
-                
-                
             'data' => $member->findAll('NumCompra=:groupId', array(':groupId'=>$model->NumCompra)),
             'showAddItemOnError' => false,
             'addItemText' => 'Agregar',
@@ -270,7 +292,7 @@
 		
             <tr>
                 <?php echo $form->labelEx($model,'TotIva'); ?>
-                <?php echo $form->textField($model,'TotIva',array('size'=>10,'maxlength'=>10)); ?>
+                <?php echo $form->textField($model,'TotIva',array('size'=>10,'maxlength'=>10, 'value'=>19)); ?>
                 <?php echo $form->error($model,'TotIva'); ?>
             </tr>
 		
