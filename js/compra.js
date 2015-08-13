@@ -115,8 +115,15 @@ function update_total() {
   
   
   var total_si = 0;
-  var iva = parseFloat($('#Compra_TotIva').val()/100);
-  total_si += total*iva;
+  $('.Iva').each(function(i){
+     price = $(this).val();
+    if (!isNaN(price)) total_si += Number(price);
+  });
+  total_si=roundNumber(total_si,2);
+   $('#Compra_TotIva').val(total_si);
+  
+//  var iva = parseFloat($('#Compra_TotIva').val()/100);
+//  total_si += total*iva;
   
   var total_ci = 0;
   total_ci = parseFloat(total)+parseFloat(total_si);
@@ -173,7 +180,7 @@ $(document).ready(function() {
           var j = $('#Detallecompra_Cantidad'+index).val();
           var l = $('#Detallecompra_Descuento'+index).val();
           var m = $('#Detallecompra_Exento'+index).val();
-          var k = (parseFloat(i)*parseFloat(j))-(parseFloat(l)+parseFloat(m));
+          var k = ((parseFloat(i)*parseFloat(j))-(parseFloat(l)+parseFloat(m))).toFixed(2);
           $('#Detallecompra_Subtotal'+index).val(k);
       //    alert(k);
           index = $('#contador').html();
@@ -187,10 +194,14 @@ $(document).ready(function() {
             var index = $('#contador').html();
         //    alert(index);
             var i = $('#Detallecompra_Precio'+index).val();
+            var iva=((parseFloat(i)*19)/100).toFixed(2);
+            var preciosiniva= (parseFloat(i)-parseFloat(iva)).toFixed(2);
             var j = $('#Detallecompra_Cantidad'+index).val();
             var l = $('#Detallecompra_Descuento'+index).val();
             var m = $('#Detallecompra_Exento'+index).val();
-            var k = (parseFloat(i)*parseFloat(j))-(parseFloat(l)+parseFloat(m));
+            var k = ((parseFloat(preciosiniva)*parseFloat(j))-(parseFloat(l)+parseFloat(m))).toFixed(2);
+            $('#Detallecompra_Iva'+index).val(iva);
+            $('#Detallecompra_Precio'+index).val(preciosiniva);
             $('#Detallecompra_Subtotal'+index).val(k);
         //    alert(k);
             index = $('#contador').html();
@@ -207,7 +218,7 @@ $(document).ready(function() {
             var j = $('#Detallecompra_Cantidad'+index).val();
             var l = $('#Detallecompra_Descuento'+index).val();
             var m = $('#Detallecompra_Exento'+index).val();
-            var k = (parseFloat(i)*parseFloat(j))-(parseFloat(l)+parseFloat(m));
+            var k = ((parseFloat(i)*parseFloat(j))-(parseFloat(l)+parseFloat(m))).toFixed(2);
             $('#Detallecompra_Subtotal'+index).val(k);
         //    alert(k);
             index = $('#contador').html();
@@ -224,7 +235,7 @@ $(document).ready(function() {
             var j = $('#Detallecompra_Cantidad'+index).val();
             var l = $('#Detallecompra_Descuento'+index).val();
             var m = $('#Detallecompra_Exento'+index).val();
-            var k = (parseFloat(i)*parseFloat(j))-(parseFloat(l)+parseFloat(m));
+            var k = ((parseFloat(i)*parseFloat(j))-(parseFloat(l)+parseFloat(m))).toFixed(2);
             $('#Detallecompra_Subtotal'+index).val(k);
         //    alert(k);
             index = $('#contador').html();

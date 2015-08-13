@@ -19,7 +19,7 @@ function getOrden() {
 
     //mysqli_select_db('pruebas', $link);
     
-    $sql = "SELECT NumCompra from compra";
+    $sql = "SELECT Id,NumCompra from compra ORDER by Id ASC";
     $resultado = mysqli_query(conexion(), $sql);
     //$resultado = mysql_query($sql) or die( "error en $sql, " . mysql_error() );
     while($row = mysqli_fetch_array($resultado)){

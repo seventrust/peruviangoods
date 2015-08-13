@@ -103,7 +103,7 @@ $(document).ready(function(){
     
     <th>
     <!--<div class="required">-->
-        <label>Cliente</label>
+        <label>Proveedor</label>
         <input type="text" id="nombreCliente"/>
     <!--</div>-->
     </th>
@@ -120,6 +120,8 @@ $(document).ready(function(){
     <!--</div>-->
     </th>
         </table>
+     <table class="table">
+         <th>
             <?php echo $form->labelEx($model,'Bodega'); ?>
             <?php echo $form->dropDownList($model,'CodBodega',CHtml::listData(Bodega::model()->findAll(),'CodBodega','Descripcion'),array('empty'=>' ')); ?>
             <?php echo $form->error($model,'CodBodega'); ?>
@@ -205,6 +207,13 @@ $(document).ready(function(){
                 'readonly'=>TRUE,
                  'class'=>'UniMedida',
             ),
+              'Iva'=>array(
+                'type'=>'text',
+                'maxlength'=>8,
+                'size'=>8,
+                'style'=>'WIDTH:70px',
+                 'class'=>'Iva',
+            ),
             'Descuento'=>array(
                 'type'=>'text',
                 'maxlength'=>8,
@@ -212,6 +221,7 @@ $(document).ready(function(){
                 'style'=>'WIDTH:70px',
                  'class'=>'Descuento',
             ),
+            
             'Exento'=>array(
                 'type'=>'text',
                 'maxlength'=>10,
@@ -273,9 +283,10 @@ $(document).ready(function(){
     <div class="table-responsive">
         <table class="table">
             <tr>
-                <?php echo $form->labelEx($model,'TotExento'); ?>
-                <?php echo $form->textField($model,'TotExento',array('size'=>10,'maxlength'=>10, 'readonly'=>'true')); ?>
-                <?php echo $form->error($model,'TotExento'); ?>
+                <?php echo $form->labelEx($model,'TotIva'); ?>
+                <?php echo $form->textField($model,'TotIva',array('size'=>10,'maxlength'=>10)); ?>
+                <?php echo $form->error($model,'TotIva'); ?>
+              
             </tr>
             
             <tr>
@@ -285,15 +296,17 @@ $(document).ready(function(){
             </tr>
 		
             <tr>
-                <?php echo $form->labelEx($model,'TotNeto'); ?>
-                <?php echo $form->textField($model,'TotNeto',array('size'=>10,'maxlength'=>10)); ?>
-                <?php echo $form->error($model,'TotNeto'); ?>
+                 <?php echo $form->labelEx($model,'TotExento'); ?>
+                <?php echo $form->textField($model,'TotExento',array('size'=>10,'maxlength'=>10, 'readonly'=>'true')); ?>
+                <?php echo $form->error($model,'TotExento'); ?>
+                
             </tr>
 		
             <tr>
-                <?php echo $form->labelEx($model,'TotIva'); ?>
-                <?php echo $form->textField($model,'TotIva',array('size'=>10,'maxlength'=>10, 'value'=>19)); ?>
-                <?php echo $form->error($model,'TotIva'); ?>
+                  <?php echo $form->labelEx($model,'TotNeto'); ?>
+                <?php echo $form->textField($model,'TotNeto',array('size'=>10,'maxlength'=>10)); ?>
+                <?php echo $form->error($model,'TotNeto'); ?>
+               
             </tr>
 		
             <tr>

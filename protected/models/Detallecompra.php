@@ -35,13 +35,13 @@ class Detallecompra extends CActiveRecord
 		return array(
 			array('CodProducto, Descripcion, Cantidad', 'required'),
 			array('Item', 'numerical', 'integerOnly'=>true),
-			array('NumCompra, Cantidad, Precio, UniMedida, Descuento, Exento, Subtotal,Saldo', 'length', 'max'=>20),
+			array('NumCompra, Cantidad, Precio, UniMedida,Iva, Descuento, Exento, Subtotal,Saldo', 'length', 'max'=>20),
                         array('CodProducto','length','max'=>40),
 			array('Descripcion', 'length', 'max'=>200),
 
                         // The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('Item, NumCompra, CodProducto, Cantidad, Precio, UniMedida, Descuento, Exento, Subtotal,Saldo', 'safe', 'on'=>'search'),
+			array('Item, NumCompra, CodProducto, Cantidad, Precio, UniMedida,Iva, Descuento, Exento, Subtotal,Saldo', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -73,6 +73,7 @@ class Detallecompra extends CActiveRecord
 			'Precio' => 'Precio',
 			'UniMedida' => 'Medida',
 			'Descuento' => 'Descuento',
+                        'Iva'=>'Iva',
 			'Exento' => 'Exento',
 			'Subtotal' => 'Subtotal',
                         'Saldo'=>'Saldo',
@@ -103,6 +104,7 @@ class Detallecompra extends CActiveRecord
 		$criteria->compare('Cantidad',$this->Cantidad,true);
 		$criteria->compare('Precio',$this->Precio,true);
 		$criteria->compare('UniMedida',$this->UniMedida,true);
+                $criteria->compare('Iva',$this->Iva,true);
 		$criteria->compare('Descuento',$this->Descuento,true);
 		$criteria->compare('Exento',$this->Exento,true);
 		$criteria->compare('Subtotal',$this->Subtotal,true);
