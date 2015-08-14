@@ -146,13 +146,14 @@ class KardexController extends Controller
 //			'dataProvider'=>$dataProvider,
 //		));
                 $model=new Kardex('search');
+                $productos=new Productos('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Kardex'])){
 			$model->attributes=$_GET['Kardex'];}
                  if ($this->isExportRequest()) { //<==== [[ADD THIS BLOCK BEFORE RENDER]]
                     //set_time_limit(0); //Uncomment to export lage datasets
                     //Add to the csv a single line of text
-                    $this->exportCSV(array('VENTAS FILTRADAS POR:'), null, false);
+                    $this->exportCSV(array('Kardex filtrado por'), null, false);
                     //Add to the csv a single model data with 3 empty rows after the data
                     $this->exportCSV($model, array_keys($model->attributeLabels()), false, 3);
                     //Add to the csv a lot of models from a CDataProvider
@@ -160,12 +161,13 @@ class KardexController extends Controller
                         'NumDocumento',
                         'Fecha',
                         'CodProducto',
+//                        $this->exportCSV($productos->search(), array('Descripcion','UniMedida')),
                         'Descripcion',
                         'UniMedida',
-                        'SaldoAnterior', 
+                        'SaldoAnterior',
+                        'Cantidad',
                         'SaldoActual',
-                        'Precio',
-                        'Usuario'
+                        'Usuario',
                         ));
                 }   
                 $this->render('admin',array(
@@ -191,8 +193,8 @@ class KardexController extends Controller
                     'Fecha',
                     'CodProducto',
                     'TipoMovimiento',
-                    'Cantidad',
                     'SaldoAnterior',
+                    'Cantidad',
                     'SaldoActual',
                     'Usuario',
                     
@@ -211,30 +213,37 @@ class KardexController extends Controller
 	 */
 	public function actionAdmin()
 	{
+            //////******** Ojo aquí es donde se arma el documento **************//////////
+            //
 //		yii::app()->request->sendFile("test.xls", "<table><tr>test <td></td><td></td></tr></table>");
                 $model=new Kardex('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Kardex'])){
                 $model->attributes=$_GET['Kardex'];
                 
+                $producto=new Productos();
+                
                 }
-                if ($this->isExportRequest()) { //<==== [[ADD THIS BLOCK BEFORE RENDER]]
-                    //set_time_limit(0); //Uncomment to export lage datasets
-                    //Add to the csv a single line of text
-                    $this->exportCSV(array('VENTAS FILTRADAS POR:'), null, false);
+                if ($this->isExportRequest()) {
+                    
+                    $this->exportCSV(array('Kardex FILTRADAS POR:'), null, false);
                     //Add to the csv a single model data with 3 empty rows after the data
                     $this->exportCSV($model, array_keys($model->attributeLabels()), false, 3);
+                   
                     //Add to the csv a lot of models from a CDataProvider
                     $this->exportCSV($model->search(), array(
+                        'Rut',
                         'NumDocumento',
                         'Fecha',
+                        'TipoMovimiento',
                         'CodProducto',
                         'Descripcion',
                         'UniMedida',
-                        'SaldoAnterior', 
+                        'SaldoAnterior',
+                        'Cantidad',
                         'SaldoActual',
-                        'Precio',
-                        'Usuario'
+                        'Subtotal',
+                        'Usuario',
                         ));
                 }
 		$this->render('admin',array(
@@ -276,7 +285,7 @@ class KardexController extends Controller
                         'Fecha',
                         'NumDocumento',
                         'CodProducto',
-                        'TipoMovimiento',
+//                        'TipoMovimiento',
                 ),
                 time());
         }

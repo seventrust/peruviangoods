@@ -45,9 +45,8 @@ $('.search-form form').submit(function(){
 //		'NumDocumento',
 		'CodProducto',
 		'TipoMovimiento',
-		'Cantidad',
-		
 		'SaldoAnterior',
+                'Cantidad',
 		'SaldoActual',
 		/*'Precio',
 		'Subtotal',

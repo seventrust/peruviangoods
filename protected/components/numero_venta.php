@@ -18,8 +18,8 @@ function conexion() {
 function getOrden() {
 
     //mysqli_select_db('pruebas', $link);
-//    $sql = "SELECT Id,NumCompra from compra ORDER by Id ASC";
-    $sql = "SELECT Id,NumCompra from compra ORDER by Id ASC";
+    $sql = "SELECT count(*)+1 as Id from compra";
+//    $sql = "SELECT (max(Id)+1) as Id from compra";
     $resultado = mysqli_query(conexion(), $sql);
     //$resultado = mysql_query($sql) or die( "error en $sql, " . mysql_error() );
     
@@ -27,13 +27,13 @@ function getOrden() {
         
         $orden = $row['Id'];
     }
-    switch ($orden){
-        case $orden = '':
-            $orden = 1;
-        case $orden =! 0:
-            $orden+=1;
-    }
-    echo (int) $orden+=1;
+//    switch ($orden){
+//        case $orden = 'NULL':
+//            $orden ;
+//        case $orden > 0:
+//            $orden+=1;
+//    }
+    echo (int) $orden;
 }
 
 
