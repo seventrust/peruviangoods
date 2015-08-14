@@ -6,20 +6,24 @@
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 
+//SE REALIZA EL LLAMADO DE LOS HELPERS PARA LA EJECUCIÓN DE LOS MISMOS
+//EN CUALQUIER PARTE DE LA APLICACIÓN
 require_once( dirname(__FILE__) . '/../components/numero_venta.php');
+require_once( dirname(__FILE__) . '/../components/orden_venta.php');
+
+//REQUERIMOS LAS LIBRERIAS DEL BOOTSTRAP Y DE YIISTRAP (un port de yii)
 Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
 Yii::setPathOfAlias('booster', dirname(__FILE__).'/../extensions/yii');
 
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Sistema de Control y Gestión de Inventario',
-        //'theme'=>"missfrog",//agregado 08/07/2015
         'theme'=>'bootstrap',
 	// preloading 'log' component
 	'preload'=>array('log'),
         
         'aliases' => array(        
-            'yiistrap' => realpath(__DIR__ . '/../extensions/yiistrap'), // change this if necessary
+            'yiistrap' => realpath(__DIR__ . '/../extensions/yiistrap'), 
             'bootstrap' => realpath(__DIR__.'/../extensions/bootstrap'),
         ),
 	// autoloading model and component classes

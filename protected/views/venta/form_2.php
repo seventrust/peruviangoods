@@ -1,8 +1,10 @@
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl?>/css/jquery.css"/>
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/jquery-ui.js"></script>
-<script src="<?php echo Yii::app()->request->baseUrl?>/js/example.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl?>/js/venta.js"></script>
 <script type="text/javascript">
-
+$(document).ready(function(){
+    $('#Compra_NumVenta').val(<?php echo getNumero()?>);
+}); 
 
 </script>
 <div id="contador"></div>
@@ -73,10 +75,10 @@
         <?php
              $this->widget('zii.widgets.jui.CJuiAutoComplete',
                       array(
-                       'id'=>'CodCliente',
-                       'name'=>'Cliente', // Nombre para el campo de autocompletar
+                       'id'=>'CodProveedor',
+                       'name'=>'Venta[CodProveedor]', // Nombre para el campo de autocompletar
                        'model'=>$model,
-                       'value'=>$model->CodCliente,
+                       'value'=>$model->CodProveedor,
                        'source'=>$this->createUrl('venta/autocompletel'), // URL que genera el conjunto de datos
                        'options'=> array(
                          'showAnim'=>'fold',
@@ -161,81 +163,95 @@
                 'source'=>$this->createUrl('venta/autocomplete'),
                 'options'=>array(
                     'showAnim'=>'fold',
-                         'size'=>'80',
-                         'minLength'=>'2', // Minimo de caracteres que hay que digitar antes de relizar la busqueda
-                         'select'=>"js:function(event, ui) { 
-                         var nomobj_texto = this.id; //El identificador del campo en mi caso #Detallecompra_Descripcion 
-                         var indexid = nomobj_texto.substring(24,nomobj_texto.length); 
-                         $('#Detalleventa_CodProducto'+indexid).val(ui.item.id); // HTML-Id del campo
-                         $('#Detalleventa_Precio'+indexid).val(ui.item.precio);
-                         $('#Detalleventa_Saldo'+indexid).val(ui.item.saldo);
-                         $('#Detalleventa_UniMedida'+indexid).val(ui.item.unidad);   
-                         $('#contador').html(indexid);
-                         
-                         }",
+                        'size'=>'80',
+                        'minLength'=>'2', // Minimo de caracteres que hay que digitar antes de relizar la busqueda
+                        'select'=>"js:function(event, ui) { 
+                            var nomobj_texto = this.id; //El identificador del campo en mi caso #Detalleventa_Descripcion 
+                            var indexid = nomobj_texto.substring(25,nomobj_texto.length); 
+                            $('#Detalleventa_CodProducto'+indexid).val(ui.item.id); 
+                            $('#Detalleventa_Precio'+indexid).val(ui.item.Precio); 
+                            $('#Detalleventa_UniMedida'+indexid).val(ui.item.UniMedida);
+                            $('#Detalleventa_Saldo'+indexid).val(ui.item.Saldo); 
+                            $('#Detalleventa_Descuento'+indexid).val(0);
+                            $('#Detalleventa_Exento'+indexid).val(0);
+                            $('#contador').html(indexid);
+                           }",
                 
                 ),
                 'htmlOptions'=> array(
-                        'size'=>120,
-                        'placeholder'=>'Buscar ...',
-                        'title'=>'Indique el producto.'
+                    'size'=>120,
+                    'placeholder'=>'Buscar ...',
+                    'title'=>'Indique el producto.'
                 ),
                 
                
             ),
-            'Precio'=>array(
-                'type'=>'text',
-                'maxlength'=>120,
-                'class'=>'Precio',
-                'style'=>'WIDTH:80px',
-                'readonly'=>true,
-                
-            ),  
             'Cantidad'=>array(
                 'type'=>'text',
                 //it is important to add an empty item because of new records
-                'maxlength'=>120,
+                'maxlength'=>8,
+                'size'=>8,
+               'style'=>'WIDTH:70px',
+//               'onchage'=>'calcularPrecioIVA()',
                 'class'=>'Cantidad',
-                'style'=>'WIDTH:80px',
+                
+            ),
+            'Precio'=>array(
+                'type'=>'text',
+                'maxlength'=>8,
+                'size'=>8,
+                'style'=>'WIDTH:70px',
+                 'class'=>'Precio',
             ),
             'UniMedida'=>array(
                 'type'=>'text',
                 'maxlength'=>8,
-                'class'=>'UniMedida',
                 'size'=>8,
-                'style'=>'WIDTH:80px',
-                'readonly'=>true,
+                'style'=>'WIDTH:70px',
+                'readonly'=>TRUE,
+                 'class'=>'UniMedida',
             ),
-             'Saldo'=>array(
+              'Iva'=>array(
                 'type'=>'text',
-                'maxlength'=>10,
-                'class'=>'Saldo',
+                'maxlength'=>8,
                 'size'=>8,
-                'style'=>'WIDTH:80px',
-                'readonly'=>true,
-             
+                'style'=>'WIDTH:70px',
+                 'class'=>'Iva',
             ),
             'Descuento'=>array(
                 'type'=>'text',
                 'maxlength'=>8,
                 'size'=>8,
-                'class'=>'Descuento',
-                'style'=>'WIDTH:80px',
+                'style'=>'WIDTH:70px',
+                 'class'=>'Descuento',
             ),
+            
             'Exento'=>array(
                 'type'=>'text',
                 'maxlength'=>10,
-                'class'=>'Exento',
                 'size'=>8,
-                'style'=>'WIDTH:80px',
+                'style'=>'WIDTH:70px',
+                 'class'=>'Exento',
             ),
             'Subtotal'=>array(
                 'type'=>'text',
                 'maxlength'=>10,
-                'class'=>'Subtotal',
                 'size'=>8,
-                'style'=>'WIDTH:80px',
+                'style'=>'WIDTH:70px',
+                 'class'=>'Subtotal',
+                'readonly'=>true,
+                
                
+            ),
+              'Saldo'=>array(
+//                'type'=>'hidden',
+                'type'=>'text',
+                'maxlength'=>10,
+                'size'=>8,
+                'style'=>'WIDTH:70px',
+                'readonly'=>true,
+                 'class'=>'Saldo',
+             
             ),
              
         ));
