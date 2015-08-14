@@ -26,7 +26,7 @@ class KardexController extends Controller
                 ),
                 'exportableGrid' => array(
                     'class' => 'application.components.ExportableGridBehavior',
-                    'filename' => 'Movimiento_Por_Fecha.csv',
+                    'filename' => 'Movimiento_kardex_Por_Fecha.csv',
                     'csvDelimiter' => ';', //i.e. Excel friendly csv delimiter
                 )
                 );
@@ -58,10 +58,7 @@ class KardexController extends Controller
 		);
 	}
 
-	/**
-	 * Displays a particular model.
-	 * @param integer $id the ID of the model to be displayed
-	 */
+
 	public function actionView($id)
 	{
 		$this->render('view',array(
@@ -69,144 +66,74 @@ class KardexController extends Controller
 		));
 	}
 
-	/**
-	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to the 'view' page.
-	 */
-//	public function actionCreate()
+
+//	public function actionIndex()
 //	{
-//		$model=new Kardex;
-//
-//		// Uncomment the following line if AJAX validation is needed
-//		// $this->performAjaxValidation($model);
-//
-//		if(isset($_POST['Kardex']))
-//		{
-//			$model->attributes=$_POST['Kardex'];
-//			if($model->save())
-//				$this->redirect(array('view','id'=>$model->Id));
-//		}
-//
-//		$this->render('create',array(
+////		$dataProvider=new CActiveDataProvider('Kardex');
+////		$this->render('index',array(
+////			'dataProvider'=>$dataProvider,
+////		));
+//                $model=new Kardex('search');
+//                $productos=new Productos('search');
+//		$model->unsetAttributes();  // clear any default values
+//		if(isset($_GET['Kardex'])){
+//			$model->attributes=$_GET['Kardex'];}
+//                 if ($this->isExportRequest()) { //<==== [[ADD THIS BLOCK BEFORE RENDER]]
+//                    //set_time_limit(0); //Uncomment to export lage datasets
+//                    //Add to the csv a single line of text
+//                    $this->exportCSV(array('Kardex filtrado por'), null, false);
+//                    //Add to the csv a single model data with 3 empty rows after the data
+//                    $this->exportCSV($model, array_keys($model->attributeLabels()), false, 3);
+//                    //Add to the csv a lot of models from a CDataProvider
+//                    $this->exportCSV($model->search(), array(
+//                        'NumDocumento',
+//                        'Fecha',
+//                        'CodProducto',
+////                        $this->exportCSV($productos->search(), array('Descripcion','UniMedida')),
+//                        'Descripcion',
+//                        'UniMedida',
+//                        'SaldoAnterior',
+//                        'Cantidad',
+//                        'SaldoActual',
+//                        'Usuario',
+//                        ));
+//                }   
+//                $this->render('admin',array(
 //			'model'=>$model,
 //		));
+//                
 //	}
-
-	/**
-	 * Updates a particular model.
-	 * If update is successful, the browser will be redirected to the 'view' page.
-	 * @param integer $id the ID of the model to be updated
-	 */
-//	public function actionUpdate($id)
-//	{
-//		$model=$this->loadModel($id);
-//
-//		// Uncomment the following line if AJAX validation is needed
-//		// $this->performAjaxValidation($model);
-//
-//		if(isset($_POST['Kardex']))
-//		{
-//			$model->attributes=$_POST['Kardex'];
-//			if($model->save())
-//				$this->redirect(array('view','id'=>$model->Id));
-//		}
-//
-//		$this->render('update',array(
-//			'model'=>$model,
-//		));
-//	}
-
-	/**
-	 * Deletes a particular model.
-	 * If deletion is successful, the browser will be redirected to the 'admin' page.
-	 * @param integer $id the ID of the model to be deleted
-	 */
-//	public function actionDelete($id)
-//	{
-//		if(Yii::app()->request->isPostRequest)
-//		{
-//			// we only allow deletion via POST request
-//			$this->loadModel($id)->delete();
-//
-//			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-//			if(!isset($_GET['ajax']))
-//				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
-//		}
-//		else
-//			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
-//	}
-
-	/**
-	 * Lists all models.
-	 */
-	public function actionIndex()
-	{
-//		$dataProvider=new CActiveDataProvider('Kardex');
-//		$this->render('index',array(
-//			'dataProvider'=>$dataProvider,
-//		));
-                $model=new Kardex('search');
-                $productos=new Productos('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Kardex'])){
-			$model->attributes=$_GET['Kardex'];}
-                 if ($this->isExportRequest()) { //<==== [[ADD THIS BLOCK BEFORE RENDER]]
-                    //set_time_limit(0); //Uncomment to export lage datasets
-                    //Add to the csv a single line of text
-                    $this->exportCSV(array('Kardex filtrado por'), null, false);
-                    //Add to the csv a single model data with 3 empty rows after the data
-                    $this->exportCSV($model, array_keys($model->attributeLabels()), false, 3);
-                    //Add to the csv a lot of models from a CDataProvider
-                    $this->exportCSV($model->search(), array(
-                        'NumDocumento',
-                        'Fecha',
-                        'CodProducto',
-//                        $this->exportCSV($productos->search(), array('Descripcion','UniMedida')),
-                        'Descripcion',
-                        'UniMedida',
-                        'SaldoAnterior',
-                        'Cantidad',
-                        'SaldoActual',
-                        'Usuario',
-                        ));
-                }   
-                $this->render('admin',array(
-			'model'=>$model,
-		));
-                
-	}
         
-        public function actionToExcel() {
-            
-                    // Load data (scoped)
-            $dataProvider=new CActiveDataProvider('Kardex', array(
-            'criteria'=>array(
-                'condition'=>'NumDocumento=55',
-                'order'=>'Fecha DESC',
-                )));
-            
-
-                // Export it
-            $this->toExcel($dataProvider,
-                array(
-                    'NumDocumento',
-                    'Fecha',
-                    'CodProducto',
-                    'TipoMovimiento',
-                    'SaldoAnterior',
-                    'Cantidad',
-                    'SaldoActual',
-                    'Usuario',
-                    
-                ),
-                'Test File',
-                array(
-                    'creator' => 'Zen',
-                ),
-                'Excel5'
-            );
-
-        }
+//        public function actionToExcel() {
+//
+//            $dataProvider=new CActiveDataProvider('Kardex', array(
+//            'criteria'=>array(
+//                'condition'=>'NumDocumento=55',
+//                'order'=>'Fecha DESC',
+//                )));
+//            
+//
+//                // Export it
+//            $this->toExcel($dataProvider,
+//                array(
+//                    'NumDocumento',
+//                    'Fecha',
+//                    'CodProducto',
+//                    'TipoMovimiento',
+//                    'SaldoAnterior',
+//                    'Cantidad',
+//                    'SaldoActual',
+//                    'Usuario',
+//                    
+//                ),
+//                'Test File',
+//                array(
+//                    'creator' => 'Zen',
+//                ),
+//                'Excel5'
+//            );
+//
+//        }
 
         /**
 	 * Manages all models.
@@ -226,7 +153,7 @@ class KardexController extends Controller
                 }
                 if ($this->isExportRequest()) {
                     
-                    $this->exportCSV(array('Kardex FILTRADAS POR:'), null, false);
+                    $this->exportCSV(array('Kardex al:'), null, false);
                     //Add to the csv a single model data with 3 empty rows after the data
                     $this->exportCSV($model, array_keys($model->attributeLabels()), false, 3);
                    
