@@ -3,7 +3,7 @@
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/venta.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-    $('#Compra_NumVenta').val(<?php echo getNumero()?>);
+    $('#Venta_NumVenta').val(<?php echo getNumero()?>);
 }); 
 
 </script>
