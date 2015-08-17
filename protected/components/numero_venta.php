@@ -5,7 +5,7 @@
 
 // Funcion general para la conexion a la base de datos
 function conexion() {
-    $link = mysqli_connect('localhost', 'root', '1234567', 'peruvianprueba');
+    $link = mysqli_connect('localhost', 'root', '', 'peruvianprueba');
     return $link;
     
 }
