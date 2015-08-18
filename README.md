@@ -1,2 +1,2 @@
-# jquiroz
-Sistema de Control y Gestion de Inventario Jquiroz
+# peruviangoods
+Sistema de Control y Gestion de Inventario
