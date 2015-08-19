@@ -82,12 +82,10 @@ class CompraController extends Controller
 //                        $this->redirect(array('view','id'=>$model->Id));
                            
                            $usuario=Yii::app()->user->name;
-                            $numdocumento=$_POST['Compra']['NumCompra'];
-                            $forpago=$_POST['Compra']['ForPago'];
+                           $numdocumento=$_POST['Compra']['NumCompra'];
+                           $forpago=$_POST['Compra']['ForPago'];
                            $rut=$_POST['Compra']['CodProveedor'];
                            $codigo = $_POST['Detallecompra']['CodProducto'];
-                           $descripcion = $_POST['Detallecompra']['Descripcion'];
-                           $medida = $_POST['Detallecompra']['UniMedida'];
                            $cantidad = $_POST['Detallecompra']['Cantidad'];
                            $saldoanterior=$_POST['Detallecompra']['Saldo'];
                            $precio=$_POST['Detallecompra']['Precio'];
@@ -97,12 +95,21 @@ class CompraController extends Controller
                            for($i=0; $i<count($codigo); $i++)
                            {
                                $saldoactual[$i]=$saldoanterior[$i]+$cantidad[$i];
-                                Yii::app()->db->createCommand('update productos set CanExistencia = (CanExistencia + '.$cantidad[$i].'),PreCompra='.$precio[$i].',Iva='.$iva[$i].' where CodProducto = "'.$codigo[$i].'"')->query();
                                
-                                yii::app()->db->createCommand('insert into kardex (Rut,ForPago,NumDocumento, CodProducto, Descripcion,UniMedida, TipoMovimiento, Cantidad, SaldoAnterior, SaldoActual, Precio,Iva, Subtotal,Usuario)'
-                                                            . ' Values("'.$rut.'",'.$forpago.','.$numdocumento.',"'.$codigo[$i].'","'.$descripcion[$i].'","'.$medida[$i].'" ,"compra",'.$cantidad[$i].','.$saldoanterior[$i].','.$saldoactual[$i].','.$precio[$i].','.$iva[$i].','.$subtotal[$i].',"'.$usuario.'")')->query();
-//                                
+                               
+//                                Yii::app()->db->createCommand('update productos set CanExistencia = (CanExistencia + '.$cantidad[$i].'),PreCompra where CodProducto = "'.$codigo[$i].'"')->query();
+                               Yii::app()->db->createCommand('update productos set CanExistencia = (CanExistencia + '.$cantidad[$i].'),PreCompra='.$precio[$i].',Iva='.$iva[$i].' where CodProducto = "'.$codigo[$i].'"')->query();
+                               
+                                yii::app()->db->createCommand('insert into kardex (Rut,ForPago,NumDocumento, CodProducto, TipoMovimiento, Cantidad, SaldoAnterior, SaldoActual, Precio,Iva, Subtotal,Usuario)'
+                                                            . ' Values("'.$rut.'",'.$forpago.','.$numdocumento.',"'.$codigo[$i].'","compra",'.$cantidad[$i].','.$saldoanterior[$i].','.$saldoactual[$i].','.$precio[$i].','.$iva[$i].','.$subtotal[$i].',"'.$usuario.'")')->query();
+//                                                                 
+//                                yii::app()->db->createCommand('insert into kardex (Fecha,NumDocumento, CodProducto, TipoMovimiento, Cantidad, SaldoAnterior, SaldoActual, Precio, Subtotal)'
+//                                                            . ' Values(today,'.$numdocumento.','.$codigo[$i].',"compra",'.$cantidad[$i].','.$saldoanterior[$i].','.$saldoactual[$i].','.$precio[$i].','.$subtotal[$i].')')->query();
+//                                                                 
                            }
+//                            $this->redirect(array('view','id'=>$model->NumCompra));
+//                           $this->redirect(array('view','NumCompra'=>$model->NumCompra));
+//                          $this->render('admin',array('model'=>$model,));
                            $this->redirect(array('view','id'=>$model->Id, ));
                      }
                     }   

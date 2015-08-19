@@ -68,11 +68,10 @@
 //                                                                    array('label'=>'Crear', 'url'=>array('kardex/create')),
                                                                     array('label'=>'Administrar', 'url'=>array('kardex/admin')),
                                                                 )),
-                                                            array('label' => 'Sesion', 'url' => '#', 'itemOptions' =>   array('class' => 'dropdown-submenu'),
+                                                            array('label' => 'Login', 'url' => '#', 'itemOptions' =>   array('class' => 'dropdown-submenu'),
                                                                 'items'=>array(
 //                                                                    array('label'=>'Crear', 'url'=>array('kardex/create')),
-                                                                    array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-																	array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
+                                                                    array('label'=>'Iniciar', 'url'=>array('site/login')),
                                                                 )),
 
                                                                    

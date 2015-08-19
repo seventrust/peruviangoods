@@ -4,7 +4,7 @@
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/compra.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-    $('#Compra_NumCompra').val(<?php echo getOrden()?>);
+    $('#Compra_NumCompra').val(<?php echo getCompra()?>);
 }); 
 </script>
 <div id="contador"></div>
