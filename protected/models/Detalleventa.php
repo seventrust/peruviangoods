@@ -12,6 +12,7 @@
  * @property string $Precio
  * @property string $UniMedida
  * @property string $Descuento
+ * @property string $Iva
  * @property string $Exento
  * @property string $Subtotal
  */
@@ -34,10 +35,10 @@ class Detalleventa extends CActiveRecord
 		return array(
 			array('CodProducto, Descripcion, Cantidad', 'required'),
 			array('Item', 'numerical', 'integerOnly'=>true),
-			array('NumVenta, CodProducto, Descripcion, Cantidad, Precio, Saldo, UniMedida, Descuento, Exento, Subtotal', 'length', 'max'=>200),
+			array('NumVenta, CodProducto, Descripcion, Cantidad, Precio, Saldo, UniMedida, Descuento, Exento, Iva, Subtotal', 'length', 'max'=>200),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('Item, NumVenta, CodProducto, Cantidad, Precio, Saldo, UniMedida, Descuento, Exento, Subtotal', 'safe', 'on'=>'search'),
+			array('Item, NumVenta, CodProducto, Cantidad, Precio, Saldo, UniMedida, Descuento, Exento, Iva, Subtotal', 'safe', 'on'=>'search'),
 		);
 	}
 	/**
@@ -67,6 +68,7 @@ class Detalleventa extends CActiveRecord
 			'UniMedida' => 'Uni Medida',
                         'Saldo' => 'Saldo',
 			'Descuento' => 'Descuento',
+                        'Iva' => 'Iva',
 			'Exento' => 'Exento',
 			'Subtotal' => 'Subtotal',
 		);
@@ -96,6 +98,7 @@ class Detalleventa extends CActiveRecord
 		$criteria->compare('Descuento',$this->Descuento,true);
 		$criteria->compare('Exento',$this->Exento,true);
 		$criteria->compare('Subtotal',$this->Subtotal,true);
+                $criteria->compare('Iva',$this->Iva,true);
                 $criteria->compare('Saldo', $this->Saldo, true);
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

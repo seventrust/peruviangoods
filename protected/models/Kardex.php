@@ -52,7 +52,7 @@ class Kardex extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-                    'productos' => array(self::BELONGS_TO, 'Productos', 'CodProducto'),
+                    'productos' => array(self::BELONGS_TO, 'Producto', 'CodProducto'),
                     
 		);
 	}
@@ -65,17 +65,15 @@ class Kardex extends CActiveRecord
 		return array(
 //			'Id' => 'ID',
 			'Fecha' => 'Fecha',
-//			'NumDocumento' => 'Numero Documento',
-//			'CodProducto' => 'Cod Producto',
-//			'TipoMovimiento' => 'Tipo Movimiento',
-                    
+			'NumDocumento' => 'Num Documento',
+			'CodProducto' => 'Cod Producto',
+			'TipoMovimiento' => 'Tipo Movimiento',
 //			'Cantidad' => 'Cantidad',
 //			'SaldoAnterior' => 'Saldo Anterior',
 //			'SaldoActual' => 'Saldo Actual',
 //			'Precio' => 'Precio',
 //			'Subtotal' => 'Subtotal',
-                    
-//			'Usuario' => 'Usuario',
+			'Usuario' => 'Usuario',
 		);
 	}
 

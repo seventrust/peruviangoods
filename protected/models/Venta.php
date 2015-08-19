@@ -16,6 +16,7 @@
  * @property string $TotImpuesto
  * @property string $TotRetencion
  * @property string $Total
+ * @property string $Usuario
  */
 class Venta extends CActiveRecord
 {
@@ -35,10 +36,10 @@ class Venta extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('NumVenta, CodBodega, Fecha, Vencimiento, ForPago, TotExento, TotDescuento, TotNeto, TotIva, TotImpuesto, TotRetencion, Total', 'required'),
-			array('NumVenta, CodCliente, CodBodega, ForPago, TotExento, TotDescuento, TotNeto, TotIva, TotImpuesto, TotRetencion, Total', 'length', 'max'=>10),
+			array('NumVenta, CodCliente, CodBodega, ForPago, TotExento, TotDescuento, TotNeto, TotIva, TotImpuesto, TotRetencion, Total, Usuario', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('NumVenta, CodCliente, CodBodega, Fecha, Vencimiento, ForPago, TotExento, TotDescuento, TotNeto, TotIva, TotImpuesto, TotRetencion, Total', 'safe', 'on'=>'search'),
+			array('NumVenta, CodCliente, CodBodega, Fecha, Vencimiento, ForPago, TotExento, TotDescuento, TotNeto, TotIva, TotImpuesto, TotRetencion, Total, Usuario', 'safe', 'on'=>'search'),
 		);
 	}
 	/**
@@ -71,6 +72,7 @@ class Venta extends CActiveRecord
 			'TotImpuesto' => 'Total Impuesto',
 			'TotRetencion' => 'Total Retencion',
 			'Total' => 'Total',
+                        'Usuario' => 'Vendedor'
 		);
 	}
 	/**
@@ -102,6 +104,7 @@ class Venta extends CActiveRecord
 		$criteria->compare('TotImpuesto',$this->TotImpuesto,true);
 		$criteria->compare('TotRetencion',$this->TotRetencion,true);
 		$criteria->compare('Total',$this->Total,true);
+                $criteria->compare('Usuario',$this->Usuario,true);
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

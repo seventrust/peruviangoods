@@ -76,6 +76,7 @@ function fechaHoy() {
 
 
 //DESDE AQUI SE EFECTUAN LOS CAMBIOS PARA OBTENER LOS RESULTADOS DE LOS CALCULOS
+
 function update_total() {
   var total = 0;
     
@@ -133,60 +134,32 @@ function update_total() {
   total_ci = roundNumber(total_ci,2);
   $('#Venta_Total').val(total_ci);
   
-  update_balance();
+  
 }
-//
-//function update_balance() {
-//  var due = $("#total").val().replace("$","") - $("#paid").val().replace("$","");
-//  due = roundNumber(due,2);
-//  
-//  $('.due').val("$"+due);
-//}
-//
-//function update_price() {
-//  var row = $(this).parents('.item-row');
-//  var price = row.find('.cost').val().replace("$","") * row.find('.qty').val();
-//  price = roundNumber(price,2);
-//  isNaN(price) ? row.find('.price').val("N/A") : row.find('.price').val("$"+price);
-//  
-//  update_total();
-//}
-//
-//function bind() {
-//  $(".cost").blur(update_price);
-//  $(".qty").blur(update_price);
-//}
 
 $(document).ready(function() {
 
-//  $('input').click(function(){
-//    $(this).select();
-//  });
-//
-//  $("#paid").blur(update_balance);
-//   
-//  $("#addrow").click(function(){
-//    $(".item-row:last").after('<tr class="item-row"><td class="item-name"><div class="delete-wpr"><textarea>Item Name</textarea><a class="delete" href="javascript:;" title="Remove row">X</a></div></td><td class="description"><textarea>Description</textarea></td><td><textarea class="cost">$0</textarea></td><td><textarea class="qty">0</textarea></td><td><span class="price">$0</span></td></tr>');
-//    if ($(".delete").length > 0) $(".delete").show();
-//    bind();
-//  });
-  
-//  bind();
+
   //CUANDO CAMBIA LA CANTIDAD
         var index = $('#contador').html();
           $('#Detalleventa_Cantidad'+index).change( function() {
           var index = $('#contador').html();
       //    alert(index);
-          var i = $('#Detalleventa_Precio'+index).val();
-          var j = $('#Detalleventa_Cantidad'+index).val();
-          var l = $('#Detalleventa_Descuento'+index).val();
-          var m = $('#Detalleventa_Exento'+index).val();
-          var k = roundNumber((parseFloat(i)*parseFloat(j))-(parseFloat(l)+parseFloat(m)));
-          $('#Detalleventa_Subtotal'+index).val(k);
-      //    alert(k);
-          index = $('#contador').html();
-          update_total();
+            var j = $('#Detalleventa_Cantidad'+index).val();
+            var l = $('#Detalleventa_Descuento'+index).val();
+            var m = $('#Detalleventa_Exento'+index).val();
+            var i = $('#Detalleventa_Precio'+index).val();
+            var iva=((parseFloat(i)*19)/100).toFixed(2);
+            var preciosiniva= (parseFloat(i)-parseFloat(iva)).toFixed(2);
+            var subiva=(parseFloat(iva)*parseFloat(j)).toFixed(2);
+            
+            var k = ((parseFloat(preciosiniva)*parseFloat(j))-(parseFloat(l)+parseFloat(m))).toFixed(2);
+            $('#Detalleventa_Iva'+index).val(subiva);
 
+            $('#Detalleventa_Subtotal'+index).val(k);
+        //    alert(k);
+            index = $('#contador').html();
+            update_total();
       }); 
       
  //CUANDO CAMBIA EL PRECIO
@@ -194,14 +167,16 @@ $(document).ready(function() {
             $('#Detalleventa_Precio'+index).change( function() {
             var index = $('#contador').html();
         //    alert(index);
-            var i = $('#Detalleventa_Precio'+index).val();
-            var iva=((parseFloat(i)*19)/100).toFixed(2);
-            var preciosiniva= (parseFloat(i)-parseFloat(iva)).toFixed(2);
             var j = $('#Detalleventa_Cantidad'+index).val();
             var l = $('#Detalleventa_Descuento'+index).val();
             var m = $('#Detalleventa_Exento'+index).val();
+            var i = $('#Detalleventa_Precio'+index).val();
+            var iva=((parseFloat(i)*19)/100).toFixed(2);
+            var preciosiniva= (parseFloat(i)-parseFloat(iva)).toFixed(2);
+            var subiva=(parseFloat(iva)*parseFloat(j)).toFixed(2);
+            
             var k = ((parseFloat(preciosiniva)*parseFloat(j))-(parseFloat(l)+parseFloat(m))).toFixed(2);
-            $('#Detalleventa_Iva'+index).val(iva);
+            $('#Detalleventa_Iva'+index).val(subiva);
             $('#Detalleventa_Precio'+index).val(preciosiniva);
             $('#Detalleventa_Subtotal'+index).val(k);
         //    alert(k);
@@ -215,16 +190,21 @@ $(document).ready(function() {
             $('#Detalleventa_Descuento'+index).change( function() {
             var index = $('#contador').html();
         //    alert(index);
-            var i = $('#Detalleventa_Precio'+index).val();
             var j = $('#Detalleventa_Cantidad'+index).val();
             var l = $('#Detalleventa_Descuento'+index).val();
             var m = $('#Detalleventa_Exento'+index).val();
-            var k = ((parseFloat(i)*parseFloat(j))-(parseFloat(l)+parseFloat(m))).toFixed(2);
+            var i = $('#Detalleventa_Precio'+index).val();
+            var iva=((parseFloat(i)*19)/100).toFixed(2);
+            var preciosiniva= (parseFloat(i)-parseFloat(iva)).toFixed(2);
+            var subiva=(parseFloat(iva)*parseFloat(j)).toFixed(2);
+            
+            var k = ((parseFloat(preciosiniva)*parseFloat(j))-(parseFloat(l)+parseFloat(m))).toFixed(2);
+            $('#Detalleventa_Iva'+index).val(subiva);
+            $('#Detalleventa_Precio'+index).val(preciosiniva);
             $('#Detalleventa_Subtotal'+index).val(k);
         //    alert(k);
             index = $('#contador').html();
             update_total();
-
         });
         
 //CUANDO CAMBIA EL EXENTO
@@ -232,11 +212,17 @@ $(document).ready(function() {
             $('#Detalleventa_Exento'+index).change( function() {
             var index = $('#contador').html();
         //    alert(index);
-            var i = $('#Detalleventa_Precio'+index).val();
             var j = $('#Detalleventa_Cantidad'+index).val();
             var l = $('#Detalleventa_Descuento'+index).val();
             var m = $('#Detalleventa_Exento'+index).val();
-            var k = ((parseFloat(i)*parseFloat(j))-(parseFloat(l)+parseFloat(m))).toFixed(2);
+            var i = $('#Detalleventa_Precio'+index).val();
+            var iva=((parseFloat(i)*19)/100).toFixed(2);
+            var preciosiniva= (parseFloat(i)-parseFloat(iva)).toFixed(2);
+            var subiva=(parseFloat(iva)*parseFloat(j)).toFixed(2);
+            
+            var k = ((parseFloat(preciosiniva)*parseFloat(j))-(parseFloat(l)+parseFloat(m))).toFixed(2);
+            $('#Detalleventa_Iva'+index).val(subiva);
+            $('#Detalleventa_Precio'+index).val(preciosiniva);
             $('#Detalleventa_Subtotal'+index).val(k);
         //    alert(k);
             index = $('#contador').html();
@@ -244,27 +230,7 @@ $(document).ready(function() {
 
         });
 
-//  $(".delete").click(function(){
-//    $(this).parents('.item-row').remove();
-//    update_total();
-//    if ($(".delete").length < 2) $(".delete").hide();
-//  });
-//  
-//  $("#cancel-logo").click(function(){
-//    $("#logo").removeClass('edit');
-//  });
-//  $("#delete-logo").click(function(){
-//    $("#logo").remove();
-//  });
-//  $("#change-logo").click(function(){
-//    $("#logo").addClass('edit');
-//    $("#imageloc").val($("#image").attr('src'));
-//    $("#image").select();
-//  });
-//  $("#save-logo").click(function(){
-//    $("#image").attr('src',$("#imageloc").val());
-//    $("#logo").removeClass('edit');
-//  });
+
   
   
 });

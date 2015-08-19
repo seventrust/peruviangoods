@@ -1,72 +1,342 @@
-<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl?>/css/jquery.css" />
-
+<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl?>/css/jquery.css"/>
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/jquery-ui.js"></script>
-<div class="form">
-    <?php
-    /** @var VentaController $this */
-    /** @var Venta $model */
-    /** @var AweActiveForm $form */
-    $form = $this->beginWidget('ext.AweCrud.components.AweActiveForm', array(
-    'id' => 'venta-form',
-    'enableAjaxValidation' => false,
-    'enableClientValidation'=> false,
+<script src="<?php echo Yii::app()->request->baseUrl?>/js/venta.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#Venta_NumVenta').val(<?php echo getVenta()?>);
+}); 
+</script>
+<div id="contador"></div>
+<div class="form wide">
+ 
+    <?php $form=$this->beginWidget('CActiveForm', array(
+            'id'=>'group-form',
+            'enableAjaxValidation'=>false,
     )); ?>
+ 
+    <?php
+        //show errorsummary at the top for all models
+        //build an array of all models to check
+        echo $form->errorSummary(array_merge(array($model),$validatedMembers));
+    ?>
 
-    <p class="note">
-        <?php echo Yii::t('AweCrud.app', 'Fields with') ?> <span class="required">*</span>
-        <?php echo Yii::t('AweCrud.app', 'are required') ?>.    </p>
-
-    <?php echo $form->errorSummary($model) ?>
-
-                        <?php echo $form->textFieldRow($model, 'CodCliente', array('class' => 'span5', 'maxlength' => 10)) ?>
-                        <?php echo $form->textFieldRow($model, 'CodBodega', array('class' => 'span5', 'maxlength' => 10)) ?>
-                        <?php echo $form->labelEx($model, 'Fecha');?>
-                        <?php 
-                            $this->widget('zii.widgets.jui.CJuiDatePicker',array(
-                                'attribute'=>'Fecha',
-                                'model'=>$model,
-                                'language'=>'es',
-                                'options'=>array(
-                                    'dateFormat'=>'yy-mm-dd',
-                                    'showButtonPanel'=>TRUE,
-                                    'changeYear'=>TRUE,
-                                   
-                                )
-                            ))
-                         ?>
-                        <?php echo $form->labelEx($model, 'Vencimiento');?>
-                        <?php 
-                           $this->widget('zii.widgets.jui.CJuiDatePicker',array(
-                               'attribute'=>'Vencimiento',
-                               'model'=>$model,
-                               'language'=>'es',
-                               'options'=>array(
-                                   'dateFormat'=>'yy-mm-dd',
-                                   'showButtonPanel'=>TRUE,
-                                   'changeYear'=>TRUE,
-                               )
-                           ))
-                        ?>
-                        <?php echo $form->textFieldRow($model, 'ForPago', array('class' => 'span5', 'maxlength' => 10)) ?>
-                        <?php echo $form->textFieldRow($model, 'TotExento', array('class' => 'span5', 'maxlength' => 10)) ?>
-                        <?php echo $form->textFieldRow($model, 'TotDescuento', array('class' => 'span5', 'maxlength' => 10)) ?>
-                        <?php echo $form->textFieldRow($model, 'TotNeto', array('class' => 'span5', 'maxlength' => 10)) ?>
-                        <?php echo $form->textFieldRow($model, 'TotIva', array('class' => 'span5', 'maxlength' => 10)) ?>
-                        <?php echo $form->textFieldRow($model, 'TotImpuesto', array('class' => 'span5', 'maxlength' => 10)) ?>
-                        <?php echo $form->textFieldRow($model, 'TotRetencion', array('class' => 'span5', 'maxlength' => 10)) ?>
-                        <?php echo $form->textFieldRow($model, 'Total', array('class' => 'span5', 'maxlength' => 10)) ?>
-                <div class="form-actions">
-                <?php $this->widget('bootstrap.widgets.TbButton', array(
-			'buttonType'=>'submit',
-			'type'=>'primary',
-			'label'=>$model->isNewRecord ? Yii::t('AweCrud.app', 'Crear') : Yii::t('AweCrud.app', 'Guardar'),
-		)); ?>
-        <?php $this->widget('bootstrap.widgets.TbButton', array(
-			//'buttonType'=>'submit',
-			'label'=> Yii::t('AweCrud.app', 'Cancel'),
-			'htmlOptions' => array('onclick' => 'javascript:history.go(-1)')
-		)); ?>
+    <div>
+    <table class="table">
+        <th> 
+                <?php echo $form->labelEx($model,'NumVenta'); ?>
+                <?php echo $form->textField($model,'NumVenta'); ?>
+                <?php echo $form->error($model,'NunVenta'); ?>
+           
+        </th>
+    
+        <th>
+            <?php echo $form->labelEx($model, 'Fecha');?>
+            <?php 
+                $this->widget('zii.widgets.jui.CJuiDatePicker',array(
+                    'attribute'=>'Fecha',
+                    'model'=>$model,
+                    'language'=>'es',
+                    'options'=>array(
+                        'dateFormat'=>'yy-mm-dd',
+                        'showButtonPanel'=>TRUE,
+                        'changeYear'=>TRUE,
+                        
+                    )
+                ))
+             ?>
+            <?php echo $form->error($model,'Fecha'); ?>
+            
+        </th>
+    
+     <th>
+        
+        <?php echo $form->labelEx($model, 'Vencimiento');?>
+         <?php 
+            $this->widget('zii.widgets.jui.CJuiDatePicker',array(
+                'attribute'=>'Vencimiento',
+                'model'=>$model,
+                'language'=>'es',
+                'options'=>array(
+                    'dateFormat'=>'yy-mm-dd',
+                    'showButtonPanel'=>TRUE,
+                    'changeYear'=>TRUE,
+                )
+            ))
+         ?>
+        <?php echo $form->error($model,'Vencimiento'); ?>
+    <!--</div>-->
+    </th>
+    </table>
+        <table class="table">
+            <th>
+        <!--<div class="required">-->
+        <?php echo $form->labelEx($model, 'CodCliente');?>
+        <?php
+             $this->widget('zii.widgets.jui.CJuiAutoComplete',
+                      array(
+                       'id'=>'CodCliente',
+                       'name'=>'Venta[CodCliente]', // Nombre para el campo de autocompletar
+                       'model'=>$model,
+                       'value'=>$model->CodCliente,
+                       'source'=>$this->createUrl('venta/autocompletel'), // URL que genera el conjunto de datos
+                       'options'=> array(
+                         'showAnim'=>'fold',
+                         'size'=>'30',
+                         'minLength'=>'2', // Minimo de caracteres que hay que digitar antes de relizar la busqueda
+                         'select'=>"js:function(event, ui) { 
+                          $('#nombreCliente').val(ui.item.nombre); // HTML-Id del campo
+                          $('#direccion').val(ui.item.direccion);
+                          $('#telefono').val(ui.item.telefono);
+                           }"
+                         ),
+                       'htmlOptions'=> array(
+                        'size'=>40,
+                        'placeholder'=>'Buscar ...',
+                        'title'=>'Indique el producto.',
+                        'style'=>'width: 80px',
+                        ),
+                      )); 
+        ?>
+        <?php echo $form->error($model,'CodCliente'); ?>
+    <!--</div>-->
+    </th>
+    
+    <th>
+    <!--<div class="required">-->
+        <label>Cliente</label>
+        <input type="text" id="nombreCliente"/>
+    <!--</div>-->
+    </th>
+    <th>
+    <!--<div class="required">-->
+        <label>Direccion</label>
+        <input type="text" id="direccion" style="WIDTH:10"/>
+    <!--</div>-->
+    </th>
+    <th>
+    <!--<div class="required">-->
+        <label>Telefono</label>
+        <input type="text" id="telefono"/>
+    <!--</div>-->
+    </th>
+        </table>
+    
+    
+     <th>
+        <?php echo $form->labelEx($model,'Bodega'); ?>
+        <?php echo $form->dropDownList($model,'CodBodega',CHtml::listData(Bodega::model()->findAll(),'CodBodega','Descripcion'),array('empty'=>' ')); ?>
+        <?php echo $form->error($model,'CodBodega'); ?>
+    </th>
+    <th>
+    <div class="required">
+        <?php echo $form->labelEx($model, 'Usuario');?>
+        <?php echo $form->textField($model, 'Usuario', array('value'=>Yii::app()->user->name, 'readonly'=>true));?>
+        <?php echo $form->error($model,'Usuario'); ?>
     </div>
+    </th>
+    
+    <div class="required">
+        <th>
+        <?php echo $form->labelEx($model, 'ForPago');?>
+        <?php echo $form->dropDownList($model, 'ForPago', array('Debito', 'Credito', 'Efectivo', 'Cheque', 'Vale'));?>
+        <?php echo $form->error($model,'ForPago'); ?>
+        </th>
+    </div>
+    
+    
 
+   
+    <?php
+    
+    // see http://www.yiiframework.com/doc/guide/1.1/en/form.table
+    // Note: Can be a route to a config file too,
+    //       or create a method 'getMultiModelForm()' in the member model
+ 
+    $memberFormConfig = array(
+          'elements'=>array(
+            'CodProducto'=>array(
+                'type'=>'text',
+                'maxlength'=>80,
+                'class'=>'CodProducto',
+                'style'=>'WIDTH:90px',
+                
+            ),
+            'Descripcion'=>array(
+                'type'=>'zii.widgets.jui.CJuiAutoComplete',                
+                'source'=>$this->createUrl('venta/autocomplete'),
+                'options'=>array(
+                    'showAnim'=>'fold',
+                         'size'=>'80',
+                         'minLength'=>'2', // Minimo de caracteres que hay que digitar antes de relizar la busqueda
+                         'select'=>"js:function(event, ui) { 
+                         var nomobj_texto = this.id; //El identificador del campo en mi caso #Detallecompra_Descripcion 
+                         var indexid = nomobj_texto.substring(24,nomobj_texto.length); 
+                         $('#Detalleventa_CodProducto'+indexid).val(ui.item.id); // HTML-Id del campo
+                         $('#Detalleventa_Precio'+indexid).val(ui.item.precio);
+                         $('#Detalleventa_Saldo'+indexid).val(ui.item.saldo);
+                         $('#Detalleventa_UniMedida'+indexid).val(ui.item.unidad); 
+                         $('#Detalleventa_Exento'+indexid).val(0); 
+                         $('#Detalleventa_Descuento'+indexid).val(0); 
+                         $('#contador').html(indexid);
+                         
+                         }",
+                
+                ),
+                'htmlOptions'=> array(
+                        'size'=>120,
+                        'placeholder'=>'Buscar ...',
+                        'title'=>'Indique el producto.'
+                ),
+                
+               
+            ),
+            'Cantidad'=>array(
+              'type'=>'text',
+              //it is important to add an empty item because of new records
+              'maxlength'=>120,
+              'class'=>'Cantidad',
+              'style'=>'WIDTH:60px',
+            ),
+            'Precio'=>array(
+                'type'=>'text',
+                'maxlength'=>120,
+                'class'=>'Precio',
+                'style'=>'WIDTH:80px',    
+            ),  
+            
+            'UniMedida'=>array(
+                'type'=>'text',
+                'maxlength'=>8,
+                'class'=>'UniMedida',
+                'size'=>8,
+                'style'=>'WIDTH:55px',
+                'readonly'=>true,
+            ),
+             'Saldo'=>array(
+                'type'=>'text',
+                'maxlength'=>10,
+                'class'=>'Saldo',
+                'size'=>8,
+                'style'=>'WIDTH:80px',
+                'readonly'=>true,
+                'hide'=>true,
+             
+            ),
+              'Iva'=>array(
+                'type'=>'text',
+                'maxlength'=>8,
+                'size'=>8,
+                'style'=>'WIDTH:55px',
+                 'class'=>'Iva',
+            ),
+            'Descuento'=>array(
+                'type'=>'text',
+                'maxlength'=>8,
+                'size'=>8,
+                'class'=>'Descuento',
+                'style'=>'WIDTH:80px',
+                'value'=>0,
+            ),
+            'Exento'=>array(
+                'type'=>'text',
+                'maxlength'=>10,
+                'class'=>'Exento',
+                'size'=>8,
+                'style'=>'WIDTH:80px',
+                'value'=>0,
+            ),
+            'Subtotal'=>array(
+                'type'=>'text',
+                'maxlength'=>10,
+                'class'=>'Subtotal',
+                'size'=>8,
+                'style'=>'WIDTH:80px',
+               
+            ),
+             
+        ));
+    
+    $this->widget('ext.multimodelform.MultiModelForm',array(
+            'id' => 'id_member', //the unique widget id
+            'formConfig' => $memberFormConfig, //the form configuration array
+            'model' => $member, //instance of the form model
+            'tableView'=>true,
+            //if submitted not empty from the controller,
+            //the form will be rendered with validation errors
+            'validatedItems' => $validatedMembers,
+            'jsAfterNewId' => MultiModelForm::afterNewIdAutoComplete($memberFormConfig['elements']['Descripcion']),                            
+            'addItemText' => 'Agregar',
+            'removeText' => 'Quitar',
+            'removeConfirm' => 'Desea quitar la fila seleccionada',
+            //array of member instances loaded from db
+            'data' => $member->findAll('NumVenta=:groupId', array(':groupId'=>$model->NumVenta)),
+        ));
+    ?>
+        
+            
+    <th>
+    <div class="required">
+        <?php echo $form->labelEx($model, 'TotExento');?>
+        <?php echo $form->textField($model, 'TotExento');?>
+        <?php echo $form->error($model,'TotExento'); ?>
+    </div>
+    </th>
+    
+    <th>
+    <div class="required">
+        <?php echo $form->labelEx($model, 'TotDescuento');?>
+        <?php echo $form->textField($model, 'TotDescuento');?>
+        <?php echo $form->error($model,'TotDescuento'); ?>
+    </div>
+    </th>
+    
+    <th>
+    <div class="required">
+        <?php echo $form->labelEx($model, 'TotNeto');?>
+        <?php echo $form->textField($model, 'TotNeto');?>
+        <?php echo $form->error($model,'TotNeto'); ?>
+    </div>
+    </th>
+    <th>
+    <div>
+        <?php echo $form->labelEx($model, 'TotIva');?>
+        <?php echo $form->textField($model, 'TotIva', array('value'=>'19', 'readonly'=>true));?>
+        <?php echo $form->error($model,'TotIva'); ?>
+    </div>
+    </th>
+    
+    <th>
+    <div>
+        <?php echo $form->labelEx($model, 'TotImpuesto');?>
+        <?php echo $form->textField($model, 'TotImpuesto', array('value'=>'21', 'readonly'=>true));?>
+        <?php echo $form->error($model,'TotImpuesto'); ?>
+    </div>
+    </th>
+    
+    <th>
+    <div>
+        <?php echo $form->labelEx($model, 'TotRetencion');?>
+        <?php echo $form->textField($model, 'TotRetencion');?>
+        <?php echo $form->error($model,'TotRetencion'); ?>
+    </div>
+    </th>
+    
+    <th>
+    <div>
+        <?php echo $form->labelEx($model, 'Total');?>
+        <?php echo $form->textField($model, 'Total');?>
+        <?php echo $form->error($model,'Total'); ?>
+    </div>
+    </th>
+    </table>
+        
+    <p class="note">Campos con <span class="required">*</span> son requeridos.</p>
+        <div class="row buttons">
+            <?php echo CHtml::submitButton($model->isNewRecord ? 'Guardar' : 'Save'); ?>
+        </div>
+ 
     <?php $this->endWidget(); ?>
+ 
+    </div><!-- form -->
 </div>

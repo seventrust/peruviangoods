@@ -31,7 +31,7 @@ class Producto extends CActiveRecord
 		return array(
 			array('CodProducto, Descripcion, UniMedida, CanExistencia, PreCompra, PreVenta', 'required'),
 			array('CanExistencia', 'numerical', 'integerOnly'=>true),
-			array('CodProducto', 'length', 'max'=>40),
+			array('CodProducto', 'length', 'max'=>20),
 			array('Descripcion', 'length', 'max'=>200),
 			array('UniMedida, PreCompra, PreVenta', 'length', 'max'=>10),
 			// The following rule is used by search().

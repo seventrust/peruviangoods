@@ -55,7 +55,31 @@ class VentaController extends Controller
 			'model'=>$this->loadModel($id),
 		));
 	}
-  
+
+	/**
+	 * Creates a new model.
+	 * If creation is successful, the browser will be redirected to the 'view' page.
+	 */
+//	public function actionCreate()
+//	{
+//            $a=new Venta;
+//            $b=new Detalleventa;
+//            $this->performAjaxValidation(array($a,$b));
+//            if(isset($_POST['Venta'],$_POST['Detalleventa']))
+//            {
+//                $a->attributes=$_POST['Venta'];
+//                $b->attributes=$_POST['Detalleventa'];
+//                
+//                if($a->save()){
+//                    $b->NumVenta=$a->NumVenta;
+//                    $b->save();
+//                    $this->redirect(array('view','id'=>$a->NumVenta));
+//                
+//                    }
+//                }
+//            $this->render('create',array('a'=>$a,'b'=>$b));
+//	}
+        
         public function actionCreate() {
             Yii::import('ext.multimodelform.MultiModelForm');
             $model = new Venta();
@@ -77,35 +101,38 @@ class VentaController extends Controller
                         $masterValues = array ('NumVenta'=>$model->NumVenta);
                         if (MultiModelForm::save($member,$validatedMembers,$deleteMembers,$masterValues)){
                            
-                           $usuario=Yii::app()->user->name;
-                           $numdocumento=$_POST['Venta']['NumCompra'];
-                           $forpago=$_POST['Venta']['ForPago'];
-                           $rut=$_POST['Venta']['CodProveedor'];
+                           $numdocumento=$_POST['Venta']['NumVenta'];   
                            $codigo = $_POST['Detalleventa']['CodProducto'];
-                           $descripcion = $_POST['Detalleventa']['Descripcion'];
-                           $medida = $_POST['Detalleventa']['UniMedida'];
                            $cantidad = $_POST['Detalleventa']['Cantidad'];
                            $saldoanterior=$_POST['Detalleventa']['Saldo'];
                            $precio=$_POST['Detalleventa']['Precio'];
                            $subtotal=$_POST['Detalleventa']['Subtotal'];
-                           $iva=$_POST['Detalleventa']['Iva'];
                            
                            for($i=0; $i<count($codigo); $i++)
                            {
-                               $saldoactual[$i]=$saldoanterior[$i]+$cantidad[$i];
-                                Yii::app()->db->createCommand('update productos set CanExistencia = (CanExistencia + '.$cantidad[$i].'),PreCompra='.$precio[$i].',Iva='.$iva[$i].' where CodProducto = "'.$codigo[$i].'"')->query();
+                               $saldoactual[$i]=$saldoanterior[$i]-$cantidad[$i];
                                
-                                yii::app()->db->createCommand('insert into kardex (Rut,ForPago,NumDocumento, CodProducto, Descripcion,UniMedida, TipoMovimiento, Cantidad, SaldoAnterior, SaldoActual, Precio,Iva, Subtotal,Usuario)'
-                                                            . ' Values("'.$rut.'",'.$forpago.','.$numdocumento.',"'.$codigo[$i].'","'.$descripcion[$i].'","'.$medida[$i].'" ,"Venta",'.$cantidad[$i].','.$saldoanterior[$i].','.$saldoactual[$i].','.$precio[$i].','.$iva[$i].','.$subtotal[$i].',"'.$usuario.'")')->query();
-//                                
-                           }
+                               
+                                Yii::app()->db->createCommand('update productos set CanExistencia = (CanExistencia - '.$cantidad[$i].') where CodProducto = "'.$codigo[$i].'"')->query();
+                               
+                                Yii::app()->db->createCommand('insert into kardex (NumDocumento, CodProducto, TipoMovimiento, Cantidad, SaldoAnterior, SaldoActual, Precio, Subtotal,Usuario)'
+                                                            . ' Values('.$numdocumento.',"'.$codigo[$i].'","venta",'.$cantidad[$i].','.$saldoanterior[$i].','.$saldoactual[$i].','.$precio[$i].','.$subtotal[$i].',"'.Yii::app()->user->name.'")')->query();
+//                                                                 
+//                            $codigo = $_POST['Detalleventa']['CodProducto'];
+//                            $final = $_POST['Detalleventa']['Cantidad'];
+//                            for($i=0; $i<count($codigo); $i++)
+//                            {
+//                               
+//
+//                            // Yii::app()->db->createCommand('update productos set CanExistencia = (CanExistencia - '.$final[$i].') where CodProducto = "'.$codigo[$i].'"')->query();
+                          }
                             $this->redirect(array('view','id'=>$model->NumVenta));
                            
                      }
                     }
                    }
 
-            $this->render('create2',array(
+            $this->render('create',array(
                 'model'=>$model,
                 //submit the member and validatedItems to the widget in the edit form
                 'member'=>$member,
@@ -239,20 +266,20 @@ class VentaController extends Controller
         public function actionAutoCompletel() {
            
             $criteria = new CDbCriteria;
-            $criteria->compare('LOWER(CodProveedor)', strtolower($_GET['term']), true);
+            $criteria->compare('LOWER(CodCliente)', strtolower($_GET['term']), true);
 //          $criteria->compare('LOWER(CodProducto)', strtolower($_GET['term']), true, 'OR');
-            $criteria->order = 'CodProveedor';
+            $criteria->order = 'CodCliente';
             $criteria->limit = 30; 
-            $data = Proveedor::model()->findAll($criteria);
+            $data = Cliente::model()->findAll($criteria);
 
             if (!empty($data))
             {
              $arr = array();
              foreach ($data as $item) {
               $arr[] = array(
-                'id' => $item->CodProveedor,
-                'value' => $item->CodProveedor,
-                'label' => $item->CodProveedor,
+                'id' => $item->CodCliente,
+                'value' => $item->CodCliente,
+                'label' => $item->CodCliente,
                 'direccion' => $item->Direccion,
                 'nombre'=> $item->Descripcion,
                 'telefono'=> $item->Telefono,
