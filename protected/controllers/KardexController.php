@@ -139,102 +139,111 @@ class KardexController extends Controller
 	/**
 	 * Lists all models.
 	 */
-	public function actionIndex()
-	{
-//		$dataProvider=new CActiveDataProvider('Kardex');
-//		$this->render('index',array(
-//			'dataProvider'=>$dataProvider,
+//	public function actionIndex()
+//	{
+////		$dataProvider=new CActiveDataProvider('Kardex');
+////		$this->render('index',array(
+////			'dataProvider'=>$dataProvider,
+////		));
+//                $model=new Kardex('search');
+//		$model->unsetAttributes();  // clear any default values
+//		if(isset($_GET['Kardex'])){
+//			$model->attributes=$_GET['Kardex'];}
+//                 if ($this->isExportRequest()) { //<==== [[ADD THIS BLOCK BEFORE RENDER]]
+//                    //set_time_limit(0); //Uncomment to export lage datasets
+//                    //Add to the csv a single line of text
+//                    $this->exportCSV(array('VENTAS FILTRADAS POR:'), null, false);
+//                    //Add to the csv a single model data with 3 empty rows after the data
+//                    $this->exportCSV($model, array_keys($model->attributeLabels()), false, 3);
+//                    //Add to the csv a lot of models from a CDataProvider
+//                    $this->exportCSV($model->search(), array(
+//                        'NumDocumento',
+//                        'Fecha',
+//                        'CodProducto',
+//                        'Descripcion',
+//                        'UniMedida',
+//                        'SaldoAnterior', 
+//                        'SaldoActual',
+//                        'Precio',
+//                        'Usuario'
+//                        ));
+//                }   
+//                $this->render('admin',array(
+//			'model'=>$model,
 //		));
-                $model=new Kardex('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Kardex'])){
-			$model->attributes=$_GET['Kardex'];}
-                 if ($this->isExportRequest()) { //<==== [[ADD THIS BLOCK BEFORE RENDER]]
-                    //set_time_limit(0); //Uncomment to export lage datasets
-                    //Add to the csv a single line of text
-                    $this->exportCSV(array('VENTAS FILTRADAS POR:'), null, false);
-                    //Add to the csv a single model data with 3 empty rows after the data
-                    $this->exportCSV($model, array_keys($model->attributeLabels()), false, 3);
-                    //Add to the csv a lot of models from a CDataProvider
-                    $this->exportCSV($model->search(), array(
-                        'NumDocumento',
-                        'Fecha',
-                        'CodProducto',
-                        'Descripcion',
-                        'UniMedida',
-                        'SaldoAnterior', 
-                        'SaldoActual',
-                        'Precio',
-                        'Usuario'
-                        ));
-                }   
-                $this->render('admin',array(
-			'model'=>$model,
-		));
-                
-	}
-        
-        public function actionToExcel() {
-            
-                    // Load data (scoped)
-            $dataProvider=new CActiveDataProvider('Kardex', array(
-            'criteria'=>array(
-                'condition'=>'NumDocumento=55',
-                'order'=>'Fecha DESC',
-                )));
-            
-
-                // Export it
-            $this->toExcel($dataProvider,
-                array(
-                    'NumDocumento',
-                    'Fecha',
-                    'CodProducto',
-                    'TipoMovimiento',
-                    'Cantidad',
-                    'SaldoAnterior',
-                    'SaldoActual',
-                    'Usuario',
-                    
-                ),
-                'Test File',
-                array(
-                    'creator' => 'Zen',
-                ),
-                'Excel5'
-            );
-
-        }
+//                
+//	}
+//        
+//        public function actionToExcel() {
+//            
+//                    // Load data (scoped)
+//            $dataProvider=new CActiveDataProvider('Kardex', array(
+//            'criteria'=>array(
+//                'condition'=>'NumDocumento=55',
+//                'order'=>'Fecha DESC',
+//                )));
+//            
+//
+//                // Export it
+//            $this->toExcel($dataProvider,
+//                array(
+//                    'NumDocumento',
+//                    'Fecha',
+//                    'CodProducto',
+//                    'TipoMovimiento',
+//                    'SaldoAnterior',
+//                    'Cantidad',
+//                    'SaldoActual',
+//                    'Usuario',
+//                    
+//                ),
+//                'Test File',
+//                array(
+//                    'creator' => 'Zen',
+//                ),
+//                'Excel5'
+//            );
+//
+//        }
 
         /**
 	 * Manages all models.
 	 */
 	public function actionAdmin()
 	{
+            //////******** Ojo aquí es donde se arma el documento **************//////////
+            //
 //		yii::app()->request->sendFile("test.xls", "<table><tr>test <td></td><td></td></tr></table>");
                 $model=new Kardex('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Kardex'])){
                 $model->attributes=$_GET['Kardex'];
                 
+                $producto=new Productos();
+                
                 }
-                if ($this->isExportRequest()) { //<==== [[ADD THIS BLOCK BEFORE RENDER]]
-                    //set_time_limit(0); //Uncomment to export lage datasets
-                    //Add to the csv a single line of text
-                    $this->exportCSV(array('VENTAS FILTRADAS POR:'), null, false);
+                if ($this->isExportRequest()) {
+                    
+                    $this->exportCSV(array('Kardex al:'), null, false);
                     //Add to the csv a single model data with 3 empty rows after the data
                     $this->exportCSV($model, array_keys($model->attributeLabels()), false, 3);
+                   
                     //Add to the csv a lot of models from a CDataProvider
                     $this->exportCSV($model->search(), array(
+                        'Rut',
                         'NumDocumento',
                         'Fecha',
+                        'TipoMovimiento',
                         'CodProducto',
                         'Descripcion',
                         'UniMedida',
-                        'SaldoAnterior', 
+                        'SaldoAnterior',
+                        'Cantidad',
                         'SaldoActual',
                         'Precio',
-                        'Usuario'
+                        'Iva',
+                        'Subtotal',
+                        'Usuario',
                         ));
                 }
 		$this->render('admin',array(

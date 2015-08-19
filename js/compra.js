@@ -180,8 +180,10 @@ $(document).ready(function() {
             var l = $('#Detallecompra_Descuento'+index).val();
             var m = $('#Detallecompra_Exento'+index).val();
             var i = $('#Detallecompra_Precio'+index).val();
-            var iva=((parseFloat(i)*19)/100).toFixed(2);
-            var preciosiniva= (parseFloat(i)-parseFloat(iva)).toFixed(2);
+           
+            
+            var preciosiniva=(parseFloat(i)/1.19).toFixed(2);
+            var iva= (parseFloat(i)-parseFloat(preciosiniva)).toFixed(2);
             var subiva=(parseFloat(iva)*parseFloat(j)).toFixed(2);
             
             var k = ((parseFloat(preciosiniva)*parseFloat(j))-(parseFloat(l)+parseFloat(m))).toFixed(2);
@@ -202,8 +204,8 @@ $(document).ready(function() {
             var l = $('#Detallecompra_Descuento'+index).val();
             var m = $('#Detallecompra_Exento'+index).val();
             var i = $('#Detallecompra_Precio'+index).val();
-            var iva=((parseFloat(i)*19)/100).toFixed(2);
-            var preciosiniva= (parseFloat(i)-parseFloat(iva)).toFixed(2);
+             var preciosiniva=(parseFloat(i)/1.19).toFixed(2);
+            var iva= (parseFloat(i)-parseFloat(preciosiniva)).toFixed(2);
             var subiva=(parseFloat(iva)*parseFloat(j)).toFixed(2);
             
             var k = ((parseFloat(preciosiniva)*parseFloat(j))-(parseFloat(l)+parseFloat(m))).toFixed(2);
@@ -225,8 +227,8 @@ $(document).ready(function() {
             var l = $('#Detallecompra_Descuento'+index).val();
             var m = $('#Detallecompra_Exento'+index).val();
             var i = $('#Detallecompra_Precio'+index).val();
-            var iva=((parseFloat(i)*19)/100).toFixed(2);
-            var preciosiniva= (parseFloat(i)-parseFloat(iva)).toFixed(2);
+             var preciosiniva=(parseFloat(i)/1.19).toFixed(2);
+            var iva= (parseFloat(i)-parseFloat(preciosiniva)).toFixed(2);
             var subiva=(parseFloat(iva)*parseFloat(j)).toFixed(2);
             
             var k = ((parseFloat(preciosiniva)*parseFloat(j))-(parseFloat(l)+parseFloat(m))).toFixed(2);
@@ -247,8 +249,8 @@ $(document).ready(function() {
             var l = $('#Detallecompra_Descuento'+index).val();
             var m = $('#Detallecompra_Exento'+index).val();
             var i = $('#Detallecompra_Precio'+index).val();
-            var iva=((parseFloat(i)*19)/100).toFixed(2);
-            var preciosiniva= (parseFloat(i)-parseFloat(iva)).toFixed(2);
+           var preciosiniva=(parseFloat(i)/1.19).toFixed(2);
+            var iva= (parseFloat(i)-parseFloat(preciosiniva)).toFixed(2);
             var subiva=(parseFloat(iva)*parseFloat(j)).toFixed(2);
             
             var k = ((parseFloat(preciosiniva)*parseFloat(j))-(parseFloat(l)+parseFloat(m))).toFixed(2);

@@ -36,7 +36,7 @@ class Compra extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-                    array('NumCompra, CodBodega, Fecha, Vencimiento, ForPago, TotExento, TotDescuento, TotNeto,  Total', 'required'),
+                    array('NumCompra, CodBodega, Fecha, Vencimiento, ForPago, TotExento, TotDescuento, TotNeto,  Total,Usuario', 'required'),
                     array('NumCompra, CodProveedor, CodBodega, ForPago, TotExento, TotDescuento, TotNeto, TotIva, TotImpuesto, TotRetencion, Total', 'length', 'max'=>120),
                     // The following rule is used by search().
                     // @todo Please remove those attributes that should not be searched.
@@ -77,6 +77,7 @@ class Compra extends CActiveRecord
                         'TotImpuesto' => 'Total Impuesto',
                         'TotRetencion' => 'Total Retencion',
                         'Total' => 'Gran Total',
+                        'Usuario'=>'Usuario',
 		);
 	}
 

@@ -40,12 +40,13 @@ class Productos extends CActiveRecord
 			array('Id, CodProveedor', 'length', 'max'=>20),
 			array('CodProducto', 'length', 'max'=>40),
 			array('Descripcion', 'length', 'max'=>200),
-			array('UniMedida, PreCompra, PreVenta, PreVenta1, CodCategoria', 'length', 'max'=>10),
+//			array('UniMedida, PreCompra, PreVenta, PreVenta1, CodCategoria', 'length', 'max'=>10),
 			array('Estatus', 'length', 'max'=>1),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('Id, CodProducto, Descripcion, UniMedida, CanExistencia, PreCompra, PreVenta, PreVenta1, Foto, CodCategoria, Estatus, CodProveedor', 'safe', 'on'=>'search'),
-		);
+//			array('Id, CodProducto, Descripcion, UniMedida, CanExistencia, PreCompra, PreVenta, PreVenta1, Foto, CodCategoria, Estatus, CodProveedor', 'safe', 'on'=>'search'),
+                        array('Id, CodProducto, Descripcion, UniMedida,CodCategoria', 'safe', 'on'=>'search'),
+                    );
 	}
 
 	/**
@@ -69,14 +70,14 @@ class Productos extends CActiveRecord
 			'CodProducto' => 'Cod Producto',
 			'Descripcion' => 'Descripcion',
 			'UniMedida' => 'Uni Medida',
-			'CanExistencia' => 'Can Existencia',
-			'PreCompra' => 'Pre Compra',
-			'PreVenta' => 'Pre Venta',
-			'PreVenta1' => 'Pre Venta1',
-			'Foto' => 'Foto',
+//			'CanExistencia' => 'Can Existencia',
+//			'PreCompra' => 'Pre Compra',
+//			'PreVenta' => 'Pre Venta',
+//			'PreVenta1' => 'Pre Venta1',
+//			'Foto' => 'Foto',
 			'CodCategoria' => 'Cod Categoria',
-			'Estatus' => 'Estatus',
-			'CodProveedor' => 'Cod Proveedor',
+//			'Estatus' => 'Estatus',
+//			'CodProveedor' => 'Cod Proveedor',
 		);
 	}
 
@@ -102,14 +103,14 @@ class Productos extends CActiveRecord
 		$criteria->compare('CodProducto',$this->CodProducto,true);
 		$criteria->compare('Descripcion',$this->Descripcion,true);
 		$criteria->compare('UniMedida',$this->UniMedida,true);
-		$criteria->compare('CanExistencia',$this->CanExistencia);
-		$criteria->compare('PreCompra',$this->PreCompra,true);
-		$criteria->compare('PreVenta',$this->PreVenta,true);
-		$criteria->compare('PreVenta1',$this->PreVenta1,true);
-		$criteria->compare('Foto',$this->Foto,true);
-		$criteria->compare('CodCategoria',$this->CodCategoria,true);
-		$criteria->compare('Estatus',$this->Estatus,true);
-		$criteria->compare('CodProveedor',$this->CodProveedor,true);
+//		$criteria->compare('CanExistencia',$this->CanExistencia);
+//		$criteria->compare('PreCompra',$this->PreCompra,true);
+//		$criteria->compare('PreVenta',$this->PreVenta,true);
+//		$criteria->compare('PreVenta1',$this->PreVenta1,true);
+//		$criteria->compare('Foto',$this->Foto,true);
+//		$criteria->compare('CodCategoria',$this->CodCategoria,true);
+//		$criteria->compare('Estatus',$this->Estatus,true);
+//		$criteria->compare('CodProveedor',$this->CodProveedor,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

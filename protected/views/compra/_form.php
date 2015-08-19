@@ -2,11 +2,20 @@
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl?>/css/jquery.css" />
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/jquery-ui.js"></script>
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/compra.js"></script>
+
 <script type="text/javascript">
 $(document).ready(function(){
-    $('#Compra_NumCompra').val(<?php echo getCompra()?>);
-}); 
+//    if( $('#auto').is(':checked') ) {
+//    alert('Seleccionado');
+     $('#Compra_NumCompra').val(<?php  echo getCompra()?>);
+//        }
+   
+     
+});
+
+
 </script>
+
 <div id="contador"></div>
 
 <div class="form wide">
@@ -32,6 +41,11 @@ $(document).ready(function(){
             <?php echo $form->textField($model,'NumCompra' ); ?>
             <?php echo $form->error($model,'NumCompra'); ?>
          </th>
+         <th>
+           <label>auto</label>
+           <input type="checkbox" id="auto"/>
+        </th>
+         
         <th>
             <?php echo $form->labelEx($model, 'Fecha');?>
             <?php 
@@ -130,6 +144,11 @@ $(document).ready(function(){
             <?php echo $form->labelEx($model,'ForPago'); ?>
             <?php echo $form->dropDownList($model,'ForPago',CHtml::listData(Formapago::model()->findAll(),'Id','Descripcion'),array('empty'=>' ')); ?>
             <?php echo $form->error($model,'ForPago'); ?>
+        </th>
+        <th>
+            <?php echo $form->labelEx($model,'Usuario'); ?>
+            <?php echo $form->textField($model,'Usuario',array('value'=>Yii::app()->user->name)); ?>
+            <?php echo $form->error($model,'Usuario'); ?>
         </th>
      </table>
         
