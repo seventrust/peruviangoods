@@ -152,7 +152,7 @@ class KardexController extends Controller
                  if ($this->isExportRequest()) { //<==== [[ADD THIS BLOCK BEFORE RENDER]]
                     //set_time_limit(0); //Uncomment to export lage datasets
                     //Add to the csv a single line of text
-                    $this->exportCSV(array('VENTAS FILTRADAS POR:'), null, false);
+                    $this->exportCSV(array('BUSQUEDA POR:'), null, false);
                     //Add to the csv a single model data with 3 empty rows after the data
                     $this->exportCSV($model, array_keys($model->attributeLabels()), false, 3);
                     //Add to the csv a lot of models from a CDataProvider
@@ -165,6 +165,8 @@ class KardexController extends Controller
                         'SaldoAnterior', 
                         'SaldoActual',
                         'Precio',
+                        'Subtotal',
+                        'Iva',
                         'Usuario'
                         ));
                 }   
@@ -221,7 +223,7 @@ class KardexController extends Controller
                 if ($this->isExportRequest()) { //<==== [[ADD THIS BLOCK BEFORE RENDER]]
                     //set_time_limit(0); //Uncomment to export lage datasets
                     //Add to the csv a single line of text
-                    $this->exportCSV(array('VENTAS FILTRADAS POR:'), null, false);
+                    $this->exportCSV(array('Filtrado por:'), null, false);
                     //Add to the csv a single model data with 3 empty rows after the data
                     $this->exportCSV($model, array_keys($model->attributeLabels()), false, 3);
                     //Add to the csv a lot of models from a CDataProvider
@@ -234,6 +236,8 @@ class KardexController extends Controller
                         'SaldoAnterior', 
                         'SaldoActual',
                         'Precio',
+                        'Subtotal',
+                        'Iva',
                         'Usuario'
                         ));
                 }

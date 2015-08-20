@@ -100,36 +100,32 @@ class VentaController extends Controller
                         //the value for the foreign key 'groupid'
                         $masterValues = array ('NumVenta'=>$model->NumVenta);
                         if (MultiModelForm::save($member,$validatedMembers,$deleteMembers,$masterValues)){
+                            $usuario=Yii::app()->user->name;
+                            $numdocumento=$_POST['Venta']['NumVenta'];
+                            $forpago=$_POST['Venta']['ForPago'];
+                            $rut=$_POST['Venta']['CodCliente'];
+                            $descripcion=$_POST['Detalleventa']['Descripcion'];
+                            $codigo = $_POST['Detalleventa']['CodProducto'];
+                            $cantidad = $_POST['Detalleventa']['Cantidad'];
+                            $saldoanterior=$_POST['Detalleventa']['Saldo'];
+                            $precio=$_POST['Detalleventa']['Precio'];
+                            $subtotal=$_POST['Detalleventa']['Subtotal'];
+                            $iva=$_POST['Detalleventa']['Iva'];
+                            $unidad=$_POST['Detalleventa']['UniMedida'];
                            
-                           $numdocumento=$_POST['Venta']['NumVenta'];   
-                           $codigo = $_POST['Detalleventa']['CodProducto'];
-                           $cantidad = $_POST['Detalleventa']['Cantidad'];
-                           $saldoanterior=$_POST['Detalleventa']['Saldo'];
-                           $precio=$_POST['Detalleventa']['Precio'];
-                           $subtotal=$_POST['Detalleventa']['Subtotal'];
+                            for($i=0; $i<count($codigo); $i++)
+                            {
+                                $saldoactual[$i]=$saldoanterior[$i]-$cantidad[$i];
+                                Yii::app()->db->createCommand('update productos set CanExistencia = (CanExistencia - '.$cantidad[$i].'),PreCompra='.$precio[$i].',Iva='.$iva[$i].' where CodProducto = "'.$codigo[$i].'"')->query();                               
+                                
+                                Yii::app()->db->createCommand('insert into kardex (Rut,ForPago,NumDocumento, Descripcion, CodProducto, UniMedida, TipoMovimiento, Cantidad, SaldoAnterior, SaldoActual, Precio,Iva, Subtotal,Usuario)'
+                                                            . ' Values("'.$rut.'",'.$forpago.','.$numdocumento.',"'.$descripcion[$i].'","'.$codigo[$i].'","'.$unidad[$i].'","Venta",'.$cantidad[$i].','.$saldoanterior[$i].','.$saldoactual[$i].','.$precio[$i].','.$iva[$i].','.$subtotal[$i].',"'.$usuario.'")')->query();
+//                                                 
+                            }
+                            $this->redirect(array('view','id'=>$model->Id));
                            
-                           for($i=0; $i<count($codigo); $i++)
-                           {
-                               $saldoactual[$i]=$saldoanterior[$i]-$cantidad[$i];
-                               
-                               
-                                Yii::app()->db->createCommand('update productos set CanExistencia = (CanExistencia - '.$cantidad[$i].') where CodProducto = "'.$codigo[$i].'"')->query();
-                               
-                                Yii::app()->db->createCommand('insert into kardex (NumDocumento, CodProducto, TipoMovimiento, Cantidad, SaldoAnterior, SaldoActual, Precio, Subtotal,Usuario)'
-                                                            . ' Values('.$numdocumento.',"'.$codigo[$i].'","venta",'.$cantidad[$i].','.$saldoanterior[$i].','.$saldoactual[$i].','.$precio[$i].','.$subtotal[$i].',"'.Yii::app()->user->name.'")')->query();
-//                                                                 
-//                            $codigo = $_POST['Detalleventa']['CodProducto'];
-//                            $final = $_POST['Detalleventa']['Cantidad'];
-//                            for($i=0; $i<count($codigo); $i++)
-//                            {
-//                               
-//
-//                            // Yii::app()->db->createCommand('update productos set CanExistencia = (CanExistencia - '.$final[$i].') where CodProducto = "'.$codigo[$i].'"')->query();
-                          }
-                            $this->redirect(array('view','id'=>$model->NumVenta));
-                           
-                     }
-                    }
+                            }
+                        }
                    }
 
             $this->render('create',array(
@@ -139,7 +135,7 @@ class VentaController extends Controller
                 'validatedMembers' => $validatedMembers,
                 'cliente' => $cliente,
                
-            ));
+                ));
             }
 
             /**
@@ -242,61 +238,39 @@ class VentaController extends Controller
 
          echo CJSON::encode($arr);
             
-            
-            /* $res = array();
-
-            if (isset($_POST['term']))
-            {
-               $criteria = new CDbCriteria();
-                $criteria->addSearchCondition('Descripcion', $_GET['term']);
-                $models = Producto::model()->findAll($criteria);
-                
-                $qtxt = "SELECT Descripcion, CodProducto, PreCompra FROM productos WHERE Descripcion LIKE :descripcion LIMIT 5";
-                $command = Yii::app()->db->createCommand($qtxt);
-                $command->bindValue(":descripcion", '%'.$_POST['term'].'%', PDO::PARAM_STR);
-                $res = $command->queryRow($fetchAssociative = true);
-
-            }
-            echo CJSON::encode($res);
-            Yii::app()->end();
-
-        */
         }
         
         public function actionAutoCompletel() {
            
             $criteria = new CDbCriteria;
             $criteria->compare('LOWER(CodCliente)', strtolower($_GET['term']), true);
-//          $criteria->compare('LOWER(CodProducto)', strtolower($_GET['term']), true, 'OR');
             $criteria->order = 'CodCliente';
             $criteria->limit = 30; 
             $data = Cliente::model()->findAll($criteria);
 
             if (!empty($data))
             {
-             $arr = array();
-             foreach ($data as $item) {
-              $arr[] = array(
-                'id' => $item->CodCliente,
-                'value' => $item->CodCliente,
-                'label' => $item->CodCliente,
-                'direccion' => $item->Direccion,
-                'nombre'=> $item->Descripcion,
-                'telefono'=> $item->Telefono,
-                
-                
-              );
-             }
+                $arr = array();
+                foreach ($data as $item) {
+                    $arr[] = array(
+                        'id' => $item->CodCliente,
+                        'value' => $item->CodCliente,
+                        'label' => $item->CodCliente,
+                        'direccion' => $item->Direccion,
+                        'nombre'=> $item->Descripcion,
+                        'telefono'=> $item->Telefono,
+                    );
+                }
             }
             else
             {
-             $arr = array();
-             $arr[] = array(
-              'id' => '',
-              'value' => 'No se han encontrado resultados para su búsqueda',
-              'label' => 'No se han encontrado resultados para su búsqueda',
-             );
-         }
+                $arr = array();
+                $arr[] = array(
+                'id' => '',
+                'value' => 'No se han encontrado resultados para su búsqueda',
+                'label' => 'No se han encontrado resultados para su búsqueda',
+                );
+            }
 
          echo CJSON::encode($arr);
         }

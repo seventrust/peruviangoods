@@ -89,7 +89,7 @@ class Detalleventa extends CActiveRecord
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
 		$criteria=new CDbCriteria;
-		$criteria->compare('Item',$this->Item);
+		$criteria->compare('Item',$this->Item, true);
 		$criteria->compare('NumVenta',$this->NumVenta,true);
 		$criteria->compare('CodProducto',$this->CodProducto,true);
 		$criteria->compare('Cantidad',$this->Cantidad,true);
