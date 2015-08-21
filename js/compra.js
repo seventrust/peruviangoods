@@ -158,8 +158,6 @@ function bind() {
 
 $(document).ready(function() {
 
-//  $('input').click(function(){
-//    $(this).select();
     $("#auto").change(function(){
     if ($(this).is(':checked')){
 //        alert('checkbox activado');
@@ -168,13 +166,7 @@ $(document).ready(function() {
 //        alert('checkbox desactivado');
           $('#Compra_NumCompra').val("");} 
     
-
 });
-
-
-//     $('#Compra_NumCompra').val(<?php  echo getCompra()?>);
-        
-
 
   $("#paid").blur(update_balance);
    
@@ -195,19 +187,37 @@ $(document).ready(function() {
             var m = $('#Detallecompra_Exento'+index).val();
             var i = $('#Detallecompra_Precio'+index).val();
            
+              $("#iva").change(function(){
+                if ($(this).is(':checked')){
+                    
+                alert('checkbox activado');
+                var preciosiniva=(parseFloat(i)/1.19).toFixed(2);
+                var iva= (parseFloat(i)-parseFloat(preciosiniva)).toFixed(2);
+                var subiva=(parseFloat(iva)*parseFloat(j)).toFixed(2);
+
+                var k = ((parseFloat(preciosiniva)*parseFloat(j))-(parseFloat(l)+parseFloat(m))).toFixed(2);
+                $('#Detallecompra_Iva'+index).val(subiva);
+                $('#Detallecompra_Subtotal'+index).val(k);
+                index = $('#contador').html();
+                update_total();
+                
+                  }
+                else {
+                     $('#Compra_NumCompra').val("");
+                 } 
             
-            var preciosiniva=(parseFloat(i)/1.19).toFixed(2);
-            var iva= (parseFloat(i)-parseFloat(preciosiniva)).toFixed(2);
-            var subiva=(parseFloat(iva)*parseFloat(j)).toFixed(2);
+//            var preciosiniva=(parseFloat(i)/1.19).toFixed(2);
+//            var iva= (parseFloat(i)-parseFloat(preciosiniva)).toFixed(2);
+//            var subiva=(parseFloat(iva)*parseFloat(j)).toFixed(2);
             
-            var k = ((parseFloat(preciosiniva)*parseFloat(j))-(parseFloat(l)+parseFloat(m))).toFixed(2);
+            var k = ((parseFloat(i)*parseFloat(j))-(parseFloat(l)+parseFloat(m))).toFixed(2);
             $('#Detallecompra_Iva'+index).val(subiva);
-//            $('#Detallecompra_Precio'+index).val(preciosiniva);
             $('#Detallecompra_Subtotal'+index).val(k);
         //    alert(k);
             index = $('#contador').html();
             update_total();
-      }); 
+      });
+  });
       
  //CUANDO CAMBIA EL PRECIO
         var index = $('#contador').html();
@@ -218,7 +228,7 @@ $(document).ready(function() {
             var l = $('#Detallecompra_Descuento'+index).val();
             var m = $('#Detallecompra_Exento'+index).val();
             var i = $('#Detallecompra_Precio'+index).val();
-             var preciosiniva=(parseFloat(i)/1.19).toFixed(2);
+            var preciosiniva=(parseFloat(i)/1.19).toFixed(2);
             var iva= (parseFloat(i)-parseFloat(preciosiniva)).toFixed(2);
             var subiva=(parseFloat(iva)*parseFloat(j)).toFixed(2);
             
@@ -242,12 +252,12 @@ $(document).ready(function() {
             var m = $('#Detallecompra_Exento'+index).val();
             var i = $('#Detallecompra_Precio'+index).val();
 //            var preciosiniva=(parseFloat(i)/1.19).toFixed(2);
-            var iva= (parseFloat(i)-parseFloat(preciosiniva)).toFixed(2);
+//            var iva= (parseFloat(i)-parseFloat(preciosiniva)).toFixed(2);
 //            var subiva=(parseFloat(iva)*parseFloat(j)).toFixed(2);
             
             var k = ((parseFloat(i)*parseFloat(j))-(parseFloat(l)+parseFloat(m))).toFixed(2);
-            $('#Detallecompra_Iva'+index).val(subiva);
-            $('#Detallecompra_Precio'+index).val(preciosiniva);
+//            $('#Detallecompra_Iva'+index).val(subiva);
+//            $('#Detallecompra_Precio'+index).val(preciosiniva);
             $('#Detallecompra_Subtotal'+index).val(k);
         //    alert(k);
             index = $('#contador').html();
@@ -263,13 +273,13 @@ $(document).ready(function() {
             var l = $('#Detallecompra_Descuento'+index).val();
             var m = $('#Detallecompra_Exento'+index).val();
             var i = $('#Detallecompra_Precio'+index).val();
-           var preciosiniva=(parseFloat(i)/1.19).toFixed(2);
-            var iva= (parseFloat(i)-parseFloat(preciosiniva)).toFixed(2);
-            var subiva=(parseFloat(iva)*parseFloat(j)).toFixed(2);
+//           var preciosiniva=(parseFloat(i)/1.19).toFixed(2);
+//            var iva= (parseFloat(i)-parseFloat(preciosiniva)).toFixed(2);
+//            var subiva=(parseFloat(iva)*parseFloat(j)).toFixed(2);
             
-            var k = ((parseFloat(preciosiniva)*parseFloat(j))-(parseFloat(l)+parseFloat(m))).toFixed(2);
-            $('#Detallecompra_Iva'+index).val(subiva);
-            $('#Detallecompra_Precio'+index).val(preciosiniva);
+            var k = ((parseFloat(i)*parseFloat(j))-(parseFloat(l)+parseFloat(m))).toFixed(2);
+//            $('#Detallecompra_Iva'+index).val(subiva);
+//            $('#Detallecompra_Precio'+index).val(preciosiniva);
             $('#Detallecompra_Subtotal'+index).val(k);
         //    alert(k);
             index = $('#contador').html();
