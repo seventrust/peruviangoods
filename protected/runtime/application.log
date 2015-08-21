@@ -7907,3 +7907,12 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/jquiroz/images/favicon.ico
 ---
+2015/08/20 17:35:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jquiroz\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquiroz/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/jquiroz/css/jquery.css
+---

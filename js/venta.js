@@ -138,7 +138,11 @@ function update_total() {
 }
 
 $(document).ready(function() {
-
+    $('#check').check(function(){
+        if ($(this).check(':checked')){
+            $('#Vent_NumCompra').val($('#num').html());
+        }
+    });
 
   //CUANDO CAMBIA LA CANTIDAD
         var index = $('#contador').html();

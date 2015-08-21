@@ -1,12 +1,7 @@
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl?>/css/jquery.css"/>
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/jquery-ui.js"></script>
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/venta.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function(){
-    $('#Venta_NumVenta').val(<?php echo getVenta()?>);
-}); 
-</script>
+<div id="num" hidden><?php echo getCompra();?></div>
 <div id="contador"></div>
 <div class="form wide">
  
@@ -143,10 +138,7 @@ $(document).ready(function(){
         <?php echo $form->error($model,'ForPago'); ?>
         </th>
     </div>
-    
-    
 
-   
     <?php
     
     // see http://www.yiiframework.com/doc/guide/1.1/en/form.table
