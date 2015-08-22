@@ -177,7 +177,7 @@ $(document).ready(function() {
   });
   
   bind();
-  //CUANDO CAMBIA LA CANTIDAD
+  //CUANDO CAMBIA LA CANTIDAD ...........
         var index = $('#contador').html();
           $('#Detallecompra_Cantidad'+index).change( function() {
           var index = $('#contador').html();
