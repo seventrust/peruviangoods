@@ -7102,3 +7102,1813 @@ Stack trace:
 REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
 HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
 ---
+2015/08/20 13:44:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/favicon.ico".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/favicon....')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/images/favicon.ico
+---
+2015/08/20 13:44:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/favicon.ico".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/favicon....')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/images/favicon.ico
+---
+2015/08/20 13:44:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 13:44:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 13:44:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_e6e6e6_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 13:44:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_222222_256x240.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-icons_222222_256x240.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 13:44:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_55_fbf9ee_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 13:44:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 13:48:51 [warning] [application] Failed to set unsafe attribute "PreCompra" of "Productos".
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\ProductosController.php (144)
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php (15)
+2015/08/20 13:49:12 [warning] [application] Failed to set unsafe attribute "PreCompra" of "Productos".
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\ProductosController.php (144)
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php (15)
+2015/08/20 13:49:46 [warning] [application] Failed to set unsafe attribute "PreCompra" of "Productos".
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\ProductosController.php (144)
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php (15)
+2015/08/20 13:50:05 [warning] [application] Failed to set unsafe attribute "PreCompra" of "Productos".
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\ProductosController.php (144)
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php (15)
+2015/08/20 13:50:15 [warning] [application] Failed to set unsafe attribute "PreCompra" of "Productos".
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\ProductosController.php (144)
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php (15)
+2015/08/20 13:50:32 [warning] [application] Failed to set unsafe attribute "PreCompra" of "Productos".
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\ProductosController.php (144)
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php (15)
+2015/08/20 13:50:51 [warning] [application] Failed to set unsafe attribute "PreCompra" of "Productos".
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\ProductosController.php (144)
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php (15)
+2015/08/20 13:50:54 [warning] [application] Failed to set unsafe attribute "PreCompra" of "Productos".
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\ProductosController.php (144)
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php (15)
+2015/08/20 13:51:01 [warning] [application] Failed to set unsafe attribute "PreCompra" of "Productos".
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\ProductosController.php (144)
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php (15)
+2015/08/20 13:51:18 [warning] [application] Failed to set unsafe attribute "PreCompra" of "Productos".
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\ProductosController.php (144)
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php (15)
+2015/08/20 13:51:27 [warning] [application] Failed to set unsafe attribute "PreCompra" of "Productos".
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\ProductosController.php (144)
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php (15)
+2015/08/20 13:54:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 13:54:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 13:54:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_222222_256x240.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-icons_222222_256x240.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 13:54:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_e6e6e6_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 13:54:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_55_fbf9ee_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 13:54:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 13:54:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_454545_256x240.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-icons_454545_256x240.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 14:08:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 14:08:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 14:08:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_e6e6e6_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 14:08:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_55_fbf9ee_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 14:08:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_222222_256x240.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-icons_222222_256x240.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 14:08:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 14:31:40 [warning] [application] Failed to set unsafe attribute "PreCompra" of "Productos".
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\ProductosController.php (144)
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php (15)
+2015/08/20 14:40:54 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('bodega/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#11 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/index.php/bodega/admin
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/index.php/bodega/create
+---
+2015/08/20 14:40:57 [error] [exception.CException] exception 'CException' with message 'Property "Cliente.Giro" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('Giro')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('Giro')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2451): CHtml::resolveValue(Object(Cliente), 'Giro')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1533): CHtml::activeInputField('text', Object(Cliente), 'Giro', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(Cliente), 'Giro', Array)
+#5 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\extensions\bootstrap\widgets\input\TbInputVertical.php(142): CActiveForm->textField(Object(Cliente), 'Giro', Array)
+#6 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\extensions\bootstrap\widgets\input\TbInput.php(230): TbInputVertical->textField()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(181): TbInput->run()
+#8 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#9 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\extensions\bootstrap\widgets\TbActiveForm.php(186): TbActiveForm->inputRow('text', Object(Cliente), 'Giro', NULL, Array)
+#10 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\views\cliente\_form.php(16): TbActiveForm->textFieldRow(Object(Cliente), 'Giro', Array)
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\views\cliente\create.php(15): CController->renderPartial('_form', Array)
+#15 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#16 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#19 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\ClienteController.php(78): CController->render('create', Array)
+#20 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): ClienteController->actionCreate()
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#22 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#23 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#24 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#25 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#26 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#27 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#28 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#30 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('cliente/create')
+#31 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#32 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#33 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/index.php/cliente/create
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/index.php/bodega/admin
+---
+2015/08/20 14:41:01 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('bodega/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#11 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/index.php/bodega/admin
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/index.php/bodega/create
+---
+2015/08/20 14:42:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 14:42:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 14:42:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_55_fbf9ee_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 14:42:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_222222_256x240.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-icons_222222_256x240.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 14:42:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_e6e6e6_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 14:43:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 14:43:09 [error] [exception.CException] exception 'CException' with message 'Property "Cliente.Giro" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('Giro')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('Giro')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2451): CHtml::resolveValue(Object(Cliente), 'Giro')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1533): CHtml::activeInputField('text', Object(Cliente), 'Giro', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(Cliente), 'Giro', Array)
+#5 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\extensions\bootstrap\widgets\input\TbInputVertical.php(142): CActiveForm->textField(Object(Cliente), 'Giro', Array)
+#6 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\extensions\bootstrap\widgets\input\TbInput.php(230): TbInputVertical->textField()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(181): TbInput->run()
+#8 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\extensions\bootstrap\widgets\TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#9 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\extensions\bootstrap\widgets\TbActiveForm.php(186): TbActiveForm->inputRow('text', Object(Cliente), 'Giro', NULL, Array)
+#10 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\views\cliente\_form.php(16): TbActiveForm->textFieldRow(Object(Cliente), 'Giro', Array)
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\views\cliente\create.php(15): CController->renderPartial('_form', Array)
+#15 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#16 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#19 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\ClienteController.php(78): CController->render('create', Array)
+#20 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): ClienteController->actionCreate()
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#22 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#23 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#24 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#25 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#26 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#27 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#28 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#30 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('cliente/create')
+#31 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#32 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#33 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/index.php/cliente/create
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/index.php/site/login
+---
+2015/08/20 14:43:15 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('proveedor/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#11 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/index.php/proveedor/admin
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/index.php/proveedor/create
+---
+2015/08/20 20:08:25 [warning] [application] Failed to set unsafe attribute "PreCompra" of "Productos".
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\ProductosController.php (144)
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php (15)
+2015/08/20 20:08:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 20:08:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 20:08:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_55_fbf9ee_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 20:08:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_e6e6e6_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 20:08:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_222222_256x240.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-icons_222222_256x240.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 20:08:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 20:08:53 [warning] [application] Failed to set unsafe attribute "PreCompra" of "Productos".
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\ProductosController.php (144)
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php (15)
+2015/08/20 20:09:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 20:09:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 20:09:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_222222_256x240.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-icons_222222_256x240.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 20:09:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_e6e6e6_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 20:09:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_55_fbf9ee_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 20:10:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 20:10:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 20:10:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 20:10:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_222222_256x240.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-icons_222222_256x240.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 20:10:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_e6e6e6_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 20:10:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_55_fbf9ee_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 20:10:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 20:16:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 20:16:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 20:19:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_55_fbf9ee_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 20:19:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 20:19:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_222222_256x240.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-icons_222222_256x240.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/20 20:19:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_e6e6e6_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 13:51:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 15:01:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/favicon.ico".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/favicon....')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/images/favicon.ico
+---
+2015/08/21 15:01:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/favicon.ico".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/favicon....')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/images/favicon.ico
+---
+2015/08/21 15:01:29 [warning] [application] Failed to set unsafe attribute "PreCompra" of "Productos".
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\ProductosController.php (144)
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php (15)
+2015/08/21 15:02:26 [warning] [application] Failed to set unsafe attribute "PreCompra" of "Productos".
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\ProductosController.php (144)
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php (15)
+2015/08/21 15:03:38 [warning] [application] Failed to set unsafe attribute "PreCompra" of "Productos".
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\ProductosController.php (144)
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php (15)
+2015/08/21 15:04:02 [warning] [application] Failed to set unsafe attribute "PreCompra" of "Productos".
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\ProductosController.php (144)
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php (15)
+2015/08/21 15:07:26 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('medida/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#11 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/index.php/medida/admin
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/index.php/medida/create
+---
+2015/08/21 15:07:35 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('medida/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#11 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/index.php/medida/admin
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/index.php/medida/index
+---
+2015/08/21 15:10:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 15:11:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 15:14:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 15:14:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 15:43:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 15:45:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 15:50:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 15:50:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 15:52:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 15:52:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_222222_256x240.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-icons_222222_256x240.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 15:52:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_e6e6e6_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 15:52:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_55_fbf9ee_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 15:53:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 15:53:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.ui.datepicker-es.js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('jquery.ui.datep...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('jquery.ui.datep...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ajusteinventari...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/index.php/ajusteinventario/jquery.ui.datepicker-es.js
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/index.php/ajusteinventario/create
+---
+2015/08/21 15:53:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.ui.datepicker-es.js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('jquery.ui.datep...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('jquery.ui.datep...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ajusteinventari...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/index.php/ajusteinventario/jquery.ui.datepicker-es.js
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/index.php/ajusteinventario/create
+---
+2015/08/21 15:53:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "public".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ajusteinventari...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/index.php/ajusteinventario/public/admin/css/style.css
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/index.php/ajusteinventario/create
+---
+2015/08/21 15:53:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "public".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ajusteinventari...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/index.php/ajusteinventario/public/admin/css/jquery.wysiwyg.css
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/index.php/ajusteinventario/create
+---
+2015/08/21 15:53:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "public".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ajusteinventari...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/index.php/ajusteinventario/public/admin/css/visualize.css
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/index.php/ajusteinventario/create
+---
+2015/08/21 15:53:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "public".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ajusteinventari...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/index.php/ajusteinventario/public/admin/css/date_input.css
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/index.php/ajusteinventario/create
+---
+2015/08/21 15:53:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "public".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('public')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('public')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ajusteinventari...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/index.php/ajusteinventario/public/admin/css/facebox.css
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/index.php/ajusteinventario/create
+---
+2015/08/21 16:02:39 [error] [php] Undefined variable: validatedMembers (C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\views\ajusteinventario\_form.php:29)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): AjusteinventarioController->renderFile()
+#1 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\views\ajusteinventario\create.php(18): AjusteinventarioController->renderPartial()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): AjusteinventarioController->renderInternal()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): AjusteinventarioController->renderFile()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): AjusteinventarioController->renderPartial()
+#6 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\AjusteinventarioController.php(84): AjusteinventarioController->render()
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): AjusteinventarioController->actionCreate()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): AjusteinventarioController->runAction()
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): AjusteinventarioController->filterAccessControl()
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(265): AjusteinventarioController->runActionWithFilters()
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): AjusteinventarioController->run()
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CWebApplication->run()
+REQUEST_URI=/peruvianbeta/peruviangoods/index.php/ajusteinventario/create
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\views\ajusteinventario\_form.php (29)
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\views\ajusteinventario\create.php (18)
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\AjusteinventarioController.php (84)
+2015/08/21 16:08:14 [error] [php] Undefined variable: validatedMembers (C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\views\ajusteinventario\_form.php:29)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): AjusteinventarioController->renderFile()
+#1 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\views\ajusteinventario\create.php(18): AjusteinventarioController->renderPartial()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): AjusteinventarioController->renderInternal()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): AjusteinventarioController->renderFile()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): AjusteinventarioController->renderPartial()
+#6 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\AjusteinventarioController.php(84): AjusteinventarioController->render()
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): AjusteinventarioController->actionCreate()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): AjusteinventarioController->runAction()
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): AjusteinventarioController->filterAccessControl()
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(265): AjusteinventarioController->runActionWithFilters()
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): AjusteinventarioController->run()
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CWebApplication->run()
+REQUEST_URI=/peruvianbeta/peruviangoods/index.php/ajusteinventario/create
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\views\ajusteinventario\_form.php (29)
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\views\ajusteinventario\create.php (18)
+in C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\AjusteinventarioController.php (84)
+2015/08/21 16:09:05 [error] [exception.CException] exception 'CException' with message 'Property "Ajusteinventario.Numero" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('Numero')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('Numero')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2451): CHtml::resolveValue(Object(Ajusteinventario), 'Numero')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1533): CHtml::activeInputField('text', Object(Ajusteinventario), 'Numero', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(Ajusteinventario), 'Numero', Array)
+#5 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\views\ajusteinventario\_form.php(41): CActiveForm->textField(Object(Ajusteinventario), 'Numero')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\views\ajusteinventario\create.php(18): CController->renderPartial('_form', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\AjusteinventarioController.php(84): CController->render('create', Array)
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): AjusteinventarioController->actionCreate()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#25 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ajusteinventari...')
+#26 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#28 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/index.php/ajusteinventario/create
+---
+2015/08/21 16:09:42 [error] [exception.CException] exception 'CException' with message 'Property "Ajusteinventario.Vencimiento" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('Vencimiento')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('Vencimiento')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2451): CHtml::resolveValue(Object(Ajusteinventario), 'Vencimiento')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1533): CHtml::activeInputField('text', Object(Ajusteinventario), 'Vencimiento', Array)
+#4 C:\xampp\htdocs\yii\framework\zii\widgets\jui\CJuiDatePicker.php(84): CHtml::activeTextField(Object(Ajusteinventario), 'Vencimiento', Array)
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(181): CJuiDatePicker->run()
+#6 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\views\ajusteinventario\_form.php(78): CBaseController->widget('zii.widgets.jui...', Array)
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\views\ajusteinventario\create.php(18): CController->renderPartial('_form', Array)
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#15 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\AjusteinventarioController.php(84): CController->render('create', Array)
+#16 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): AjusteinventarioController->actionCreate()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#26 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ajusteinventari...')
+#27 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#28 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#29 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/index.php/ajusteinventario/create
+---
+2015/08/21 16:10:31 [error] [exception.CException] exception 'CException' with message 'Property "Ajusteinventario.TotIva" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('TotIva')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('TotIva')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2451): CHtml::resolveValue(Object(Ajusteinventario), 'TotIva')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1533): CHtml::activeInputField('text', Object(Ajusteinventario), 'TotIva', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(Ajusteinventario), 'TotIva', Array)
+#5 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\views\ajusteinventario\_form.php(306): CActiveForm->textField(Object(Ajusteinventario), 'TotIva', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\views\ajusteinventario\create.php(18): CController->renderPartial('_form', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 C:\xampp\htdocs\peruvianbeta\peruviangoods\protected\controllers\AjusteinventarioController.php(84): CController->render('create', Array)
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): AjusteinventarioController->actionCreate()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#25 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ajusteinventari...')
+#26 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#28 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/index.php/ajusteinventario/create
+---
+2015/08/21 16:11:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 16:11:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 16:11:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_222222_256x240.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-icons_222222_256x240.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 16:11:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_e6e6e6_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 16:11:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_55_fbf9ee_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 16:11:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 16:11:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_454545_256x240.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-icons_454545_256x240.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 16:32:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 16:32:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 16:32:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_55_fbf9ee_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 16:32:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_222222_256x240.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-icons_222222_256x240.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 16:32:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_e6e6e6_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 16:44:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 16:45:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 16:50:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 16:52:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 17:04:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 17:05:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 17:05:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 17:06:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 17:11:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 17:13:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 17:16:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 17:19:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 17:19:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 17:19:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 17:21:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 17:21:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 17:53:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 17:54:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 17:57:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 17:58:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 19:21:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 19:24:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 19:25:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 19:26:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 19:27:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 19:27:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 19:27:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 19:28:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 19:28:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 19:37:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 19:38:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 20:27:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 20:27:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 20:28:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 20:28:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 20:30:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 20:31:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 20:32:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 20:36:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 20:37:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 20:38:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 20:38:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 20:39:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 20:40:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 20:43:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 20:47:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 20:49:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 20:49:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 20:50:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 20:51:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 20:51:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 21:13:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 21:13:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 21:15:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 21:15:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 21:26:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 21:26:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 21:31:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 21:32:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 21:32:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 21:32:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 21:32:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 21:32:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 21:32:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 21:32:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 21:40:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 21:40:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 21:41:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 21:42:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 21:42:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 21:42:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 21:42:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---
+2015/08/21 21:43:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\peruvianbeta\peruviangoods\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/peruvianbeta/peruviangoods/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/peruvianbeta/peruviangoods/css/jquery.css
+---

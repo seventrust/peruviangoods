@@ -3,21 +3,9 @@
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/jquery-ui.js"></script>
 <script src="<?php echo Yii::app()->request->baseUrl?>/js/compra.js"></script>
 
-<script type="text/javascript">
-$(document).ready(function(){
-//    if( $('#auto').is(':checked') ) {
-//    alert('Seleccionado');
-     $('#Compra_NumCompra').val(<?php  echo getCompra()?>);
-//        }
-   
-     
-});
-
-
-</script>
 
 <div id="contador"></div>
-
+<div id="num" hidden="true"><?php echo getCompra();?></div>
 <div class="form wide">
  
     <?php $form=$this->beginWidget('CActiveForm', array(
@@ -149,6 +137,10 @@ $(document).ready(function(){
             <?php echo $form->labelEx($model,'Usuario'); ?>
             <?php echo $form->textField($model,'Usuario',array('value'=>Yii::app()->user->name)); ?>
             <?php echo $form->error($model,'Usuario'); ?>
+        </th>
+         <th>
+           <label>Sin iva</label>
+           <input type="checkbox" id="iva"/>
         </th>
      </table>
         
@@ -355,7 +347,6 @@ $(document).ready(function(){
             </tr>    
     </div>
     <?php $this->endWidget(); ?>
-    
-     
+   
  
     </div><!-- form -->

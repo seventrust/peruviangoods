@@ -1,9 +1,5 @@
-<?php
-/* @var $this CategoriaController */
-/* @var $model Categoria */
-/* @var $form CActiveForm */
-?>
-
+<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl?>/css/jquery.css" />
+<script src="<?php echo Yii::app()->request->baseUrl?>/js/jquery-ui.js"></script>
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(

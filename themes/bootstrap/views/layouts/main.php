@@ -52,6 +52,8 @@
                                                                     array('label'=>'Proveedores', 'url'=>array('proveedor/create')),
                                                                     array('label'=>'Tipo Cliente', 'url'=>array('cliente/create')),
                                                                     array('label'=>'Usuarios', 'url'=>array('usuario/create')),
+                                                                    array('label'=>'Medida', 'url'=>array('medida/create')),
+                                                                    array('label'=>'Categoria Producto', 'url'=>array('categoria/create')),
                                                                 )),
                                                             array('label' => 'Compras', 'url' => '#', 'itemOptions' =>   array('class' => 'dropdown-submenu'),
                                                                 'items'=>array(

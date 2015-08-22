@@ -57,7 +57,7 @@ class Ajusteinventario extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'Id' => 'ID',
+			'Id' => 'Numero',
 			'Fecha' => 'Fecha',
 			'Descripcion' => 'Descripcion',
 			'Tipo' => 'Tipo',
