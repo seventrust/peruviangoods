@@ -7916,3 +7916,194 @@ Stack trace:
 REQUEST_URI=/jquiroz/css/images/ui-bg_flat_75_ffffff_40x100.png
 HTTP_REFERER=http://localhost/jquiroz/css/jquery.css
 ---
+2015/08/22 15:32:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/favicon.ico".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/favicon....')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jquiroz\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquiroz/images/favicon.ico
+---
+2015/08/22 15:32:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/favicon.ico".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/favicon....')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jquiroz\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquiroz/images/favicon.ico
+---
+2015/08/22 15:33:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jquiroz\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquiroz/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+HTTP_REFERER=http://localhost/jquiroz/css/jquery.css
+---
+2015/08/22 15:33:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_222222_256x240.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jquiroz\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquiroz/css/images/ui-icons_222222_256x240.png
+HTTP_REFERER=http://localhost/jquiroz/css/jquery.css
+---
+2015/08/22 15:33:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jquiroz\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquiroz/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/jquiroz/css/jquery.css
+---
+2015/08/22 15:33:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_55_fbf9ee_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jquiroz\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquiroz/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+HTTP_REFERER=http://localhost/jquiroz/css/jquery.css
+---
+2015/08/22 15:33:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_e6e6e6_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jquiroz\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquiroz/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+HTTP_REFERER=http://localhost/jquiroz/css/jquery.css
+---
+2015/08/22 15:33:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jquiroz\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquiroz/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/jquiroz/css/jquery.css
+---
+2015/08/22 15:33:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_65_ffffff_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jquiroz\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquiroz/css/images/ui-bg_glass_65_ffffff_1x400.png
+HTTP_REFERER=http://localhost/jquiroz/css/jquery.css
+---
+2015/08/22 15:44:00 [error] [php] mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) (C:\xampp\htdocs\jquiroz\protected\components\numero.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\jquiroz\protected\views\compra\_form.php(8): getCompra()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CompraController->renderInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): CompraController->renderFile()
+#4 C:\xampp\htdocs\jquiroz\protected\views\compra\create.php(18): CompraController->renderPartial()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CompraController->renderInternal()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): CompraController->renderFile()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(782): CompraController->renderPartial()
+#9 C:\xampp\htdocs\jquiroz\protected\controllers\CompraController.php(129): CompraController->render()
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CompraController->actionCreate()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CompraController->runAction()
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CompraController->filterAccessControl()
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): CompraController->runActionWithFilters()
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CompraController->run()
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\jquiroz\index.php(15): CWebApplication->run()
+REQUEST_URI=/jquiroz/index.php/compra/create
+in C:\xampp\htdocs\jquiroz\protected\components\numero.php (15)
+in C:\xampp\htdocs\jquiroz\protected\components\numero.php (23)
+in C:\xampp\htdocs\jquiroz\protected\views\compra\_form.php (8)
+2015/08/22 15:44:15 [error] [php] mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) (C:\xampp\htdocs\jquiroz\protected\components\numero.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\jquiroz\protected\views\compra\_form.php(8): getCompra()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CompraController->renderInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): CompraController->renderFile()
+#4 C:\xampp\htdocs\jquiroz\protected\views\compra\create.php(18): CompraController->renderPartial()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CompraController->renderInternal()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): CompraController->renderFile()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(782): CompraController->renderPartial()
+#9 C:\xampp\htdocs\jquiroz\protected\controllers\CompraController.php(129): CompraController->render()
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CompraController->actionCreate()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CompraController->runAction()
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CompraController->filterAccessControl()
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): CompraController->runActionWithFilters()
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CompraController->run()
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\jquiroz\index.php(15): CWebApplication->run()
+REQUEST_URI=/jquiroz/index.php/compra/create
+in C:\xampp\htdocs\jquiroz\protected\components\numero.php (15)
+in C:\xampp\htdocs\jquiroz\protected\components\numero.php (23)
+in C:\xampp\htdocs\jquiroz\protected\views\compra\_form.php (8)
+2015/08/22 15:48:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jquiroz\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquiroz/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/jquiroz/css/jquery.css
+---
+2015/08/22 15:48:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_e6e6e6_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jquiroz\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquiroz/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+HTTP_REFERER=http://localhost/jquiroz/css/jquery.css
+---
+2015/08/22 15:48:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_222222_256x240.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jquiroz\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquiroz/css/images/ui-icons_222222_256x240.png
+HTTP_REFERER=http://localhost/jquiroz/css/jquery.css
+---
+2015/08/22 15:48:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jquiroz\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquiroz/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+HTTP_REFERER=http://localhost/jquiroz/css/jquery.css
+---
+2015/08/22 15:48:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_55_fbf9ee_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jquiroz\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquiroz/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+HTTP_REFERER=http://localhost/jquiroz/css/jquery.css
+---
+2015/08/22 15:48:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jquiroz\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquiroz/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/jquiroz/css/jquery.css
+---
